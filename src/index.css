@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.text-glow {
+  text-shadow: 0 0 10px #f7e290, 0 0 20px #f7e290, 0 0 30px #f7e290,
+    0 0 40px #f7e290;
+}

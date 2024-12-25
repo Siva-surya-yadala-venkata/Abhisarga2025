@@ -1,0 +1,16 @@
+/* Navbar.css */
+@import url('https://fonts.cdnfonts.com/css/harry-potter');
+
+.navbar {
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar:hover {
+    background-color: rgba(19, 20, 51, 0.8); /* Optional: Add background on hover */
+  }
+  /* index.css or App.css */
+
+.font-harrypotter {
+  font-family: 'Harry P', cursive;
+  font-weight: bold;
+}

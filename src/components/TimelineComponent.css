@@ -1,0 +1,43 @@
+/* Star Movement and Flickering */
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  animation: moveStar linear infinite,
+    twinkleStars 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes moveStar {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(calc(100vw + 50px)) translateY(calc(100vh + 50px));
+  }
+}
+
+@keyframes twinkleStars {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(0.5);
+  }
+}
+
+.event-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  /* background: linear-gradient(145deg, #f7e290, #24222d); */
+  border-color: #fff;
+}
