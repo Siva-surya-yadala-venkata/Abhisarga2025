@@ -2,16 +2,18 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
 import EventPage from "./pages/events";
 import AccommodationPage from "./components/Acomodation";
+import SplashCursor from "./components/SplashCursor";
 
 function App() {
   return (
+    <>
+    <SplashCursor /> {/* Place this outside <Routes> */}
     <Routes>
-      {/* Define your routes here */}
       <Route path="/" element={<Home />} />
       <Route path="/events" element={<EventPage />} />
-      <Route path="/acomodation" element={<AccommodationPage />} />
-
+      <Route path="/accommodation" element={<AccommodationPage />} />
     </Routes>
+  </>
   );
 }
 
