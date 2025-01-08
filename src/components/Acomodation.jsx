@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import {
@@ -10,7 +9,9 @@ import {
   Sparkles,
 } from "lucide-react";
 import { useEffect, useState } from "react";
-import AccomodationCards from "./AccomodationCard/AccomodationCards";
+import AccomodationCard from "./AccomodationCard/AccomodationCard";
+import bg1 from "../assets/bg1.jpg";
+import bg2 from "../assets/bg2.png";
 
 export default function AccommodationPage() {
   const [stars, setStars] = useState([]);
@@ -39,6 +40,48 @@ export default function AccommodationPage() {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
   };
+
+  const cardsData = [
+    {
+      title: "Boys Hostel 1",
+      details: [
+        "3 day tours",
+        "Up to 30 people",
+        "2 tour guides",
+        "Sleep in cozy hotels",
+        "Difficulty: easy",
+      ],
+      price: "$297",
+      gradient: "bg-gradient-to-r from-orange-500 to-yellow-500",
+      image: bg1,
+    },
+    {
+      title: "Boys Hostel 2",
+      details: [
+        "5 day tours",
+        "Up to 25 people",
+        "3 tour guides",
+        "Camp in wild nature",
+        "Difficulty: medium",
+      ],
+      price: "$497",
+      gradient: "bg-gradient-to-r from-green-500 to-teal-500",
+      image: bg2,
+    },
+    {
+      title: "Boys Hostel 3",
+      details: [
+        "7 day tours",
+        "Up to 15 people",
+        "2 tour guides",
+        "Stay in cozy lodges",
+        "Difficulty: hard",
+      ],
+      price: "$697",
+      gradient: "bg-gradient-to-r from-blue-500 to-indigo-500",
+      image: bg1,
+    },
+  ];
 
   return (
     <motion.div
@@ -170,7 +213,28 @@ export default function AccommodationPage() {
             </div>
           </motion.section>
 
-          <AccomodationCards></AccomodationCards>
+          <div className="w-full grid grid-cols-1 items-center md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 sm:px-8 py-4">
+            {cardsData.map((card, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                <AccomodationCard
+                  title={card.title}
+                  details={card.details}
+                  price={card.price}
+                  gradient={card.gradient}
+                  image={card.image}
+                />
+              </motion.div>
+            ))}
+          </div>
 
           {/* Contact Information */}
           <motion.section
