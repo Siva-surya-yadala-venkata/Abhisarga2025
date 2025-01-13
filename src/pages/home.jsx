@@ -13,7 +13,7 @@ function Home() {
 
       {/* Video Background */}
       <HeroComponent />
-
+      {/* <Temp/> */}
       {/* Main Content */}
       <div className="flex-grow">
         <ImageCarousel />
