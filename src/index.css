@@ -7,3 +7,7 @@
   text-shadow: 0 0 10px #f7e290, 0 0 20px #f7e290, 0 0 30px #f7e290,
     0 0 40px #f7e290;
 }
+
+body {
+  cursor: url("assets/cursor.png"), auto;
+}
