@@ -62,9 +62,13 @@ const FAQ = () => {
         ></div>
       </div>
 
-      <h1 className="text-4xl font-bold text-center text-[#F7E290] mb-10">
-        Frequently Asked Questions
-      </h1>
+      <div className="flex flex-row justify-center items-center space-x-4">
+        <img src="/assets/header-flourish.svg" alt="" className="h-3 transform scale-x-[-1] mb-10" />
+        <h1 className="text-4xl font-bold text-center text-[#F7E290] mb-10">
+          Frequently Asked Questions
+        </h1>
+        <img src="/assets/header-flourish.svg" alt="" className="h-3 mb-10" />
+      </div>
 
       <div className="space-y-8 mx-auto max-w-4xl">
         {faqData.map((item, index) => (
