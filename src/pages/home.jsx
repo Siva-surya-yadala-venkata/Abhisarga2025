@@ -3,8 +3,7 @@ import ImageCarousel from "../components/ProShows/ImageCarousel";
 import HeroComponent from "../components/HeroComponent";
 import TimeLine from "../components/TimelineComponent";
 import FAQ from "../components/FAQ";
-
-
+import Temp from '../components/Temp'
 function Home() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -13,7 +12,7 @@ function Home() {
 
       {/* Video Background */}
       <HeroComponent />
-
+      {/* <Temp/> */}
       {/* Main Content */}
       <div className="flex-grow">
         <ImageCarousel />

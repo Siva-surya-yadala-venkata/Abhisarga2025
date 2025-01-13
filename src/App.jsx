@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
+import EventsPage from './components/EventsPage'
 import EventPage from "./pages/events";
 import AccommodationPage from "./components/Acomodation";
 import SplashCursor from "./components/SplashCursor";
@@ -7,11 +8,12 @@ import SplashCursor from "./components/SplashCursor";
 function App() {
   return (
     <>
-    <SplashCursor /> {/* Place this outside <Routes> */}
+    {/* Place this outside <Routes> */}
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={ <>  <SplashCursor /> <Home /> </>} />
       <Route path="/events" element={<EventPage />} />
       <Route path="/acomodation" element={<AccommodationPage />} />
+      <Route path="/eventspage" element={<EventsPage />} />
     </Routes>
   </>
   );
