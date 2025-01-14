@@ -183,7 +183,7 @@ function App() {
           }
           
           .card:hover .img-container {
-            transform: rotateY(-135deg);
+            transform: rotateY(-110deg);
           }
           
           .card-details {
@@ -205,7 +205,7 @@ function App() {
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 1, y: 20 }}
               transition={{ duration: 0.5 }}
               className="card relative w-[300px] h-[400px] bg-[#24222d]/30 shadow-lg preserve-3d perspective-2000"
-              whileHover={{ rotateZ: -10 }}
+              // whileHover={{ rotateZ: -10 }}
             >
               <div className="img-container absolute inset-0 bg-[#24222d]/20 border border-[#24222d]/10 overflow-hidden rotate-y-[-135deg]">
                 <img

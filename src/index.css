@@ -8,13 +8,6 @@
   transform-style: preserve-3d;
 }
 
-.rotate-y-[-135deg] {
-  transform: rotateY(-135deg);
-}
-
-/* Optional: Add these perspective utilities if not already in your Tailwind config */
-@layer utilities {
-  .perspective-2000 {
-    perspective: 2000px;
-  }
+body {
+  cursor: url("assets/cursor.png"), auto;
 }
