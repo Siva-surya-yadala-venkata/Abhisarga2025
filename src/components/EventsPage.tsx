@@ -8,7 +8,7 @@ interface Event {
   date: string;
   location: string;
   type: 'Technical' | 'Non-Technical';
-  house: 'Gryffindor' | 'Slytherin' | 'Hufflepuff' | 'Ravenclaw';
+  club: 'Epoch' | 'GDG' | 'Iota' | 'Enigma' | 'Meraki';
   attendees: number;
   image: string;
 }
@@ -20,17 +20,17 @@ const events: Event[] = [
     date: "2024-04-15",
     location: "Great Hall",
     type: "Non-Technical",
-    house: "Gryffindor",
+    club: "Epoch",
     attendees: 500,
     image: "https://images.unsplash.com/photo-1551269901-5c5e14c25df7?auto=format&fit=crop&q=80&w=2069"
   },
   {
     id: 2,
-    title: "House Quidditch Finals",
+    title: "club Quidditch Finals",
     date: "2024-05-01",
     location: "Quidditch Pitch",
     type: "Non-Technical",
-    house: "Slytherin",
+    club: "GDG",
     attendees: 300,
     image: "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?auto=format&fit=crop&q=80&w=2070"
   },
@@ -40,7 +40,7 @@ const events: Event[] = [
     date: "2024-10-31",
     location: "Great Hall",
     type: "Non-Technical",
-    house: "Hufflepuff",
+    club: "Iota",
     attendees: 400,
     image: "https://images.unsplash.com/photo-1509024644558-2f56ce76c490?auto=format&fit=crop&q=80&w=2070"
   },
@@ -50,7 +50,7 @@ const events: Event[] = [
     date: "2024-06-15",
     location: "Defense Classroom",
     type: "Technical",
-    house: "Ravenclaw",
+    club: "Enigma",
     attendees: 30,
     image: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&q=80&w=2070"
   },
@@ -60,7 +60,7 @@ const events: Event[] = [
     date: "2024-12-25",
     location: "Great Hall",
     type: "Non-Technical",
-    house: "Gryffindor",
+    club: "Epoch",
     attendees: 450,
     image: "https://images.unsplash.com/photo-1461696114087-397271a7aedc?auto=format&fit=crop&q=80&w=2070"
   },
@@ -70,21 +70,22 @@ const events: Event[] = [
     date: "2024-09-01",
     location: "Dungeons",
     type: "Technical",
-    house: "Slytherin",
+    club: "Meraki",
     attendees: 100,
     image: "https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?auto=format&fit=crop&q=80&w=2070"
   }
 ];
 
-const houseColors = {
-  Gryffindor: "bg-gradient-to-r from-purple-900/40 to-amber-500/40 text-amber-200 border-amber-500/50",
-  Slytherin: "bg-gradient-to-r from-purple-900/40 to-emerald-500/40 text-emerald-200 border-emerald-500/50",
-  Hufflepuff: "bg-gradient-to-r from-purple-900/40 to-yellow-500/40 text-yellow-200 border-yellow-500/50",
-  Ravenclaw: "bg-gradient-to-r from-purple-900/40 to-blue-500/40 text-blue-200 border-blue-500/50",
+const clubColors = {
+  Epoch: "bg-gradient-to-r from-purple-900/40 to-amber-500/40 text-amber-200 border-amber-500/50",
+  GDG: "bg-gradient-to-r from-purple-900/40 to-emerald-500/40 text-emerald-200 border-emerald-500/50",
+  Iota: "bg-gradient-to-r from-purple-900/40 to-yellow-500/40 text-yellow-200 border-yellow-500/50",
+  Enigma: "bg-gradient-to-r from-purple-900/40 to-blue-500/40 text-blue-200 border-blue-500/50",
+  Meraki: "bg-gradient-to-r from-purple-900/40 to-red-500/40 text-red-200 border-red-500/50",
 };
 
 function App() {
-  const [selectedHouse, setSelectedHouse] = useState<string>("");
+  const [selectedclub, setSelectedclub] = useState<string>("");
   const [selectedType, setSelectedType] = useState<string>("");
   const [searchQuery, setSearchQuery] = useState("");
  const [ref, inView] = useInView({
@@ -92,11 +93,11 @@ function App() {
     threshold: 0.1,
   });
   const filteredEvents = events.filter(event => {
-    const matchesHouse = selectedHouse ? event.house === selectedHouse : true;
+    const matchesclub = selectedclub ? event.club === selectedclub : true;
     const matchesType = selectedType ? event.type === selectedType : true;
     const matchesSearch = event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          event.location.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesHouse && matchesType && matchesSearch;
+    return matchesclub && matchesType && matchesSearch;
   });
   const [isMobile, setIsMobile] = useState(false)
   
@@ -130,15 +131,16 @@ function App() {
         <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-full max-w-2xl px-4">
           <div className="grid grid-cols-3 gap-4 backdrop-blur-xl bg-[#24222f]/30 p-4 rounded-xl border border-[#24222f]/20 shadow-lg shadow-[#24222f]/10">
             <select
-              value={selectedHouse}
-              onChange={(e) => setSelectedHouse(e.target.value)}
+              value={selectedclub}
+              onChange={(e) => setSelectedclub(e.target.value)}
               className="w-full px-3 py-2 rounded-lg bg-[#24222f]/30 border border-[#24222f]/20 text-[#F7E290] focus:outline-none focus:ring-2 focus:ring-[#F7E290]/50"
             >
-              <option value="">Filter by House</option>
-              <option value="Gryffindor">Gryffindor</option>
-              <option value="Slytherin">Slytherin</option>
-              <option value="Hufflepuff">Hufflepuff</option>
-              <option value="Ravenclaw">Ravenclaw</option>
+              <option value="">Filter by club</option>
+              <option value="Epoch">Epoch</option>
+              <option value="GDG">GDG</option>
+              <option value="Iota">Iota</option>
+              <option value="Enigma">Enigma</option>
+              <option value="Meraki">Meraki</option>
             </select>
 
             <select
@@ -213,8 +215,8 @@ function App() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#24222f]/80 via-[#24222d]/50 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <span className={`inline-block px-3 py-1 rounded-full text-sm ${houseColors[event.house]} border`}>
-                    {event.house}
+                  <span className={`inline-block px-3 py-1 rounded-full text-sm ${clubColors[event.club]} border`}>
+                    {event.club}
                   </span>
                 </div>
               </div>
@@ -241,8 +243,8 @@ function App() {
                     </div>
                   </div>
                   <button className="w-full px-4 py-2 mt-4 rounded-lg bg-gradient-to-r from-purple-500/20 to-amber-500/20 border border-purple-500/30 hover:border-amber-500/30 text-amber-200 transition-all duration-300 flex items-center justify-center">
-                    <span>Join Event</span>
-                    <Wand2 className="w-4 h-4 ml-2 opacity-50 group-hover:opacity-100 group-hover:rotate-12 transition-all" />
+                  <a href="/event"> <span>Join Event</span> </a>
+                  <Wand2 className="w-4 h-4 ml-2 opacity-50 club-hover:opacity-100 club-hover:rotate-12 transition-all" />
                   </button>
                 </div>
               </div>
@@ -257,7 +259,7 @@ function App() {
       key={event.id}
       ref={ref}
       transition={{ duration: 0.5 }}
-      className="group w-full max-w-sm mx-auto mb-6 border-2 border-amber-500"
+      className="club w-full max-w-sm mx-auto mb-6 border-2 border-amber-500"
     >
       <div className="overflow-hidden bg-[#24224d]/30 border border-[#24222d]/10 rounded-lg shadow-sm hover:shadow-md hover:shadow-[#24222d]/10 transition-shadow duration-300">
         {/* Image Section */}
@@ -265,21 +267,21 @@ function App() {
           <img
             src={event.image}
             alt={event.title}
-            className="w-full h-full object-cover filter brightness-75 group-hover:brightness-100 transition-all duration-500"
+            className="w-full h-full object-cover filter brightness-75 club-hover:brightness-100 transition-all duration-500"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#24222f]/80 via-transparent to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-2">
             <span
-              className={`inline-block px-2 py-1 rounded-full text-xs sm:text-sm ${houseColors[event.house]} border`}
+              className={`inline-block px-2 py-1 rounded-full text-xs sm:text-sm ${clubColors[event.club]} border`}
             >
-              {event.house}
+              {event.club}
             </span>
           </div>
         </div>
 
         {/* Details Section */}
         <div className="p-4 space-y-3">
-          <h2 className="text-lg sm:text-xl font-semibold text-amber-200 group-hover:text-amber-300 transition-colors">
+          <h2 className="text-lg sm:text-xl font-semibold text-amber-200 club-hover:text-amber-300 transition-colors">
             {event.title}
           </h2>
           <div className="space-y-1 text-sm sm:text-base text-purple-200/70">
@@ -297,8 +299,8 @@ function App() {
             </div>
           </div>
           <button className="w-full px-3 py-2 rounded-md bg-gradient-to-r from-purple-500/20 to-amber-500/20 border border-purple-500/30 hover:border-amber-500/30 text-amber-200 transition-all duration-300 flex items-center justify-center">
-            <span>Join Event</span>
-            <Wand2 className="w-4 h-4 ml-2 opacity-50 group-hover:opacity-100 group-hover:rotate-12 transition-all" />
+           <a href="/event"> <span>Join Event</span> </a>
+            <Wand2 className="w-4 h-4 ml-2 opacity-50 club-hover:opacity-100 club-hover:rotate-12 transition-all" />
           </button>
         </div>
       </div>
@@ -378,8 +380,8 @@ function App() {
     //               />
     //               <div className="absolute inset-0 bg-gradient-to-t from-purple-950/80 via-transparent to-transparent" />
     //               <div className="absolute bottom-0 left-0 right-0 p-4">
-    //                 <span className={`inline-block px-3 py-1 rounded-full text-sm ${houseColors[event.house]} border`}>
-    //                   {event.house}
+    //                 <span className={`inline-block px-3 py-1 rounded-full text-sm ${clubColors[event.club]} border`}>
+    //                   {event.club}
     //                 </span>
     //               </div>
     //             </div>
@@ -408,7 +410,7 @@ function App() {
     //                 </div>
     //                 <button className="w-full px-4 py-2 mt-4 rounded-lg bg-gradient-to-r from-purple-500/20 to-amber-500/20 border border-purple-500/30 hover:border-amber-500/30 text-amber-200 transition-all duration-300 flex items-center justify-center">
     //                   <span>Join Event</span>
-    //                   <Wand2 className="w-4 h-4 ml-2 opacity-50 group-hover:opacity-100 group-hover:rotate-12 transition-all" />
+    //                   <Wand2 className="w-4 h-4 ml-2 opacity-50 club-hover:opacity-100 club-hover:rotate-12 transition-all" />
     //                 </button>
     //               </div>
     //             </div>

@@ -11,9 +11,9 @@ function App() {
     {/* Place this outside <Routes> */}
     <Routes>
       <Route path="/" element={ <>  <SplashCursor /> <Home /> </>} />
-      <Route path="/events" element={<EventPage />} />
+      <Route path="/event" element={<EventPage />} />
       <Route path="/acomodation" element={<AccommodationPage />} />
-      <Route path="/eventspage" element={<EventsPage />} />
+      <Route path="/events" element={<EventsPage />} />
     </Routes>
   </>
   );
