@@ -288,8 +288,8 @@ export default function AccommodationPage() {
           </h2>
           <div className="aspect-video w-full h-[calc(100%-5rem)] rounded-lg overflow-hidden border border-[#F7E290]/20">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5337669051037!2d77.5181624!3d12.9345799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU2JzA0LjUiTiA3N8KwMzEnMDUuNCJF!5e0!3m2!1sen!2sin!4v1640887407284!5m2!1sen!2sin"
-              width="100%"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31028.893224027328!2d80.0227328!3d13.5593984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4d773f1e0f8721%3A0xadb0842ffc2719e4!2sIndian%20Institute%20of%20Information%20Technology%2C%20Sri%20City%2C%20Chittoor!5e0!3m2!1sen!2sin!4v1737188121631!5m2!1sen!2sin"
+          width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
