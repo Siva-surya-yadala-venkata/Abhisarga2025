@@ -67,7 +67,7 @@ const Navbar = () => {
             to="/events"
             className="text-[#F7E290] hover:text-[#F7E290] transition duration-300 font-harrypotter hover:border-b-2 hover:border-[#F7E290] pb-1"
           >
-            Event
+            Events
           </Link>
           <Link
             to="/contact"
@@ -105,7 +105,7 @@ const Navbar = () => {
               className="text-[#F7E290] text-lg hover:text-[#F7E290] transition duration-300 font-harrypotter"
               onClick={() => setIsMenuOpen(false)}
             >
-              Event
+              Events
             </Link>
             <Link
               to="/contact"

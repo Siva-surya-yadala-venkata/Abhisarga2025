@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import AccomodationCard from "./AccomodationCard/AccomodationCard";
 import bg1 from "../assets/bg1.jpg";
 import bg2 from "../assets/bg2.png";
-
+import ParallaxComponent from "./ParllaxComponent";
 export default function AccommodationPage() {
   const [stars, setStars] = useState([]);
   const [hover, setHover] = useState(false);
@@ -87,6 +87,7 @@ export default function AccommodationPage() {
       onMouseLeave={() => setHover(false)}
       ref={ref}
     >
+      <ParallaxComponent backgroundImage={"/AccomodationBg.jpg"} heading={"Accomodations"}  />
       {/* Background Effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-40 h-40 bg-gradient-to-r from-purple-500 to-pink-500 opacity-30 blur-2xl rounded-full animate-float" />
@@ -152,8 +153,8 @@ export default function AccommodationPage() {
           {/* Accommodation Details */}
           <motion.section
             className="grid md:grid-cols-2 gap-8"
-            variants={cardVariants}
-            initial="hidden"
+            // variants={cardVariants}
+            // initial="hidden"
             animate={inView ? "visible" : "hidden"}
           >
             <div className="p-6 bg-[#24222d]/50 backdrop-blur-sm border border-[#F7E290]/20 rounded-lg">
@@ -197,7 +198,7 @@ export default function AccommodationPage() {
             {cardsData.map((card, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 1, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.5,
@@ -217,93 +218,98 @@ export default function AccommodationPage() {
           </div>
 
           {/* Contact Information */}
-          <motion.section
-            className="text-center space-y-8"
-            variants={cardVariants}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+          <div
+  className="min-h-screen p-4 xl:p-16 bg-center bg-no-repeat bg-cover xl:bg-[url('/video-frame.webp')]"
+  style={{
+    backgroundSize: "contain",
+  }}
+>
+  <div className="grid p-4 xl:p-8 md:grid-cols-2 gap-8 items-start max-w-7xl mx-auto">
+        {/* Contact Information Section */}
+        <motion.section
+          className="space-y-8 mr-8"
+          initial="hidden"
+          animate="visible"
+        >
+          <h2
+            className="text-3xl font-bold text-center"
+            style={{ color: "#F7E290" }}
           >
-            <h2 className="text-3xl font-bold" style={{ color: "#F7E290" }}>
-              Contact Information
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: Phone,
-                  title: "Phone",
-                  content: "+91 1234567890",
-                },
-                {
-                  icon: Mail,
-                  title: "Email",
-                  content: "accommodation@abhisarga.com",
-                },
-                {
-                  icon: MapPin,
-                  title: "Location",
-                  content: "College Campus, City, State",
-                },
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.2 }}
-                >
-                  <div className="p-6 bg-[#24222d]/50 backdrop-blur-sm border border-[#F7E290]/20 rounded-lg">
-                    <div className="flex flex-col items-center gap-3">
-                      <item.icon
-                        className="w-8 h-8"
-                        style={{ color: "#F7E290" }}
-                      />
-                      <h3
-                        className="text-xl font-semibold"
-                        style={{ color: "#F7E290" }}
-                      >
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-300">{item.content}</p>
-                    </div>
+            Contact Information
+          </h2>
+          <div className="grid gap-6">
+            {[
+              {
+                icon: Phone,
+                title: "Phone",
+                content: "+91 1234567890",
+              },
+              {
+                icon: Mail,
+                title: "Email",
+                content: "accommodation@abhisarga.com",
+              },
+              {
+                icon: MapPin,
+                title: "Location",
+                content: "College Campus, City, State",
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2 }}
+              >
+                <div className="p-6 bg-[#24222d]/50 backdrop-blur-sm border border-[#F7E290]/20 rounded-lg">
+                  <div className="flex flex-col items-center gap-3">
+                    <item.icon
+                      className="w-8 h-8"
+                      style={{ color: "#F7E290" }}
+                    />
+                    <h3
+                      className="text-xl font-semibold"
+                      style={{ color: "#F7E290" }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-300">
+                      {item.content}
+                    </p>
                   </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.section>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
 
-          {/* Map Section */}
-          <motion.section
-            className="space-y-8"
-            variants={cardVariants}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+        {/* Map Section */}
+        <motion.section
+          className="space-y-8 h-full"
+          variants={cardVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <h2
+            className="text-3xl font-bold text-center"
+            style={{ color: "#F7E290" }}
           >
-            <h2
-              className="text-3xl font-bold text-center"
-              style={{ color: "#F7E290" }}
-            >
-              How to Reach
-            </h2>
-            <div className="aspect-video w-full rounded-lg overflow-hidden border border-[#F7E290]/20">
-              <iframe
-                src="https://maps.app.goo.gl/KWyFPnJEZvUqusBT6"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-              {/* <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.255835603484!2d79.61188521535323!3d13.630507590419012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4d5e96b65b47eb%3A0x67617c4ed8c154e3!2sIndian%20Institute%20of%20Information%20Technology%20Sri%20City!5e0!3m2!1sen!2sin!4v1640887704283!5m2!1sen!2sin"
-                width="100%"
-                height="450"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe> */}
-            </div>
-          </motion.section>
+            How to Reach
+          </h2>
+          <div className="aspect-video w-full h-[calc(100%-5rem)] rounded-lg overflow-hidden border border-[#F7E290]/20">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5337669051037!2d77.5181624!3d12.9345799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU2JzA0LjUiTiA3N8KwMzEnMDUuNCJF!5e0!3m2!1sen!2sin!4v1640887407284!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </motion.section>
+      </div>
+    </div>
         </main>
       </div>
     </motion.div>
