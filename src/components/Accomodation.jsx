@@ -123,19 +123,8 @@ export default function AccommodationPage() {
           transition={{ duration: 1 }}
         >
           <div className="text-center space-y-4 px-4">
-            <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold"
-              style={{ color: "#F7E290" }}
-              initial={{ y: -50 }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              Accommodations at Abhisarga
-            </motion.h1>
             <motion.div
               className="flex items-center justify-center gap-2"
-              initial={{ y: 50 }}
-              animate={{ y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <Sparkles className="w-6 h-6" style={{ color: "#F7E290" }} />
@@ -150,7 +139,8 @@ export default function AccommodationPage() {
 
         {/* Main Content */}
         <main className="container mx-auto px-4 py-12 space-y-16">
-          {/* Accommodation Details */}
+          {/* Accommodation Details */}<img src="/divider.png" className="mx-auto block" alt="" />
+
           <motion.section
             className="grid md:grid-cols-2 gap-8"
             // variants={cardVariants}

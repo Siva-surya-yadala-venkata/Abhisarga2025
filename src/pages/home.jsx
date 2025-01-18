@@ -24,9 +24,6 @@ function Home() {
 
       {/* FAQ */}
       <FAQ />
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }

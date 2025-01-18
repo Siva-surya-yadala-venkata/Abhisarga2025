@@ -19,7 +19,7 @@ function Footer() {
         />
         <div className="social-media flex space-x-4 mt-4">
           {/* Social Media Icons */}
-          <a href="#" aria-label="Instagram">
+          <a href="https://www.instagram.com/abhisarga/?hl=en" aria-label="Instagram">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-4 w-4 md:h-5 md:w-5"
