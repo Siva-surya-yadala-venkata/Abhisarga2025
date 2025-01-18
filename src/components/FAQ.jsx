@@ -51,7 +51,7 @@ const FAQ = () => {
       }}
     >
       {/* Background Effects */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 cursor-events-none">
         <div
           className="absolute top-10 left-20 w-40 h-40 bg-gradient-to-r from-purple-500 to-pink-500 opacity-30 blur-2xl rounded-full"
           style={{ animation: "orbMove 6s ease-in-out infinite alternate" }}

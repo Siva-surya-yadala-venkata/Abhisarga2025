@@ -15,7 +15,7 @@ function Footer() {
         <img
           src="./full_logo_2.png"
           alt="Full Logo"
-          className="h-12 md:h-20"
+          className="h-12 md:h-20 mt-4"
         />
         <div className="social-media flex space-x-4 mt-4">
           {/* Social Media Icons */}
@@ -52,7 +52,7 @@ function Footer() {
         </div>
         <img src="./divider.png" alt="Divider" className="h-4 md:h-5 my-4" />
         <p
-          className="text-sm md:text-base font-serif"
+          className="text-sm md:text-base font-serif mb-4"
           style={{ fontFamily: "MedievalSharp, serif", color: "#AE8E48" }}
         >
           Designed with ❤️ by IIITS Team

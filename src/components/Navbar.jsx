@@ -45,7 +45,7 @@ const Navbar = () => {
         </Link>
 
         {/* Hamburger for small screens */}
-        <div className="md:hidden text-[#F7E290] text-2xl cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <div className="md:hidden text-[#F7E290] text-2xl" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <FaTimes /> : <FaBars />}
         </div>
 
@@ -76,10 +76,10 @@ const Navbar = () => {
             Contact
           </Link>
           <Link
-            to="/acomodation"
+            to="/accomodation"
             className="text-[#F7E290] hover:text-[#F7E290] transition duration-300 font-harrypotter hover:border-b-2 hover:border-[#F7E290] pb-1"
           >
-            Acomodation
+            Accomodation
           </Link>
         </div>
 

@@ -37,7 +37,7 @@ const AccomodationCard = ({
             transition={{ delay: 0.5, duration: 0.5 }}
           ></motion.div>
           <motion.h2
-            className="text-center text-white font-bold text-4xl"
+            className="text-center text-[#F7E290] font-bold text-4xl"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.5 }}
@@ -54,7 +54,7 @@ const AccomodationCard = ({
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.7, duration: 0.5 }}
       >
-        <ul className="text-white flex flex-col items-center space-y-2">
+        <ul className="text-[#F7E290] flex flex-col items-center space-y-2">
           {details.map((detail, index) => (
             <>
               <motion.li
@@ -68,9 +68,9 @@ const AccomodationCard = ({
               >
                 {detail}
               </motion.li>
-              {index != details.length - 1 && (
+              {/* {index != details.length - 1 && (
                 <hr className="w-[250px]"></hr>
-              )}
+              )} */}
             </>
           ))}
         </ul>
@@ -85,12 +85,12 @@ const AccomodationCard = ({
           transition={{ delay: 1, duration: 0.5 }}
         ></motion.div>
         <div className="absolute text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <p className="text-white text-sm">ONLY</p>
-          <p className="text-white text-3xl font-bold">
+          <p className="text-[#F7E290] text-sm">ONLY</p>
+          <p className="text-[#F7E290] text-3xl font-bold">
             {price}
           </p>
           <motion.button
-            className="mt-4 bg-white text-gray-800 font-bold py-2 px-6 rounded-full shadow hover:bg-gray-100 transition"
+            className="mt-4 bg-[#F7E290] text-gray-800 font-bold py-2 px-6 rounded-full shadow hover:bg-gray-100 transition"
             initial={{ scale: 0.9 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
@@ -105,3 +105,4 @@ const AccomodationCard = ({
 };
 
 export default AccomodationCard;
+  
