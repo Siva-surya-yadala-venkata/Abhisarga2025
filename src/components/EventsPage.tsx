@@ -22,7 +22,7 @@ const events: Event[] = [
     type: "Non-Technical",
     club: "Epoch",
     attendees: 500,
-    image: "https://images.unsplash.com/photo-1551269901-5c5e14c25df7?auto=format&fit=crop&q=80&w=2069"
+    image: "/assets/Event.png"
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const events: Event[] = [
     type: "Non-Technical",
     club: "GDG",
     attendees: 300,
-    image: "https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?auto=format&fit=crop&q=80&w=2070"
+    image: "/assets/Event.png"
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const events: Event[] = [
     type: "Non-Technical",
     club: "Iota",
     attendees: 400,
-    image: "https://images.unsplash.com/photo-1509024644558-2f56ce76c490?auto=format&fit=crop&q=80&w=2070"
+    image: "/assets/Event.png"
   },
   {
     id: 4,
@@ -52,7 +52,7 @@ const events: Event[] = [
     type: "Technical",
     club: "Enigma",
     attendees: 30,
-    image: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&q=80&w=2070"
+    image: "/assets/Event.png"
   },
   {
     id: 5,
@@ -62,7 +62,7 @@ const events: Event[] = [
     type: "Non-Technical",
     club: "Epoch",
     attendees: 450,
-    image: "https://images.unsplash.com/photo-1461696114087-397271a7aedc?auto=format&fit=crop&q=80&w=2070"
+    image: "/assets/Event.png"
   },
   {
     id: 6,
@@ -72,7 +72,7 @@ const events: Event[] = [
     type: "Technical",
     club: "Meraki",
     attendees: 100,
-    image: "https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?auto=format&fit=crop&q=80&w=2070"
+    image: "/assets/Event.png"
   }
 ];
 
@@ -115,11 +115,13 @@ function App() {
   }, [])
   return (
     <div className="min-h-screen bg-[#24222d]">
-      <div className="relative h-[60vh] mb-16">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1598153346810-860daa814c4b?auto=format&fit=crop&q=80')] bg-cover bg-center">
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
-        <div className="relative h-full flex flex-col items-center justify-center px-4 text-center">
+      <div className="relative  h-[500px] mb-16">
+        <div
+          // className="  h-[500px]  inset-0 bg-[url('https://images.unsplash.com/photo-1598153346810-860daa814c4b?auto=format&fit=crop&q=80')] bg-cover bg-center bg-attachment-fixed"
+         className='parallax'
+         >
+        
+          <div className="absolute inset-0 bg-black/50"> <div className=" h-full flex flex-col items-center justify-center px-4 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -127,7 +129,8 @@ function App() {
           >
             <span className="text-[#F7E290]">Events</span>
           </motion.h1>
-        </div>    
+        </div>   </div>
+        </div> 
         <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-full max-w-2xl px-4">
           <div className="grid grid-cols-3 gap-4 backdrop-blur-xl bg-[#24222f]/30 p-4 rounded-xl border border-[#24222f]/20 shadow-lg shadow-[#24222f]/10">
             <select
@@ -174,17 +177,17 @@ function App() {
           }
           
           .card:hover {
-            transform: perspective(2000px) rotate(-10deg);
+            transform: perspective(2000px) rotateX(-10deg);
           }
           
           .img-container {
-            transform-origin: left;
+            transform-origin: top;
             transition: transform 1s ease;
           }
           
           .card:hover .img-container {
-            transform: rotateY(-110deg);
-          }
+            transform: rotateX(-80deg) scale(0);
+            }
           
           .card-details {
             transform: perspective(2000px) translateZ(0);
@@ -207,18 +210,12 @@ function App() {
               className="card relative w-[300px] h-[400px] bg-[#24222d]/30 shadow-lg preserve-3d perspective-2000"
               // whileHover={{ rotateZ: -10 }}
             >
-              <div className="img-container absolute inset-0 bg-[#24222d]/20 border border-[#24222d]/10 overflow-hidden rotate-y-[-135deg]">
+              <div className="img-container absolute inset-0 bg-[#24222d]/20 border border-[#24222d]/10 overflow-hidden rotate-x-[-135deg]">
                 <img
                   src={event.image}
                   alt={event.title}
                   className="absolute inset-0 w-full h-full object-cover brightness-75 transition-all duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#24222f]/80 via-[#24222d]/50 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <span className={`inline-block px-3 py-1 rounded-full text-sm ${clubColors[event.club]} border`}>
-                    {event.club}
-                  </span>
-                </div>
               </div>
               <div className="card-details absolute inset-0 p-6 bg-[#24221f]/95 text-amber-200 bg-gradient-to-r from-[#24222d]/95 to-[#000]/50">
                 <h2 className="text-2xl font-semibold text-amber-300 mb-4">
@@ -267,16 +264,8 @@ function App() {
           <img
             src={event.image}
             alt={event.title}
-            className="w-full h-full object-cover filter brightness-75 club-hover:brightness-100 transition-all duration-500"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#24222f]/80 via-transparent to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-2">
-            <span
-              className={`inline-block px-2 py-1 rounded-full text-xs sm:text-sm ${clubColors[event.club]} border`}
-            >
-              {event.club}
-            </span>
-          </div>
         </div>
 
         {/* Details Section */}
