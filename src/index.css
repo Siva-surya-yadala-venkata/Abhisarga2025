@@ -24,3 +24,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+/* 
+@font-face {
+  font-family: 'CustomFont';
+  src: url('./DragonHunter.otf') format('opentype');
+}
+
+body {
+  font-family: 'CustomFont', sans-serif;
+} */

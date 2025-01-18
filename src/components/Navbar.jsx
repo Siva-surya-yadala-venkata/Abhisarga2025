@@ -81,6 +81,12 @@ const Navbar = () => {
           >
             Accomodation
           </Link>
+          <Link
+            to="/merch"
+            className="text-[#F7E290] hover:text-[#F7E290] transition duration-300 font-harrypotter hover:border-b-2 hover:border-[#F7E290] pb-1"
+          >
+            Merch
+          </Link>
         </div>
 
         {/* Links for small screens */}

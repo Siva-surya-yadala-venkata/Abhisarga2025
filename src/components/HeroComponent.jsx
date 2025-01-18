@@ -1,4 +1,27 @@
+import { useEffect , useRef } from "react";
+
 function HeroComponent() {
+    const videoRef = useRef(null);
+    useEffect(() => {
+      const handleScroll = () => {
+        const scrollPosition = window.scrollY; // Get current scroll position
+        const rotationDegree = (scrollPosition * 0.5) % 360; // Rotation speed and degree
+    
+        if (videoRef.current) {
+          // Combine transformations in one `transform` string
+          videoRef.current.style.transform = `rotateX(${rotationDegree}deg)`;
+        }
+      };
+    
+      window.addEventListener("scroll", handleScroll);
+    
+      // Cleanup listener on unmount
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
+    
+  
   return (
     <div className="relative h-screen">
       {/* Gradient Overlay */}
@@ -11,6 +34,7 @@ function HeroComponent() {
       />
 
       <video
+        ref={videoRef}
         src="/assets/homePageBG.mp4"
         muted
         playsInline
