@@ -1,7 +1,9 @@
-import { useEffect, useRef } from 'react';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-import './App.css';
+import { useEffect, useRef } from "react";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+import "./App.css";
+import ParallaxComponent from "./ParllaxComponent";
+
 // import JohnSmith from './background.jpg';
 // import Andrea from './image1.jpg.jpg';
 // import Rocky from './image 2.jpg';
@@ -35,25 +37,25 @@ export default function AboutUs() {
               <svg viewBox="0 0 24 24" width="24" height="24">
                 <path d="M9 18l6-6-6-6" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-            </div>`
+            </div>`,
           ],
           responsive: {
             0: {
               items: 1,
               margin: 10,
-              center: true
+              center: true,
             },
             576: {
               items: 2,
               margin: 15,
-              center: false
+              center: false,
             },
             992: {
               items: 3,
               margin: 20,
-              center: true
-            }
-          }
+              center: true,
+            },
+          },
         });
       }
     };
@@ -63,22 +65,26 @@ export default function AboutUs() {
     return () => {
       if (carouselRef.current && window.jQuery) {
         const $ = window.jQuery;
-        $(carouselRef.current).trigger('destroy.owl.carousel');
+        $(carouselRef.current).trigger("destroy.owl.carousel");
       }
     };
   }, []);
 
   return (
     <div className="magicians-container">
-      <div className="header">
-        <h2 className="text-glow">Our Magicians</h2>
-      </div>
-
+      <ParallaxComponent
+        backgroundImage={"/AccomodationBg.jpg"}
+        heading={"Our Magicians"}
+      />
       <div className="featured-frames">
         <div className="frames-grid">
           <div className="frame">
             <div className="image-container">
-              <img className="featured-image" src="./assets/AboutUs/frame1-removebg-preview.png" alt="Tony Stark" />
+              <img
+                className="featured-image"
+                src="./assets/AboutUs/frame1-removebg-preview.png"
+                alt="Tony Stark"
+              />
             </div>
             <h3 className="featured-name">Tony Stark</h3>
             <p className="featured-description">Master of Illusions</p>
@@ -86,7 +92,11 @@ export default function AboutUs() {
 
           <div className="frame">
             <div className="image-container">
-              <img className="featured-image" src="./assets/AboutUs/frame1-removebg-preview.png" alt="Tony Stark" />
+              <img
+                className="featured-image"
+                src="./assets/AboutUs/frame1-removebg-preview.png"
+                alt="Tony Stark"
+              />
             </div>
             <h3 className="featured-name">Tony Stark</h3>
             <p className="featured-description">Mind Reader Extraordinaire</p>
@@ -94,7 +104,11 @@ export default function AboutUs() {
 
           <div className="frame">
             <div className="image-container">
-              <img className="featured-image" src="./assets/AboutUs/frame1-removebg-preview.png" alt="Tony Stark" />
+              <img
+                className="featured-image"
+                src="./assets/AboutUs/frame1-removebg-preview.png"
+                alt="Tony Stark"
+              />
             </div>
             <h3 className="featured-name">Tony Stark</h3>
             <p className="featured-description">Escape Artist</p>

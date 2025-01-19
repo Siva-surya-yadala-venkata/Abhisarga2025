@@ -45,7 +45,7 @@ const FAQ = () => {
     <motion.div
       className="faq-container relative min-h-screen py-10 px-5"
       style={{
-        background: " #24222d",
+        background: "rgb(0, 0, 0)",
         color: "#F7E290",
         overflow: "hidden",
       }}

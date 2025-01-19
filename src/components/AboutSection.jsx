@@ -1,27 +1,29 @@
-'use client'
+"use client";
 
 import React from "react";
 import { Marquee3D } from "./ui/Marquee3D";
-import Typing from './ui/Typing'
+import Typing from "./ui/Typing";
 const AboutPage = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden pt-16">
       {/* Background Image (lowest layer) */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: "url('/DroneView.jpg')",
-          zIndex: 0
+          zIndex: 0,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/100 via-black/60 to-black/10"></div>
+        <div className="absolute inset-0 bg-[#000000]"></div>
       </div>
 
       {/* Marquee3D (middle layer) */}
-      <div className="hidden xl:absolute xl:inset-[-10rem] xl:flex xl:items-center xl:justify-end" style={{ zIndex: 1 }}>
-  <Marquee3D />
-</div>
-
+      <div
+        className="hidden xl:absolute xl:inset-[-10rem] xl:flex xl:items-center xl:justify-end"
+        style={{ zIndex: 1 }}
+      >
+        <Marquee3D />
+      </div>
 
       {/* Content (top layer) */}
       <div className="relative z-10 container mx-auto px-6 py-16">
@@ -31,15 +33,15 @@ const AboutPage = () => {
             href="https://www.iiits.ac.in"
             className="shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-black"
           >
-            <img
-              src="/IIITS-logo.png"
-              alt="IIIT Sri City Logo"
-              className=" "
-            />
+            <img src="/IIITS-logo.png" alt="IIIT Sri City Logo" className=" " />
           </a>
 
           <h1 className="text-6xl md:text-8xl font-bold text-white leading-tight">
-            <span style={{color:'#F7E290'}} className="text-#F7E290">ABOUT </span>  IIIT SRI CITY
+          {/* style={{ fontFamily: "MedievalSharp, serif" }} */}
+            <span style={{ color: "#F7E290", fontFamily: "MedievalSharp, serif" }} className="text-#F7E290">
+              ABOUT{" "}
+            </span>{" "}
+            IIIT SRI CITY
           </h1>
         </div>
 
@@ -81,4 +83,3 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
-

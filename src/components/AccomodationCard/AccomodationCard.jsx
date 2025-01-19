@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 const AccomodationCard = ({ title, details, price, gradient, image }) => {
   return (
     <motion.div
-      className="w-full w-[450px] mx-auto  shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl"
+      className="bg-[#24222d]/50 backdrop-blur-sm w-[450px] mx-auto  shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl"
       initial={{ opacity: 0, scale: 0.9 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: false, amount: 0.1 }}
       transition={{ duration: 0.1, ease: "easeInOut" }}
     >
-      <div className="bg-[#24222d]">
+      <div className="">
         {/* Image Section */}
         <div className="cardTopImage relative">
           <motion.div
@@ -83,7 +83,7 @@ const AccomodationCard = ({ title, details, price, gradient, image }) => {
             <p className="text-[#F7E290] text-sm">ONLY</p>
             <p className="text-[#F7E290] text-3xl font-bold">{price}</p>
             <motion.button
-              className="mt-4 bg-[#F7E290] text-gray-800 font-bold py-2 px-6 rounded-full shadow hover:bg-gray-100 transition"
+              className="mt-4 bg-gradient-to-r from-[#d4af37] to-[#b8860b] text-black font-bold py-2 px-6 rounded-full shadow-lg border border-[#b8860b] hover:from-[#f0c420] hover:to-[#e6b800] hover:text-black transition-all duration-300 ease-in-out"
               initial={{ scale: 0.9 }}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}

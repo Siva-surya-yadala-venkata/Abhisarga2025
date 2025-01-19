@@ -11,8 +11,8 @@ export default function CarouselSlide({ item, isActive }) {
         className="absolute inset-0 bg-gradient-to-b "
         style={{
           background: `
-            linear-gradient(to bottom, #24222d, transparent 30%, #24222d),
-            linear-gradient(to right, #24222d, transparent 50%)
+            linear-gradient(to bottom, #000000, transparent 30%, #000000),
+            linear-gradient(to right, #000000, transparent 50%)
           `,
         }}
       />
@@ -33,14 +33,14 @@ export default function CarouselSlide({ item, isActive }) {
         <h2 className="text-white text-5xl font-bold mb-3">{item.title}</h2>
         <h3 className="text-2xl text-[#F7E290] mb-5">{item.topic}</h3>
         <p className="text-white/80 mb-8">{item.description}</p>
-        <div className="flex gap-4">
+        {/* <div className="flex gap-4">
           <button className="px-8 py-3 bg-[#F7E290] text-[#131433] rounded-full hover:bg-orange-600 transition-colors">
             SEE MORE
           </button>
           <button className="px-8 py-3 bg-white/20 rounded-full backdrop-blur-md hover:bg-white/30 transition-colors">
             @ABHISARGA
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

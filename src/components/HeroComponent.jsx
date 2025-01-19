@@ -28,7 +28,7 @@ function HeroComponent() {
       <div
         className="absolute inset-0 bg-gradient z-1"
         style={{
-          background: "linear-gradient(to bottom,transparent,  #24222d 130%)",
+          background: "linear-gradient(to bottom,transparent,  #000000 130%)",
           backgroundPosition: "bottom",
         }}
       />
