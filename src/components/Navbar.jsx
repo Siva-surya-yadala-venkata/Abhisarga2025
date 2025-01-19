@@ -26,7 +26,7 @@ const Navbar = () => {
     <motion.nav
       className={`fixed top-0 left-0 w-full z-50 py-4 px-6 transition-all duration-300 ${
         isScrolled
-          ? "backdrop-blur-lg bg-[#24222d] bg-opacity-60"
+          ? "backdrop-blur-lg bg-[#49727e] bg-opacity-20"
           : "bg-transparent"
       }`}
       style={{ zIndex: 9999 }}

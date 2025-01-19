@@ -1,8 +1,11 @@
 function Footer() {
   return (
-    <footer className="bg-[#24222d] text-[#f5e0a9] flex flex-wrap justify-between items-end">
+    <footer className="bg-[#24222d] text-[#f5e0a9] flex flex-wrap justify-between items-end relative">
+      {/* Backdrop Layer */}
+      <div className="absolute inset-0 bg-black opacity-50 backdrop-blur-md rounded-lg z-0"></div>
+
       {/* Left Section */}
-      <div className="left">
+      <div className="left relative z-10">
         <img
           src="./assets/corner-bottom-right.png"
           alt="Decorative Corner"
@@ -11,7 +14,7 @@ function Footer() {
       </div>
 
       {/* Center Section */}
-      <div className="center flex flex-col items-center text-center">
+      <div className="center flex flex-col items-center text-center relative z-10">
         <img
           src="./full_logo_2.png"
           alt="Full Logo"
@@ -73,7 +76,7 @@ function Footer() {
       </div>
 
       {/* Right Section */}
-      <div className="right">
+      <div className="right relative z-10">
         <img
           src="./assets/corner-bottom-right.png"
           alt="Decorative Corner"

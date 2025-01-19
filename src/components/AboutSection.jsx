@@ -2,73 +2,99 @@
 
 import React from "react";
 import { Marquee3D } from "./ui/Marquee3D";
-import Typing from "./ui/Typing";
+
 const AboutPage = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden pt-16">
+    <div className="relative min-h-screen overflow-hidden">
       {/* Background Image (lowest layer) */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/DroneView.jpg')",
-          zIndex: 0,
-        }}
+        style={{ backgroundImage: "url('/path/to/background.jpg')" }}
       >
-        <div className="absolute inset-0 bg-[#000000]"></div>
+        <div className="absolute inset-0 bg-black opacity-70"></div>
       </div>
 
-      {/* Marquee3D (middle layer) */}
+      {/* Marquee3D (center layer) */}
       <div
-        className="hidden xl:absolute xl:inset-[-10rem] xl:flex xl:items-center xl:justify-end"
+        className="absolute inset-0 flex items-center justify-center"
         style={{ zIndex: 1 }}
       >
         <Marquee3D />
       </div>
 
-      {/* Content (top layer) */}
-      <div className="relative z-10 container mx-auto px-6 py-16">
-        {/* Header with Logo and Title */}
-        <div className="flex items-center gap-6 mb-12">
-          <a
-            href="https://www.iiits.ac.in"
-            className="shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-black"
-          >
-            <img src="/IIITS-logo.png" alt="IIIT Sri City Logo" className=" " />
-          </a>
-
-          <h1 className="text-6xl md:text-8xl font-bold text-white leading-tight">
-          {/* style={{ fontFamily: "MedievalSharp, serif" }} */}
-            <span style={{ color: "#F7E290", fontFamily: "MedievalSharp, serif" }} className="text-#F7E290">
+      {/* Content Layers */}
+      {/* About Abhisarga Section */}
+      <div className="absolute top-10 left-20 z-10">
+        <div className="flex flex-col gap-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
+            <span
+              style={{
+                color: "#F7E290",
+                fontFamily: "Bebas Neue",
+                fontWeight: "200",
+                fontSize: "80px",
+              }}
+            >
               ABOUT{" "}
-            </span>{" "}
-            IIIT SRI CITY
+            </span>
           </h1>
+          <div
+            className="text-xl md:text-3xl text-white"
+            style={{
+              fontFamily: "Cinzel Decorative, serif",
+              fontWeight: "400",
+              fontSize: "80px",
+            }}
+          >
+            ABHISARGA
+          </div>
         </div>
-
-        {/* Content */}
-        <div className="max-w-3xl space-y-6 text-lg text-gray-200">
+        <div className="max-w-md space-y-4 text-gray-400 text-sm md:text-lg mt-16" style={{ fontSize: "22px" }}>
           <p>
-            Indian Institute of Information Technology Sri City, Chittoor known as IIIT Sri City (IIITS) 
-            was established in 2013 by Ministry of Education, Government of India as an Institute of 
-            National importance by an Act of Parliament. IIITS is one among the 20 Institutes across 
-            India, focusing on Information Technology education, research and development.
+            Abhisarga is IIIT Sricity's annual techno-cultural fest. It combines
+            technology, culture, and entertainment, creating a vibrant platform
+            for talent and innovation.
           </p>
-
           <p>
-            The institute is located in Sri City (www.sricity.in) located about 60 KMs from Chennai 
-            on the Nellore Highway. The nearest airports are Chennai (70 KMs) and Tirupati (70 KMs).
+            Experience dazzling dance competitions, proshows, DJ nights,
+            technical challenges, cultural performances, and much more.
+            Celebrate creativity and innovation at Abhisarga this March!
           </p>
+        </div>
+      </div>
 
+      {/* About IIIT Section */}
+      <div className="absolute bottom-10 right-20 z-10">
+        <div className="flex flex-col gap-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
+            <span
+              style={{
+                color: "#F7E290",
+                fontFamily: "Bebas Neue",
+                fontWeight: "200",
+                fontSize: "80px",
+              }}
+            >
+              ABOUT{" "}
+            </span>
+          </h1>
+          <div
+            className="text-xl md:text-3xl text-white"
+            style={{
+              fontFamily: "Orbitron, serif",
+              fontWeight: "400",
+              fontSize: "80px",
+            }}
+          >
+            IIIT SRICITY
+          </div>
+        </div>
+        <div className="max-w-md space-y-4 text-gray-400 text-sm md:text-lg mt-16" style={{ fontSize: "22px" }}>
           <p>
-            The Institute was setup by the Government of India along with Government of Andhra Pradesh 
-            and Industry Partners represented by Sri City Foundation as a Public-Private-Partnership (PPP) 
-            institution. The Institute is governed by the Board of Governors consisting of eminent 
-            personalities from the Government, Industry and Academia.
-          </p>
-
-          <p>
-            IIITS offers B. Tech, M.Tech, M.S. and Ph. D. programmes in the areas of Computer Science & 
-            Engineering and Electronics & Communications Engineering.
+            IIIT Sricity, established in 2013, is one of India's premier
+            institutions for Information Technology education, research, and
+            development. It stands as a beacon of excellence in technology and
+            innovation.
           </p>
         </div>
       </div>
