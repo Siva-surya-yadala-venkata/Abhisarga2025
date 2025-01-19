@@ -1,6 +1,7 @@
 
 import ImageCarousel from "../components/ProShows/ImageCarousel";
 import HeroComponent from "../components/HeroComponent";
+import SplashScreen from "../components/SplashScreen";
 import TimeLine from "../components/TimelineComponent";
 import FAQ from "../components/FAQ";
 import AboutPage from "../components/AboutSection";
@@ -13,17 +14,17 @@ function Home() {
     
       {/* Video Background */}
       {/* <HeroComponent />  */}
+      <SplashScreen /> 
       {/* Main Content */}
+      <AboutPage/>
       <div className="flex-grow">
         <ImageCarousel />
       </div>
-
-      <AboutPage/>
       {/* Timeline */}
       <TimeLine />
-      <SponsorCarousel/>
       {/* FAQ */}
       <FAQ />
+      <SponsorCarousel/>
     </div>
   );
 }

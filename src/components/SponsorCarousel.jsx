@@ -2,12 +2,12 @@ import { cn } from "./libs/Cn";
 import Marquee from "./ui/Marquee";
 
 const sponsors = [
-    { id: 1, logo: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" }, // Nike
-    { id: 2, logo: "/google.svg" }, // McDonald's
-    { id: 3, logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/Apple_logo_black.svg" }, // Apple
-    { id: 4, logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Google_2015_logo.svg" }, // Google
-    { id: 5, logo: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adidas_Logo.svg" }, // Adidas
-    { id: 6, logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Spotify_logo_with_text.svg" }, // Spotify
+    { id: 1, logo: "https://www.svgrepo.com/show/303106/mcdonald-s-15-logo.svg" }, // Nike
+    { id: 2, logo: "https://www.svgrepo.com/show/303108/google-icon-logo.svg" }, // McDonald's
+    { id: 3, logo: "https://www.svgrepo.com/show/303149/creative-cloud-cc-logo.svg" }, // Apple
+    { id: 4, logo: "https://www.svgrepo.com/show/303110/apple-black-logo.svg" }, // Google
+    { id: 5, logo: "https://www.svgrepo.com/show/303154/instagram-2016-logo.svg" }, // Adidas
+    { id: 6, logo: "https://www.svgrepo.com/show/303130/snapchat-logo.svg" }, // Spotify
   ];
   
 const firstRow = sponsors.slice(0, sponsors.length);
@@ -38,7 +38,7 @@ export default function SponsorCarousel() {
             src={sponsor.logo}
             alt={`Sponsor ${sponsor.id}`}
             className={cn(
-              "h-24 w-30 object-contain transform transition-transform duration-300 hover:scale-110"
+              "h-20 w-20 object-contain transform transition-transform duration-300 hover:scale-110"
             )}
           />
         ))}

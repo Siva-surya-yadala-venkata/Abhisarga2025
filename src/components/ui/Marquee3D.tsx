@@ -5,6 +5,7 @@ import React from "react";
 interface Marquee3DProps {
   className?: string;
   style?: React.CSSProperties;
+  transform?: string; // Added to the props interface
 }
 
 const logos = [
@@ -34,11 +35,11 @@ const logos = [
   },
 ];
 
-export function Marquee3D({ className, style }: Marquee3DProps) {
+export function Marquee3D({ className, style, transform }: Marquee3DProps) {
   return (
-    <div 
+    <div
       className={cn(
-        "relative flex h-[100vh] w-[80vw] flex-col items-center justify-end gap-4 overflow-hidden bg-transparent",
+        "relative flex h-[100vh] w-[80vw] flex-col items-center justify-center gap-4 overflow-hidden bg-transparent",
         className
       )}
       style={style}
@@ -49,6 +50,7 @@ export function Marquee3D({ className, style }: Marquee3DProps) {
           vertical
           style={{
             transform:
+              transform ||
               "translateX(0px) translateY(0px) translateZ(-50px) rotateX(0deg) rotateY(-20deg) rotateZ(10deg) scale(1.5)",
           }}
         >
@@ -57,13 +59,11 @@ export function Marquee3D({ className, style }: Marquee3DProps) {
               key={idx}
               src={data.img || "/placeholder.svg"}
               alt={data.name}
-              className="mx-auto h-full w-1/3 cursor-pointer  rounded-xl transition-all duration-300"
+              className="mx-auto h-full w-1/3 cursor-pointer rounded-xl transition-all duration-300"
             />
           ))}
         </Marquee>
       </div>
-
     </div>
   );
 }
-

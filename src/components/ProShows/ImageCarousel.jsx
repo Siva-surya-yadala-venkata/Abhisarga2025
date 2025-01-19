@@ -47,14 +47,14 @@ export default function ImageCarousel() {
       {/* Navigation - responsive padding */}
 
       {/* Timeline - adjusts position based on screen size */}
-      <div className="hidden sm:block">
+      {/* <div className="hidden sm:block">
         <Timeline 
           total={carouselData.length}
           currentIndex={currentIndex}
           onSelect={handleThumbnailClick}
           className="absolute top-1/4 right-4 sm:right-6 lg:right-8 z-30"
         />
-      </div>
+      </div> */}
 
       {/* Main carousel content */}
       <div className="relative h-full">
@@ -68,14 +68,14 @@ export default function ImageCarousel() {
       </div>
 
       {/* Thumbnails - hidden on mobile, shown on larger screens */}
-      <div className="hidden md:block">
+      {/* <div className="hidden md:block">
         <Thumbnails
           items={carouselData}
           currentIndex={currentIndex}
           onSelect={handleThumbnailClick}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30"
         />
-      </div>
+      </div> */}
 
       {/* Navigation arrows - adjusted padding for different screen sizes */}
       <NavigationArrows

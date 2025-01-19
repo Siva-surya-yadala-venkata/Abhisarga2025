@@ -81,30 +81,36 @@ const FAQ = () => {
         {faqData.map((item, index) => (
           <div
             key={index}
-            className="faq-item border border-[#F7E290] bg-gradient-to-r from-[#24222d] to-[#131433] p-5 rounded-lg shadow-lg"
+            className="faq-item border border-[#F7E290] bg-gradient-to-r from-[#24222d] to-[#131433] p-5 rounded-lg shadow-lg relative"
             onClick={() => toggleQuestion(index)}
           >
-            <button className="w-full text-left text-lg font-semibold flex justify-between items-center text-[#F7E290]">
-              {item.question}
-              <motion.span
-                className="ml-2 text-2xl"
-                initial={{ rotate: 0 }}
-                animate={{ rotate: selectedQuestion === index ? 45 : 0 }}
-              >
-                +
-              </motion.span>
-            </button>
-            {selectedQuestion === index && (
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                variants={variants}
-                className="overflow-hidden text-sm mt-3 text-[#F7E290]"
-              >
-                {item.answer}
-              </motion.div>
-            )}
+            {/* Backdrop Layer (Dimmed and Blurred) */}
+            <div className="absolute inset-0 bg-black opacity-50 backdrop-blur-md rounded-lg z-0"></div>
+
+            {/* Content (Text remains unaffected by backdrop opacity) */}
+            <div className="relative z-10">
+              <button className="w-full text-left text-lg font-semibold flex justify-between items-center text-[#F7E290]">
+                {item.question}
+                <motion.span
+                  className="ml-2 text-2xl"
+                  initial={{ rotate: 0 }}
+                  animate={{ rotate: selectedQuestion === index ? 45 : 0 }}
+                >
+                  +
+                </motion.span>
+              </button>
+              {selectedQuestion === index && (
+                <motion.div
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  variants={variants}
+                  className="overflow-hidden text-sm mt-3 text-white"
+                >
+                  {item.answer}
+                </motion.div>
+              )}
+            </div>
           </div>
         ))}
       </div>

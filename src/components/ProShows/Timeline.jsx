@@ -60,14 +60,14 @@ function TimelineButton({ index, isActive, onClick }) {
         
         /* Active state */
         isActive ? [
-          'bg-[#F7E290]',
+          'bg-gradient-to-r from-[#654ea3] to-[#d4af37]', // Deep purple to gold gradient
           'text-[#080C22] font-medium',
-          'focus:ring-orange-300',
-          'shadow-lg shadow-orange-500/20'
+          'focus:ring-[#d4af37]',
+          'shadow-lg shadow-[#654ea3]/50'
         ] : [
-          'bg-white/10 hover:bg-white/20',
-          'text-white/70 hover:text-white',
-          'focus:ring-white/30'
+          'bg-[#1A1832] hover:bg-[#2B2745]', // Deep blue-gray with a hint of purple
+          'text-[#D3C4E3] hover:text-[#E0D4F5]', // Muted silver to light lavender
+          'focus:ring-[#2B2745]'
         ]
       )}
       style={{
@@ -80,7 +80,7 @@ function TimelineButton({ index, isActive, onClick }) {
       {/* Active indicator glow */}
       {isActive && (
         <animated.div 
-          className="absolute inset-0 rounded-full bg-orange-500/40"
+          className="absolute inset-0 rounded-full bg-[#d4af37]/40" // Gold glow
           style={{ opacity }}
         />
       )}
@@ -103,7 +103,8 @@ export default function Timeline({ total, currentIndex, onSelect }) {
         'bottom-20 left-1/2 -translate-x-1/2',
         'flex-row gap-2 sm:gap-3',
         'px-4 py-3',
-        'bg-[#131433] backdrop-blur-sm',
+        'bg-gradient-to-r from-[#1A1832] to-[#2B2745]', // Mystical gradient
+        'backdrop-blur-md',
         'rounded-full'
       ] : [
         /* Desktop: vertical side layout */
@@ -111,7 +112,8 @@ export default function Timeline({ total, currentIndex, onSelect }) {
         'top-1/2 -translate-y-1/2',
         'flex-col gap-3 sm:gap-4 md:gap-5',
         'p-3',
-        'bg-[#131433] backdrop-blur-sm',
+        'bg-gradient-to-b from-[#1A1832] to-[#2B2745]', // Vertical mystical gradient
+        'backdrop-blur-md',
         'rounded-full'
       ],
       
