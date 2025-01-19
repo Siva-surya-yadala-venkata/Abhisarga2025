@@ -8,8 +8,11 @@
   transform-style: preserve-3d;
 }
 
+* {
+  cursor: url("assets/cursor.png") 16 16, auto;
+}
+
 body {
-  cursor: url("assets/cursor.png"), auto;
   background-color: #24222d;
 }
 .parallax {
