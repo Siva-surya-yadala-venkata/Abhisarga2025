@@ -34,7 +34,7 @@ function HeroComponent() {
       />
 
       <video
-        ref={videoRef}
+        // ref={videoRef}
         src="/assets/homePageBG.mp4"
         muted
         playsInline
