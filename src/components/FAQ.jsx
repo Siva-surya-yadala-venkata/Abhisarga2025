@@ -63,8 +63,15 @@ const FAQ = () => {
       </div>
 
       <div className="flex flex-row justify-center items-center space-x-4">
-        <img src="/assets/header-flourish.svg" alt="" className="h-3 transform scale-x-[-1] mb-10" />
-        <h1 className="text-4xl font-bold text-center text-[#F7E290] mb-10">
+        <img
+          src="/assets/header-flourish.svg"
+          alt=""
+          className="h-3 transform scale-x-[-1] mb-10"
+        />
+        <h1
+          className="text-4xl font-bold text-center text-[#F7E290] mb-10"
+          style={{ fontFamily: "MedievalSharp, serif" }}
+        >
           Frequently Asked Questions
         </h1>
         <img src="/assets/header-flourish.svg" alt="" className="h-3 mb-10" />

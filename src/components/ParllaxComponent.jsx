@@ -18,7 +18,7 @@ export default function ParallaxComponent({ backgroundImage , heading }) {
                 animate={{ opacity: 1, y: 0 }}
                 className="text-6xl md:text-8xl font-bold mb-4 font-magical text-white"
               >
-                <span className="text-[#F7E290]">{heading}</span>
+                <span className="text-[#F7E290]" style={{fontFamily: 'MedievalSharp'}}>{heading}</span>
               </motion.h1>
             </div>
           </div>

@@ -165,7 +165,10 @@ const Timeline = () => {
           alt=""
           className="h-3 transform scale-x-[-1] mb-10"
         />
-        <h1 className="text-4xl font-bold text-center text-[#F7E290] mb-10">
+        <h1
+          className="text-4xl font-bold text-center text-[#F7E290] mb-10"
+          style={{ fontFamily: "MedievalSharp, serif" }}
+        >
           Mystical Timeline
         </h1>
         <img src="/assets/header-flourish.svg" alt="" className="h-3 mb-10" />
