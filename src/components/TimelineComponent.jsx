@@ -110,7 +110,7 @@ const Timeline = () => {
       onMouseLeave={() => setHover(false)}
     >
       {/* Fixed Image */}    
-      <CoolMode         options={{
+      {/* <CoolMode         options={{
           particle:
             "/wizard.svg",
         }}
@@ -136,7 +136,64 @@ const Timeline = () => {
         exit={{ opacity: 0, scale: 0.8, x: -50, y: 50 }}
       />
       </button>
+</CoolMode> */}
+
+<CoolMode         options={{
+          particle:
+            "/wizard.svg",
+        }}
+>
+        <button>
+      <motion.img
+        src="./assets/harrypotter.gif"
+        alt="Fixed Decorative"
+        className="hidden lg:block fixed bottom-10 left-10 object-cover opacity-80  z-10"
+        width={400}
+        initial={{ opacity: 0, scale: 0.8, x: -50, y: 90 }}
+        animate={{
+          opacity: inView ? 1 : 0,
+          scale: inView ? 1 : 0.8,
+          x: inView ? 0 : -50,
+          y: inView ? 0 : 50,
+        }}
+        transition={{
+          duration: 1,
+          ease: "easeOut",
+          delay: 0.2,
+        }}
+        exit={{ opacity: 0, scale: 0.8, x: -40, y: 100 }}
+      />
+      </button>
 </CoolMode>
+<CoolMode
+  options={{
+    particle: "/bird.png",
+  }}
+>
+  <button>
+    <motion.img
+      src="./Magic-hat.gif"
+      alt="Fixed Decorative"
+      className="hidden lg:block fixed top-20 right-10 object-cover opacity-80 z-10"
+      width={200}
+      initial={{ opacity: 0, scale: 0.8, x: 50, y: 50 }}
+      animate={{
+        opacity: inView ? 1 : 0,
+        scale: inView ? 1 : 0.8,
+        x: inView ? 0 : 50,
+        y: inView ? 0 : 50,
+      }}
+      transition={{
+        duration: 1,
+        ease: "easeOut",
+        delay: 0.2,
+      }}
+      exit={{ opacity: 0, scale: 0.8, x: 40, y: 100 }}
+    />
+  </button>
+</CoolMode>
+
+
       {/* Background Effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div
