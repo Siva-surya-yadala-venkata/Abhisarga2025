@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="bg-[#0f0f0f] text-[#f5e0a9] flex flex-wrap justify-between items-end">
+    <footer className="bg-[#24222d] text-[#f5e0a9] flex flex-wrap justify-between items-end">
       {/* Left Section */}
       <div className="left">
         <img

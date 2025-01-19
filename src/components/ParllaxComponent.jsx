@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'; // Make sure to install framer-motion if
 export default function ParallaxComponent({ backgroundImage , heading }) {
   return (
     <div>
-      <div className="relative h-[500px] mb-16">
+      <div className="relative h-[500px] w-[100vw] mb-16">
         <div
           className="parallax h-[500px] bg-cover bg-center bg-attachment-fixed"
           style={{

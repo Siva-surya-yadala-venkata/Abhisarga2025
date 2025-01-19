@@ -103,7 +103,7 @@ const Timeline = () => {
       ref={timelineRef}
       className="relative min-h-screen py-10 px-5"
       style={{
-        background: "radial-gradient(circle at top, #24222d, #24222d)",
+        background: "radial-gradient(circle at top, #000000, #000000)",
         overflow: "hidden",
       }}
       onMouseEnter={() => setHover(true)}
