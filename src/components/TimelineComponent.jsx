@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "./TimelineComponent.css";
-
+import {CoolMode} from './ui/CoolMode'
 const Timeline = () => {
   const [stars, setStars] = useState([]); // State to manage random stars
   const [hover, setHover] = useState(false); // State to track hover for interaction
@@ -109,11 +109,17 @@ const Timeline = () => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      {/* Fixed Image */}
+      {/* Fixed Image */}    
+      <CoolMode         options={{
+          particle:
+            "/wizard.svg",
+        }}
+>
+        <button>
       <motion.img
         src="./assets/harrypotter.gif"
         alt="Fixed Decorative"
-        className="hidden lg:block fixed bottom-10 left-10 object-cover opacity-80 pointer-events-none z-10"
+        className="hidden lg:block fixed bottom-10 left-10 object-cover opacity-80  z-10"
         width={400}
         initial={{ opacity: 0, scale: 0.8, x: -50, y: 50 }}
         animate={{
@@ -129,7 +135,8 @@ const Timeline = () => {
         }}
         exit={{ opacity: 0, scale: 0.8, x: -50, y: 50 }}
       />
-
+      </button>
+</CoolMode>
       {/* Background Effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div
