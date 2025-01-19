@@ -81,13 +81,20 @@ export default function AccommodationPage() {
     <motion.div
       className="min-h-screen relative overflow-hidden"
       style={{
-        background: "radial-gradient(circle at top, #24222d, #131433)",
+        background: `
+    linear-gradient(rgba(36, 34, 45, 0.9), rgba(36, 34, 45, 0.9)),
+        url('https://png.pngtree.com/thumb_back/fh260/background/20231225/pngtree-fairytale-castle-and-a-mythical-fire-breathing-dragon-guarding-it-on-image_15513889.jpg') center/cover no-repeat fixed,
+        radial-gradient(circle at top, #24222d, #131433)
+      `,
       }}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       ref={ref}
     >
-      <ParallaxComponent backgroundImage={"/AccomodationBg.jpg"} heading={"Accomodations"}  />
+      <ParallaxComponent
+        backgroundImage={"/AccomodationBg.jpg"}
+        heading={"Accomodations"}
+      />
       {/* Background Effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-40 h-40 bg-gradient-to-r from-purple-500 to-pink-500 opacity-30 blur-2xl rounded-full animate-float" />
@@ -138,16 +145,15 @@ export default function AccommodationPage() {
         </motion.section>
 
         {/* Main Content */}
-        <main className="container mx-auto px-4 py-12 space-y-16">
-          {/* Accommodation Details */}<img src="/divider.png" className="mx-auto block" alt="" />
+        <main className="main-container mx-auto px-4 py-12 space-y-16">
+          {/* Accommodation Details */}
+          <img src="/divider.png" className="mx-auto block" alt="" />
 
           <motion.section
-            className="grid md:grid-cols-2 gap-8"
-            // variants={cardVariants}
-            // initial="hidden"
+            className="flex flex-wrap items-center justify-center gap-8"
             animate={inView ? "visible" : "hidden"}
           >
-            <div className="p-6 bg-[#24222d]/50 backdrop-blur-sm border border-[#F7E290]/20 rounded-lg">
+            <div className="p-6 bg-[#24222d]/50 backdrop-blur-sm border border-[#F7E290]/20 rounded-lg w-[450px] h-[250px] flex flex-col justify-between">
               <div className="flex items-center gap-2 mb-4">
                 <Moon className="w-6 h-6" style={{ color: "#F7E290" }} />
                 <h2
@@ -157,14 +163,15 @@ export default function AccommodationPage() {
                   Stay Details
                 </h2>
               </div>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed flex-grow">
                 To ensure you feel at home, the college will take care of all
                 your accommodation needs. Relax, unwind, and enjoy the fest
                 without any worries. Our magical accommodations provide a
                 comfortable and secure environment for all participants.
               </p>
             </div>
-            <div className="p-6 bg-[#24222d]/50 backdrop-blur-sm border border-[#F7E290]/20 rounded-lg">
+
+            <div className="p-6 bg-[#24222d]/50 backdrop-blur-sm border border-[#F7E290]/20 rounded-lg w-[450px] h-[250px] flex flex-col justify-between">
               <div className="flex items-center gap-2 mb-4">
                 <Sparkles className="w-6 h-6" style={{ color: "#F7E290" }} />
                 <h2
@@ -174,7 +181,7 @@ export default function AccommodationPage() {
                   Amenities
                 </h2>
               </div>
-              <ul className="text-gray-300 space-y-2">
+              <ul className="text-gray-300 space-y-2 flex-grow">
                 <li>• 24/7 Security</li>
                 <li>• Clean and comfortable rooms</li>
                 <li>• Basic amenities provided</li>
@@ -184,7 +191,7 @@ export default function AccommodationPage() {
             </div>
           </motion.section>
 
-          <div className="w-full grid grid-cols-1 items-center md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 sm:px-8 py-4">
+          <div className="w-full flex flex-wrap justify-center gap-5">
             {cardsData.map((card, index) => (
               <motion.div
                 key={index}
@@ -209,97 +216,95 @@ export default function AccommodationPage() {
 
           {/* Contact Information */}
           <div
-  className="min-h-screen p-4 xl:p-16 bg-center bg-no-repeat bg-cover xl:bg-[url('/video-frame.webp')]"
-  style={{
-    backgroundSize: "contain",
-  }}
->
-  <div className="grid p-4 xl:p-8 md:grid-cols-2 gap-8 items-start max-w-7xl mx-auto">
-        {/* Contact Information Section */}
-        <motion.section
-          className="space-y-8 mr-8"
-          initial="hidden"
-          animate="visible"
-        >
-          <h2
-            className="text-3xl font-bold text-center"
-            style={{ color: "#F7E290" }}
+            className="min-h-screen p-4 xl:p-16 bg-center bg-no-repeat bg-cover xl:bg-[url('/video-frame.webp')]"
+            style={{
+              backgroundSize: "contain",
+            }}
           >
-            Contact Information
-          </h2>
-          <div className="grid gap-6">
-            {[
-              {
-                icon: Phone,
-                title: "Phone",
-                content: "+91 1234567890",
-              },
-              {
-                icon: Mail,
-                title: "Email",
-                content: "accommodation@abhisarga.com",
-              },
-              {
-                icon: MapPin,
-                title: "Location",
-                content: "College Campus, City, State",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
+            <div className="grid p-4 xl:p-8 md:grid-cols-2 gap-8 items-start max-w-7xl mx-auto">
+              {/* Contact Information Section */}
+              <motion.section
+                className="space-y-8 mr-8"
+                initial="hidden"
+                animate="visible"
               >
-                <div className="p-6 bg-[#24222d]/50 backdrop-blur-sm border border-[#F7E290]/20 rounded-lg">
-                  <div className="flex flex-col items-center gap-3">
-                    <item.icon
-                      className="w-8 h-8"
-                      style={{ color: "#F7E290" }}
-                    />
-                    <h3
-                      className="text-xl font-semibold"
-                      style={{ color: "#F7E290" }}
+                <h2
+                  className="text-3xl font-bold text-center"
+                  style={{ color: "#F7E290" }}
+                >
+                  Contact Information
+                </h2>
+                <div className="grid gap-6">
+                  {[
+                    {
+                      icon: Phone,
+                      title: "Phone",
+                      content: "+91 1234567890",
+                    },
+                    {
+                      icon: Mail,
+                      title: "Email",
+                      content: "accommodation@abhisarga.com",
+                    },
+                    {
+                      icon: MapPin,
+                      title: "Location",
+                      content: "College Campus, City, State",
+                    },
+                  ].map((item, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.2 }}
                     >
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-300">
-                      {item.content}
-                    </p>
-                  </div>
+                      <div className="p-6 bg-[#24222d]/50 backdrop-blur-sm border border-[#F7E290]/20 rounded-lg">
+                        <div className="flex flex-col items-center gap-3">
+                          <item.icon
+                            className="w-8 h-8"
+                            style={{ color: "#F7E290" }}
+                          />
+                          <h3
+                            className="text-xl font-semibold"
+                            style={{ color: "#F7E290" }}
+                          >
+                            {item.title}
+                          </h3>
+                          <p className="text-gray-300">{item.content}</p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
+              </motion.section>
 
-        {/* Map Section */}
-        <motion.section
-          className="space-y-8 h-full"
-          variants={cardVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <h2
-            className="text-3xl font-bold text-center"
-            style={{ color: "#F7E290" }}
-          >
-            How to Reach
-          </h2>
-          <div className="aspect-video w-full h-[calc(100%-5rem)] rounded-lg overflow-hidden border border-[#F7E290]/20">
-            <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31028.893224027328!2d80.0227328!3d13.5593984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4d773f1e0f8721%3A0xadb0842ffc2719e4!2sIndian%20Institute%20of%20Information%20Technology%2C%20Sri%20City%2C%20Chittoor!5e0!3m2!1sen!2sin!4v1737188121631!5m2!1sen!2sin"
-          width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+              {/* Map Section */}
+              <motion.section
+                className="space-y-8 h-full"
+                variants={cardVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                <h2
+                  className="text-3xl font-bold text-center"
+                  style={{ color: "#F7E290" }}
+                >
+                  How to Reach
+                </h2>
+                <div className="aspect-video w-full h-[calc(100%-5rem)] rounded-lg overflow-hidden border border-[#F7E290]/20">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31028.893224027328!2d80.0227328!3d13.5593984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4d773f1e0f8721%3A0xadb0842ffc2719e4!2sIndian%20Institute%20of%20Information%20Technology%2C%20Sri%20City%2C%20Chittoor!5e0!3m2!1sen!2sin!4v1737188121631!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </motion.section>
+            </div>
           </div>
-        </motion.section>
-      </div>
-    </div>
         </main>
       </div>
     </motion.div>
