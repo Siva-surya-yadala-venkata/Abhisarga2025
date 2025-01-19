@@ -8,17 +8,17 @@ const merchandiseItems = [
   {
     image: "/TShirt.webp",
     title: "T Shirt",
-    price: "₹29.99",
+    price: "₹229.99",
   },
   {
     image: "/TShirt.webp",
     title: "T Shirt",
-    price: "₹89.99",
+    price: "₹149.99",
   },
   {
     image: "/TShirt.webp",
     title: "T Shirt",
-    price: "₹49.99",
+    price: "₹39.99",
   }
 ]
 
@@ -82,7 +82,7 @@ export default function Merch() {
                     <div className="flex items-center justify-between">
                       <span className="text-2xl font-bold text-[#FFD700]">{item.price}</span>
                       <button className="px-4 py-2 bg-[#FFD700] text-[#1a1a2e] rounded-md hover:bg-[#FFC700] transition-colors">
-                        Add to Cart
+                        Buy Now
                       </button>
                     </div>
                   </div>
