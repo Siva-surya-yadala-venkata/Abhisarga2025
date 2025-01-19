@@ -1,84 +1,72 @@
-'use client'
+import Image from 'next/image'
+import Link from 'next/link'
 
-import React from "react";
-import { Marquee3D } from "./ui/Marquee3D";
-import Typing from './ui/Typing'
-const AboutPage = () => {
+export default function AboutPage() {
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      {/* Background Image (lowest layer) */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
+    <div className="min-h-screen relative">
+      {/* Background Image with Gradient Overlay */}
+      <div 
+        className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/DroneView.jpg')",
-          zIndex: 0
+          backgroundImage: "url('/placeholder.svg?height=1080&width=1920')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/100 via-black/60 to-black/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/60" />
       </div>
 
-      {/* Marquee3D (middle layer) */}
-      <div className="hidden xl:absolute xl:inset-[-10rem] xl:flex xl:items-center xl:justify-end" style={{ zIndex: 1 }}>
-  <Marquee3D />
-</div>
-
-
-      {/* Content (top layer) */}
-      <div className="relative z-10 container mx-auto px-6 py-16">
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header with Logo and Title */}
         <div className="flex items-center gap-6 mb-12">
-          <a
-            href="https://www.iiits.ac.in"
-            className="shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-black"
-          >
-            <img
-              src="/IIITS-logo.png"
-              alt="IIIT Sri City Logo"
-              className=" "
-            />
-          </a>
+          <Link href="https://www.iiits.ac.in" className="shrink-0">
+            <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white/20">
+              <Image
+                src="/placeholder.svg?height=80&width=80"
+                alt="IIIT Sri City Logo"
+                width={80}
+                height={80}
+                className="brightness-0 invert"
+              />
+            </div>
+          </Link>
 
-          <h1 className="text-6xl md:text-8xl font-bold text-white leading-tight">
-            <span style={{color:'#F7E290'}} className="text-#F7E290">ABOUT </span>  IIIT SRI CITY
+          <h1 className="text-6xl md:text-8xl font-bold text-white">
+            ABOUT
+            <br />
+            IIIT SRI CITY
           </h1>
         </div>
 
-        {/* Text Content */}
-        <div className="max-w-3xl space-y-6 text-lg text-gray-300">
+        {/* Content */}
+        <div className="max-w-3xl space-y-6 text-lg text-gray-200">
           <p>
-            Indian Institute of Information Technology Sri City, Chittoor known
-            as IIIT Sri City (IIITS) was established in 2013 by the Ministry of
-            Education, Government of India as an Institute of National
-            importance by an Act of Parliament. IIITS is one among the 20
-            Institutes across India, focusing on Information Technology
-            education, research, and development.
+            Indian Institute of Information Technology Sri City, Chittoor known as IIIT Sri City (IIITS) 
+            was established in 2013 by Ministry of Education, Government of India as an Institute of 
+            National importance by an Act of Parliament. IIITS is one among the 20 Institutes across 
+            India, focusing on Information Technology education, research and development.
           </p>
 
           <p>
-            The institute is located in Sri City (www.sricity.in) about 60 KMs
-            from Chennai on the Nellore Highway. The nearest airports are
-            Chennai (70 KMs) and Tirupati (70 KMs).
+            The institute is located in Sri City (www.sricity.in) located about 60 KMs from Chennai 
+            on the Nellore Highway. The nearest airports are Chennai (70 KMs) and Tirupati (70 KMs).
           </p>
 
           <p>
-            The Institute was set up by the Government of India along with the
-            Government of Andhra Pradesh and Industry Partners represented by
-            Sri City Foundation as a Public-Private-Partnership (PPP)
-            institution. The Institute is governed by the Board of Governors
-            consisting of eminent personalities from the Government, Industry,
-            and Academia.
+            The Institute was setup by the Government of India along with Government of Andhra Pradesh 
+            and Industry Partners represented by Sri City Foundation as a Public-Private-Partnership (PPP) 
+            institution. The Institute is governed by the Board of Governors consisting of eminent 
+            personalities from the Government, Industry and Academia.
           </p>
 
           <p>
-            IIITS offers B. Tech, M.Tech, M.S., and Ph.D. programmes in the
-            areas of Computer Science & Engineering and Electronics &
-            Communications Engineering.
+            IIITS offers B. Tech, M.Tech, M.S. and Ph. D. programmes in the areas of Computer Science & 
+            Engineering and Electronics & Communications Engineering.
           </p>
         </div>
       </div>
     </div>
-  );
-};
-
-export default AboutPage;
+  )
+}
 
