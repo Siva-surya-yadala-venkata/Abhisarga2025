@@ -91,7 +91,7 @@ const Navbar = () => {
 
         {/* Links for small screens */}
         {isMenuOpen && (
-          <div className="absolute top-16 left-0 w-full bg-[#24222d] bg-opacity-90 text-center space-y-4 py-4 flex flex-col md:hidden">
+          <div className="absolute top-16 left-0 w-full bg-[#49727e] bg-opacity-20 text-center space-y-4 py-4 flex flex-col md:hidden">
             <Link
               to="/"
               className="text-[#F7E290] text-lg hover:text-[#F7E290] transition duration-300 font-harrypotter"
@@ -121,11 +121,18 @@ const Navbar = () => {
               Contact
             </Link>
             <Link
-              to="/acomodation"
+              to="/accomodation"
               className="text-[#F7E290] text-lg hover:text-[#F7E290] transition duration-300 font-harrypotter"
               onClick={() => setIsMenuOpen(false)}
             >
-              Acomodation
+              Accomodation
+            </Link>
+            <Link
+              to="/merch"
+              className="text-[#F7E290] text-lg hover:text-[#F7E290] transition duration-300 font-harrypotter"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Merch
             </Link>
           </div>
         )}
