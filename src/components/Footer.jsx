@@ -1,4 +1,5 @@
 function Footer() {
+  var baseUrl = `${window.location.origin}`;
   return (
     <footer className="bg-[#24222d] text-[#f5e0a9] flex flex-wrap justify-between items-end relative">
       {/* Backdrop Layer */}
@@ -7,7 +8,7 @@ function Footer() {
       {/* Left Section */}
       <div className="left relative z-10">
         <img
-          src="./assets/corner-bottom-right.png"
+          src={`${baseUrl}/assets/corner-bottom-right.png`}
           alt="Decorative Corner"
           className="transform scale-x-[-1] w-[70px] md:w-[100px]"
         />
@@ -16,7 +17,7 @@ function Footer() {
       {/* Center Section */}
       <div className="center flex flex-col items-center text-center relative z-10">
         <img
-          src="./full_logo_2.png"
+          src={`${baseUrl}/full_logo_2.png`}
           alt="Full Logo"
           className="h-12 md:h-20 mt-4"
         />
@@ -66,7 +67,7 @@ function Footer() {
             </svg>
           </a>
         </div>
-        <img src="./divider.png" alt="Divider" className="h-4 md:h-5 my-4" />
+        <img src={`${baseUrl}/divider.png`} alt="Divider" className="h-4 md:h-5 my-4" />
         <p
           className="text-sm md:text-base font-serif mb-4"
           style={{ fontFamily: "MedievalSharp, serif", color: "#AE8E48" }}
@@ -78,7 +79,7 @@ function Footer() {
       {/* Right Section */}
       <div className="right relative z-10">
         <img
-          src="./assets/corner-bottom-right.png"
+          src={`${baseUrl}/assets/corner-bottom-right.png`}
           alt="Decorative Corner"
           className="w-[70px] md:w-[100px]"
         />

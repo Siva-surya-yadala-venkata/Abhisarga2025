@@ -8,9 +8,13 @@
   transform-style: preserve-3d;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   cursor: url("assets/cursor.png"), auto;
-  background-color: #24222d;
+  background-color: #000000;
 }
 .parallax {
   /* The image used */
