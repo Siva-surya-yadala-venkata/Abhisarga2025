@@ -6,6 +6,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false); // State to track if the page is scrolled
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle the hamburger menu
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -25,27 +26,26 @@ const Navbar = () => {
   return (
     <motion.nav
       className={`fixed top-0 left-0 w-full z-50 py-4 px-6 transition-all duration-300 ${
-        isScrolled
+        isScrolled || isMenuOpen
           ? "backdrop-blur-lg bg-black bg-opacity-50"
           : "bg-transparent"
       }`}
       style={{ zIndex: 9999 }}
-    >
+    > 
       <div className="flex justify-between items-center">
         {/* Logo */}
         <Link
           to="/"
           className="flex items-center text-[#F7E290] text-2xl font-bold font-harrypotter"
         >
-          <img
-            src="/full_logo.png"
-            alt="Logo"
-            className="w-30 h-10 mr-2"
-          />
+          <img src="/full_logo.png" alt="Logo" className="w-30 h-10 mr-2" />
         </Link>
 
         {/* Hamburger for small screens */}
-        <div className="md:hidden text-[#F7E290] text-2xl" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <div
+          className="md:hidden text-[#F7E290] text-2xl"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
           {isMenuOpen ? <FaTimes /> : <FaBars />}
         </div>
 
@@ -91,7 +91,9 @@ const Navbar = () => {
 
         {/* Links for small screens */}
         {isMenuOpen && (
-          <div className="absolute top-16 left-0 w-full bg-black bg-opacity-70 text-center space-y-4 py-4 flex flex-col md:hidden">
+          <div
+            className={`absolute top-[72px] left-0 w-full text-center py-4 flex flex-col items-center md:hidden justify-center space-y-4 filter bg-black bg-opacity-90`}
+          >
             <Link
               to="/"
               className="text-[#F7E290] text-lg hover:text-[#F7E290] transition duration-300 font-harrypotter"
