@@ -196,51 +196,50 @@ const Timeline = () => {
 
           return (
             <motion.div
-            ref={ref}
-            key={index}
-            className={`mb-20 flex ${
-              index % 2 === 0 ? "flex-row-reverse" : "flex-row"
-            } items-center`}
-            variants={itemVariants}
-            initial="hidden"
-            animate={itemControls}
-          >
-            {/* Content Area */}
-            <div
-              className={`relative w-1/2 px-5 py-5 bg-gradient-to-r ${
-                index % 2 === 0
-                  ? "from-[#24222d] to-[#131433]"
-                  : "from-[#131433] to-[#24222d]"
-              } rounded-lg shadow-lg border border-[#F7E290] text-[#F7E290] event-card`}
+              ref={ref}
+              key={index}
+              className={`mb-20 flex ${
+                index % 2 === 0 ? "flex-row-reverse" : "flex-row"
+              } items-center`}
+              variants={itemVariants}
+              initial="hidden"
+              animate={itemControls}
             >
-              {/* Backdrop Layer (Dimmed and Blurred) */}
-              <div className="absolute inset-0 bg-black opacity-50 backdrop-blur-md rounded-lg"></div>
-          
-              {/* Content (Text remains unaffected by backdrop opacity) */}
-              <div className="relative z-10">
-                <h2 className="text-2xl font-semibold">{item.title}</h2>
-                <p className="mt-2">{item.description}</p>
-                <p className="mt-2 text-sm italic">{item.date}</p>
-              </div>
-          
-              {/* Decorative Circle */}
+              {/* Content Area */}
               <div
-                className={`absolute top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-[#F7E290] border-4 border-[#131433] ${
-                  index % 2 === 0 ? "-right-3" : "-left-3"
-                }`}
-              ></div>
-            </div>
-          
-            {/* Image Area */}
-            <div className="w-1/2 flex justify-center">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-40 h-40 object-cover rounded-lg shadow-lg border-2 border-[#F7E290]"
-              />
-            </div>
-          </motion.div>
-          
+                className={`relative w-1/2 px-5 py-5 bg-gradient-to-r ${
+                  index % 2 === 0
+                    ? "from-[#24222d] to-[#131433]"
+                    : "from-[#131433] to-[#24222d]"
+                } rounded-lg shadow-lg border border-[#F7E290] text-[#F7E290] event-card`}
+              >
+                {/* Backdrop Layer (Dimmed and Blurred) */}
+                <div className="absolute inset-0 bg-black opacity-50 backdrop-blur-md rounded-lg"></div>
+
+                {/* Content (Text remains unaffected by backdrop opacity) */}
+                <div className="relative z-10">
+                  <h2 className="text-2xl font-semibold">{item.title}</h2>
+                  <p className="mt-2">{item.description}</p>
+                  <p className="mt-2 text-sm italic">{item.date}</p>
+                </div>
+
+                {/* Decorative Circle */}
+                <div
+                  className={` absolute top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-[#F7E290] border-4 border-[#131433] ${
+                    index % 2 !== 0 ? "-right-3" : "-left-3"
+                  }`}
+                ></div>
+              </div>
+
+              {/* Image Area */}
+              <div className="w-1/2 flex justify-center">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-40 h-40 object-cover rounded-lg shadow-lg border-2 border-[#F7E290]"
+                />
+              </div>
+            </motion.div>
           );
         })}
       </div>

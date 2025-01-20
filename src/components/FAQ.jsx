@@ -43,7 +43,7 @@ const FAQ = () => {
 
   return (
     <motion.div
-      className="faq-container relative min-h-screen py-10 px-5"
+      className="faq-container  flex flex-col items-center justify-center min-h-screen py-10 px-5 w-full"
       style={{
         background: "rgb(0, 0, 0)",
         color: "#F7E290",
@@ -77,7 +77,7 @@ const FAQ = () => {
         <img src="/assets/header-flourish.svg" alt="" className="h-3 mb-10" />
       </div>
 
-      <div className="space-y-8 mx-auto max-w-4xl">
+      <div className="space-y-8 max-w-4xl w-full">
         {faqData.map((item, index) => (
           <div
             key={index}

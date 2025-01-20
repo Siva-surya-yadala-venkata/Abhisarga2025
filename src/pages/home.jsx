@@ -24,7 +24,7 @@ function Home() {
       <TimeLine />
       {/* FAQ */}
       <FAQ />
-      <SponsorCarousel/>
+      {/* <SponsorCarousel/> */}
     </div>
   );
 }
