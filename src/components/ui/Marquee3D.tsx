@@ -39,7 +39,7 @@ export function Marquee3D({ className, style, transform }: Marquee3DProps) {
   return (
     <div
       className={cn(
-        "relative flex h-[100vh] w-[80vw] flex-col items-center justify-center gap-4 overflow-hidden bg-transparent",
+        "relative flex h-[300vh] w-[80vw] flex-col items-center justify-center gap-4 overflow-hidden bg-transparent",
         className
       )}
       style={style}
