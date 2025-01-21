@@ -180,10 +180,9 @@ function App() {
         transform-style: preserve-3d;
         transition: transform 0.6s ease;
       }
-
-      .card:hover {
+     .card-container:hover .card {
         transform: rotateY(180deg);
-      }
+      } 
 
       .card-face {
         position: absolute;
