@@ -1,4 +1,4 @@
-import { HashRouter as Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/home";
@@ -13,7 +13,7 @@ import Sponsors from "./pages/Sponsors";
 
 function App() {
   return (
-    <Router>
+    <>
       <Navbar />
       <Routes>
         <Route
@@ -35,7 +35,7 @@ function App() {
         <Route path="*" element={<div>Page Not Found</div>} />
       </Routes>
       <Footer />
-    </Router>
+    </>
   );
 }
 
