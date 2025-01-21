@@ -1,146 +1,135 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { FaBars, FaTimes } from "react-icons/fa";
+import  { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
+import { motion, AnimatePresence } from "framer-motion"
+import {
+  FaBars,
+  FaTimes,
+  FaHome,
+  FaInfoCircle,
+  FaCalendarAlt,
+  FaEnvelope,
+  FaBed,
+  FaTshirt,
+  FaHandshake,
+  FaAward,
+} from "react-icons/fa"
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false); // State to track if the page is scrolled
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle the hamburger menu
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
+      setIsScrolled(window.scrollY > 50)
+    }
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const navItems = [
+    { name: "Home", path: "/", icon: FaHome },
+    { name: "About", path: "/about", icon: FaInfoCircle },
+    { name: "Events", path: "/events", icon: FaCalendarAlt },
+    { name: "Contact", path: "/contact", icon: FaEnvelope },
+    { name: "Accommodation", path: "/accommodation", icon: FaBed },
+    { name: "Merch", path: "/merch", icon: FaTshirt },
+    { name: "Call For Sponsors", path: "/call-for-sponsors", icon: FaHandshake },
+    { name: "Sponsors", path: "/sponsors", icon: FaAward },
+  ]
 
   return (
     <motion.nav
       className={`fixed top-0 left-0 w-full z-50 py-4 px-6 transition-all duration-300 ${
-        isScrolled || isMenuOpen
-          ? "backdrop-blur-lg bg-black bg-opacity-50"
-          : "bg-transparent"
+        isScrolled || isMenuOpen ? "backdrop-blur-lg bg-black bg-opacity-50" : "bg-transparent"
       }`}
-      style={{ zIndex: 9999 }}
-    > 
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ type: "spring", stiffness: 120 }}
+    >
       <div className="flex justify-between items-center">
-        {/* Logo */}
-        <Link
-          to="/"
-          className="flex items-center text-[#F7E290] text-2xl font-bold font-harrypotter"
-        >
-          <img src="/full_logo.png" alt="Logo" className="w-30 h-10 mr-2" />
+        <Link to="/" className="flex items-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <img src="/full_logo.png" alt="Logo" className="w-30 h-10 mr-2" />
+          </motion.div>
         </Link>
 
-        {/* Hamburger for small screens */}
-        <div
-          className="md:hidden text-[#F7E290] text-2xl"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? <FaTimes /> : <FaBars />}
+        <div className="md:hidden text-[#F7E290] text-2xl cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <motion.div initial={{ rotate: 0 }} animate={{ rotate: isMenuOpen ? 90 : 0 }} transition={{ duration: 0.3 }}>
+            {isMenuOpen ? <FaTimes /> : <FaBars />}
+          </motion.div>
         </div>
 
-        {/* Links for larger screens */}
         <div className="hidden md:flex space-x-6">
-          <Link
-            to="/"
-            className="text-[#F7E290] hover:text-[#F7E290] transition duration-300 font-harrypotter hover:border-b-2 hover:border-[#F7E290] pb-1"
-          >
-            Home
-          </Link>
-          <Link
-            to="/about"
-            className="text-[#F7E290] hover:text-[#F7E290] transition duration-300 font-harrypotter hover:border-b-2 hover:border-[#F7E290] pb-1"
-          >
-            About
-          </Link>
-          <Link
-            to="/events"
-            className="text-[#F7E290] hover:text-[#F7E290] transition duration-300 font-harrypotter hover:border-b-2 hover:border-[#F7E290] pb-1"
-          >
-            Events
-          </Link>
-          <Link
-            to="/contact"
-            className="text-[#F7E290] hover:text-[#F7E290] transition duration-300 font-harrypotter hover:border-b-2 hover:border-[#F7E290] pb-1"
-          >
-            Contact
-          </Link>
-          <Link
-            to="/accommodation"
-            className="text-[#F7E290] hover:text-[#F7E290] transition duration-300 font-harrypotter hover:border-b-2 hover:border-[#F7E290] pb-1"
-          >
-            Accommodation
-          </Link>
-          <Link
-            to="/merch"
-            className="text-[#F7E290] hover:text-[#F7E290] transition duration-300 font-harrypotter hover:border-b-2 hover:border-[#F7E290] pb-1"
-          >
-            Merch
-          </Link>
+          {navItems.map((item, index) => (
+            <motion.div
+              key={item.name}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <Link
+                to={item.path}
+                className="text-[#F7E290] hover:text-[#F7E290] transition duration-300 font-harrypotter relative group"
+              >
+                <span className="relative z-10">{item.name}</span>
+                <motion.span
+                  className="absolute bottom-0 left-0 w-full h-0.5 bg-[#F7E290] transform origin-left"
+                  initial={{ scaleX: 0 }}
+                  whileHover={{ scaleX: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+                <motion.div
+                  className="absolute inset-0 bg-[#F7E290] rounded-md opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+                  initial={false}
+                  whileHover={{ opacity: 0.1 }}
+                />
+              </Link>
+            </motion.div>
+          ))}
         </div>
-
-        {/* Links for small screens */}
-        {isMenuOpen && (
-          <div
-            className={`absolute top-[72px] left-0 w-full text-center py-4 flex flex-col items-center md:hidden justify-center space-y-4 filter bg-black bg-opacity-90`}
-          >
-            <Link
-              to="/"
-              className="text-[#F7E290] text-lg hover:text-[#F7E290] transition duration-300 font-harrypotter"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className="text-[#F7E290] text-lg hover:text-[#F7E290] transition duration-300 font-harrypotter"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              About
-            </Link>
-            <Link
-              to="/events"
-              className="text-[#F7E290] text-lg hover:text-[#F7E290] transition duration-300 font-harrypotter"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Events
-            </Link>
-            <Link
-              to="/contact"
-              className="text-[#F7E290] text-lg hover:text-[#F7E290] transition duration-300 font-harrypotter"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact
-            </Link>
-            <Link
-              to="/accommodation"
-              className="text-[#F7E290] text-lg hover:text-[#F7E290] transition duration-300 font-harrypotter"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Accommodation
-            </Link>
-            <Link
-              to="/merch"
-              className="text-[#F7E290] text-lg hover:text-[#F7E290] transition duration-300 font-harrypotter"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Merch
-            </Link>
-          </div>
-        )}
       </div>
-    </motion.nav>
-  );
-};
 
-export default Navbar;
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            className="absolute top-full left-0 w-full bg-black bg-opacity-90 md:hidden"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            {navItems.map((item, index) => (
+              <motion.div
+                key={item.name}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -50 }}
+                transition={{ delay: index * 0.05 }}
+              >
+                <Link
+                  to={item.path}
+                  className="block text-[#F7E290] text-lg py-3 px-6 hover:bg-[#F7E290] hover:text-black transition duration-300 font-harrypotter"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <span className="flex items-center">
+                    <item.icon className="mr-2" />
+                    {item.name}
+                  </span>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
+  )
+}
+
+
+export default Navbar
+
