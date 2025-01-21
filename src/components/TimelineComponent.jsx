@@ -138,32 +138,32 @@ const Timeline = () => {
         </button>
       </CoolMode>
       <CoolMode
-  options={{
-    particle: "/bird.png",
-  }}
->
-  <button>
-    <motion.img
-      src="/Magic-hat.gif"
-      alt="Fixed Decorative"
-      className="hidden lg:block fixed top-20 right-10 object-cover opacity-80 z-10"
-      width={200}
-      initial={{ opacity: 0, scale: 0.8, x: 50, y: 50 }}
-      animate={{
-        opacity: inView ? 1 : 0,
-        scale: inView ? 1 : 0.8,
-        x: inView ? 0 : 50,
-        y: inView ? 0 : 50,
-      }}
-      transition={{
-        duration: 1,
-        ease: "easeOut",
-        delay: 0.2,
-      }}
-      exit={{ opacity: 0, scale: 0.8, x: 40, y: 100 }}
-    />
-  </button>
-</CoolMode>
+        options={{
+          particle: "/bird.png",
+        }}
+      >
+        <button>
+          <motion.img
+            src="/Magic-hat.gif"
+            alt="Fixed Decorative"
+            className="hidden lg:block fixed top-20 right-10 object-cover opacity-80 z-10"
+            width={200}
+            initial={{ opacity: 0, scale: 0.8, x: 50, y: 50 }}
+            animate={{
+              opacity: inView ? 1 : 0,
+              scale: inView ? 1 : 0.8,
+              x: inView ? 0 : 50,
+              y: inView ? 0 : 50,
+            }}
+            transition={{
+              duration: 1,
+              ease: "easeOut",
+              delay: 0.2,
+            }}
+            exit={{ opacity: 0, scale: 0.8, x: 40, y: 100 }}
+          />
+        </button>
+      </CoolMode>
 
       {/* Background Effects */}
       <div className="absolute inset-0 pointer-events-none">
@@ -172,7 +172,7 @@ const Timeline = () => {
           style={{ animation: "orbMove 6s ease-in-out infinite alternate" }}
         ></div>
         <div
-          className="absolute bottom-32 right-20 w-60 h-60 bg-gradient-to-r from-blue-500 to-teal-500 opacity-30 blur-2xl rounded-full"
+          className="absolute bottom-32 right-20 w-60 h-60 bg-gradient-to-r from-blue-500 to-teal-500 opacity-20 blur-3xl rounded-full"
           style={{ animation: "orbMove 8s ease-in-out infinite alternate" }}
         ></div>
 

@@ -7,7 +7,7 @@ const AccomodationCard = ({ title, details, price, gradient, image }) => {
       className="bg-[#24222d]/50 backdrop-blur-sm w-[450px] mx-auto  shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl"
       initial={{ opacity: 0, scale: 0.9 }}
       whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: false, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.1, ease: "easeInOut" }}
     >
       <div className="">
