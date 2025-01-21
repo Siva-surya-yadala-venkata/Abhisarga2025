@@ -9,6 +9,7 @@ import Event from "./pages/events";
 import Merch from "./components/Merch";
 import CallForSponsors from "./components/CallForSponsors/page";
 import SplashCursor from "./components/SplashCursor";
+import Sponsors from "./pages/Sponsors";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/event/:name" element={<Event />} />
         <Route path="/merch" element={<Merch />} />
         <Route path="/call-for-sponsors" element={<CallForSponsors />} />
+        <Route path="/sponsors" element={<Sponsors />} />
         <Route path="*" element={<div>Page Not Found</div>} />
       </Routes>
       <Footer />

@@ -25,7 +25,16 @@ export default function CallForSponsors() {
             backgroundImage={"/CallForSponsors.jpg"}
             heading={"Call For Sponsors"}
           />
-    <main className="min-h-screen bg-gradient-to-b from-midnight-blue via-deep-purple to-midnight-blue text-white overflow-hidden relative">
+    <main 
+    className="min-h-screen bg-gradient-to-b from-midnight-blue via-deep-purple to-midnight-blue text-white overflow-hidden relative"
+    style={{
+      background: `
+  linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+      url('https://img.freepik.com/free-photo/apocalyptic-landscape-with-war-zone-destruction_23-2150985699.jpg?ga=GA1.1.2092140943.1701793667&semt=ais_incoming') center/cover no-repeat fixed,
+      radial-gradient(circle at top, #24222d, #131433)
+    `,
+    }}
+    >
       <div className="stars"></div>
       <div className="twinkling"></div>
       {/* <SpookyTree /> */}
@@ -145,8 +154,7 @@ function SponsorTiers() {
       name: "Title Sponsor",
       amount: "₹12 Lakhs",
       icon: Crown,
-      description:
-        "The Grand Sorcerer tier, commanding the highest magical influence",
+      description: "The Grand Sorcerer tier, commanding the highest magical influence",
     },
     {
       name: "Diamond Sponsor",
@@ -183,7 +191,15 @@ function SponsorTiers() {
   const [tier, setTier] = useState("");
 
   return (
-    <section id="sponsor-tiers" className="py-20 px-4 relative">
+    <section id="sponsor-tiers" className="py-20 px-4 relative bg-black text-gold"
+    style={{
+      background: `
+  linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+      url('https://img.freepik.com/free-photo/apocalyptic-landscape-with-war-zone-destruction_23-2150985699.jpg?ga=GA1.1.2092140943.1701793667&semt=ais_incoming') center/cover no-repeat fixed,
+      radial-gradient(circle at top, #24222d, #131433)
+    `,
+    }}
+    >
       {isOpen && (
         <BenefitsModal
           isOpen={isOpen}
@@ -192,6 +208,7 @@ function SponsorTiers() {
         />
       )}
       <div className="max-w-6xl mx-auto">
+     
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -199,16 +216,23 @@ function SponsorTiers() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold magical-text mb-6">
-              Magical Sponsorship Tiers
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold magical-text mb-6 text-gold">
+              Sponsorship Tiers
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Choose your magical tier and join us in creating an unforgettable
-              experience.
+              Choose your tier and join us in creating an unforgettable experience.
             </p>
           </motion.div>
         </div>
-
+        <div className="mt-12 mb-12 text-center">
+          <a
+            href="/Final_Draft_Sponsorship.pdf"
+            download
+            className="bg-gold text-white  px-8 py-3 rounded-full font-bold text-lg hover:bg-yellow-500 transition-colors duration-300"
+          >
+             Brochure
+          </a>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {tiers.map((tier, index) => (
             <SponsorCard
@@ -224,45 +248,39 @@ function SponsorTiers() {
         </div>
 
         <motion.div
-  className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center"
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.5, delay: 0.2 }}
->
-  {[
-    "Food & Beverage Partner",
-    "Banking Partner",
-    "Travel Partner",
-    "Delivery Partner",
-    "Educational Partner",
-    "Credential Partner",
-    "Crypto Partner",
-    "Media & Digital Partner",
-    "Event Partner",
-  ].map((partner) => (
-    <motion.div
-      key={partner}
-      className="bg-gray-900/30 backdrop-blur-sm border border-gray-700 rounded-lg p-6 transform transition-all duration-300 hover:shadow-xl hover:scale-105 relative group"
-      whileHover={{ scale: 1.1 }}
-    >
-      {/* Background Gradient Effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/0 via-yellow-500/20 to-yellow-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-      
-      {/* Partner Text */}
-      <span className="relative z-10 text-yellow-400 font-semibold text-lg tracking-wide">
-        {partner}
-      </span>
-    </motion.div>
-  ))}
-</motion.div>
-
+          className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          {[
+            "Food & Beverage Partner",
+            "Banking Partner",
+            "Travel Partner",
+            "Delivery Partner",
+            "Educational Partner",
+            "Credential Partner",
+            "Crypto Partner",
+            "Media & Digital Partner",
+            "Event Partner",
+          ].map((partner) => (
+            <motion.div
+              key={partner}
+              className="bg-gray-900/30 backdrop-blur-sm border border-gray-700 rounded-lg p-6 transform transition-all duration-300 hover:shadow-xl hover:scale-105 relative group"
+              whileHover={{ scale: 1.1 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/0 via-yellow-500/20 to-yellow-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              <span className="relative z-10 text-yellow-400 font-semibold text-lg tracking-wide">
+                {partner}
+              </span>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
 }
-
-
 
 export function Contact() {
   return (
