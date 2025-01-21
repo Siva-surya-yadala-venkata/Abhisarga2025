@@ -43,7 +43,7 @@ const AboutPage = () => {
             <div
               className="text-[40px] xl:text-[80px] text-white"
               style={{
-                fontFamily: "Cinzel Decorative, serif",
+                fontFamily: "MedievalSharp, serif",
                 fontWeight: "400",
               }}
             >
@@ -85,7 +85,7 @@ const AboutPage = () => {
             <div
               className="text-[40px] xl:text-[80px] text-white"
               style={{
-                fontFamily: "Orbitron, serif",
+                fontFamily: "MedievalSharp, serif",
                 fontWeight: "400",
               }}
             >
