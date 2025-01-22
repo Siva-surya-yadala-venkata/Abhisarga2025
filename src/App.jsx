@@ -13,34 +13,36 @@ import Sponsors from "./pages/Sponsors";
 
 function App() {
   return (
-    <>
-      {/* Navbar placed outside Routes to persist across all pages */}
-      <Navbar />
 
-      {/* Routes for page navigation */}
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <SplashCursor />
-              <Home />
-            </>
-          }
-        />
-        <Route path="/events" element={<EventsPage />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/accommodation" element={<AccommodationPage />} />
-        <Route path="/event/:name" element={<Event />} />
-        <Route path="/merch" element={<Merch />} />
-        <Route path="/call-for-sponsors" element={<CallForSponsors />} />
-        <Route path="/sponsors" element={<Sponsors />} />
-        <Route path="*" element={<div>Page Not Found</div>} />
-      </Routes>
+    // <>
+    //   {/* Navbar placed outside Routes to persist across all pages */}
+    //   <Navbar />
 
-      {/* Footer placed outside Routes to persist across all pages */}
-      <Footer />
-    </>
+    //   {/* Routes for page navigation */}
+    //   <Routes>
+    //     <Route
+    //       path="/"
+    //       element={
+    //         <>
+    //           <SplashCursor />
+    //           <Home />
+    //         </>
+    //       }
+    //     />
+    //     <Route path="/events" element={<EventsPage />} />
+    //     <Route path="/about" element={<AboutUs />} />
+    //     <Route path="/accommodation" element={<AccommodationPage />} />
+    //     <Route path="/event/:name" element={<Event />} />
+    //     <Route path="/merch" element={<Merch />} />
+    //     <Route path="/call-for-sponsors" element={<CallForSponsors />} />
+    //     <Route path="/sponsors" element={<Sponsors />} />
+    //     <Route path="*" element={<div>Page Not Found</div>} />
+    //   </Routes>
+
+    //   {/* Footer placed outside Routes to persist across all pages */}
+    //   <Footer />
+    // </>
+    <>Comming Soon</>
   );
 }
 
