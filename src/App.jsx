@@ -1,14 +1,14 @@
 import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./pages/home";
 import EventsPage from "./components/EventsPage";
-import Event from "./pages/events";
-import AccommodationPage from "./components/Accomodation";
-import SplashCursor from "./components/SplashCursor";
-import Footer from "./components/Footer";
-import Merch from "./components/Merch";
 import AboutUs from "./components/AboutUs";
-import Navbar from "./components/Navbar";
+import AccommodationPage from "./components/Accommodation";
+import Event from "./pages/events";
+import Merch from "./components/Merch";
 import CallForSponsors from "./components/CallForSponsors/page";
+import SplashCursor from "./components/SplashCursor";
 import Sponsors from "./pages/Sponsors";
 
 function App() {

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const AccomodationCard = ({ title, details, price, gradient, image }) => {
   return (
     <motion.div
-      className="bg-[#24222d]/50 backdrop-blur-sm w-[450px] mx-auto  shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl"
+      className="mr-5 mb-5 bg-[#24222d]/50 backdrop-blur-sm min-w-[400px] w-full max-w-[450px] mx-auto  shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl"
       initial={{ opacity: 0, scale: 0.9 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true, amount: 0.1 }}
@@ -44,7 +44,7 @@ const AccomodationCard = ({ title, details, price, gradient, image }) => {
 
         {/* Info Section */}
         <motion.div
-          className="p-6 text-center"
+          className="p-6 text-center h-[200px] flex flex-col justify-center"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.5 }}

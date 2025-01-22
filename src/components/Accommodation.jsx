@@ -37,41 +37,29 @@ export default function AccommodationPage() {
 
   const cardsData = [
     {
-      title: "Boys Hostel 1",
+      title: "BH - 1",
       details: [
-        "3 day tours",
-        "Up to 30 people",
-        "2 tour guides",
-        "Sleep in cozy hotels",
-        "Difficulty: easy",
+        "Details to be announced soon",
       ],
-      price: "$297",
+      price: "₹50/-",
       gradient: "bg-gradient-to-r from-orange-500 to-yellow-500",
       image: bg1,
     },
     {
-      title: "Boys Hostel 2",
+      title: "BH - 2",
       details: [
-        "5 day tours",
-        "Up to 25 people",
-        "3 tour guides",
-        "Camp in wild nature",
-        "Difficulty: medium",
+        "Details to be announced soon",
       ],
-      price: "$497",
+      price: "₹50/-",
       gradient: "bg-gradient-to-r from-green-500 to-teal-500",
       image: bg2,
     },
     {
-      title: "Boys Hostel 3",
+      title: "BH - 3",
       details: [
-        "7 day tours",
-        "Up to 15 people",
-        "2 tour guides",
-        "Stay in cozy lodges",
-        "Difficulty: hard",
+        "Details to be announced soon",
       ],
-      price: "$697",
+      price: "₹50/-",
       gradient: "bg-gradient-to-r from-blue-500 to-indigo-500",
       image: bg1,
     },
@@ -153,7 +141,7 @@ export default function AccommodationPage() {
             className="flex flex-wrap items-center justify-center gap-8"
             animate={inView ? "visible" : "hidden"}
           >
-            <div className="p-6 bg-[#24222d]/50 backdrop-blur-sm border border-[#F7E290]/20 rounded-lg w-[450px] h-[250px] flex flex-col justify-between">
+            <div className="p-6 bg-[#24222d]/50 backdrop-blur-sm border border-[#F7E290]/20 rounded-lg w-[450px] h-[250px] flex flex-col justify-between mr-5 ml-5">
               <div className="flex items-center gap-2 mb-4">
                 <Moon className="w-6 h-6" style={{ color: "#F7E290" }} />
                 <h2
@@ -171,7 +159,7 @@ export default function AccommodationPage() {
               </p>
             </div>
 
-            <div className="p-6 bg-[#24222d]/50 backdrop-blur-sm border border-[#F7E290]/20 rounded-lg w-[450px] h-[250px] flex flex-col justify-between">
+            <div className="p-6 bg-[#24222d]/50 backdrop-blur-sm border border-[#F7E290]/20 rounded-lg w-[450px] h-[250px] flex flex-col justify-between mr-5 ml-5">
               <div className="flex items-center gap-2 mb-4">
                 <Sparkles className="w-6 h-6" style={{ color: "#F7E290" }} />
                 <h2
@@ -239,17 +227,17 @@ export default function AccommodationPage() {
                     {
                       icon: Phone,
                       title: "Phone",
-                      content: "+91 1234567890",
+                      content: "+91 xxxxxxxxxx",
                     },
                     {
                       icon: Mail,
                       title: "Email",
-                      content: "accommodation@abhisarga.com",
+                      content: "abhisarga@iiits.in",
                     },
                     {
                       icon: MapPin,
                       title: "Location",
-                      content: "College Campus, City, State",
+                      content: "IIIT Sri City, 630 Gnan Marg, Sri City, Andhra Pradesh 517646",
                     },
                   ].map((item, index) => (
                     <motion.div
@@ -259,7 +247,7 @@ export default function AccommodationPage() {
                       transition={{ delay: index * 0.2 }}
                     >
                       <div className="p-6 bg-[#24222d]/50 backdrop-blur-sm border border-[#F7E290]/20 rounded-lg">
-                        <div className="flex flex-col items-center gap-3">
+                        <div className="flex flex-col items-center gap-3 justify-center text-center">
                           <item.icon
                             className="w-8 h-8"
                             style={{ color: "#F7E290" }}
