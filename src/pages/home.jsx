@@ -1,4 +1,3 @@
-
 import ImageCarousel from "../components/ProShows/ImageCarousel";
 import HeroComponent from "../components/HeroComponent";
 import SplashScreen from "../components/SplashScreen";
@@ -11,11 +10,10 @@ import { Marquee3D } from "../components/ui/Marquee3D";
 function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-    
       {/* <HeroComponent />  */}
-      <SplashScreen /> 
+      <SplashScreen />
       {/* Main Content */}
-      <AboutPage/>
+      <AboutPage />
       <div className="flex-grow mt-10">
         <ImageCarousel />
       </div>

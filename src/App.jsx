@@ -10,10 +10,10 @@ import Merch from "./components/Merch";
 import CallForSponsors from "./components/CallForSponsors/page";
 import SplashCursor from "./components/SplashCursor";
 import Sponsors from "./pages/Sponsors";
+import ComingSoon from "./pages/comingSoon";
 
 function App() {
   return (
-
     // <>
     //   {/* Navbar placed outside Routes to persist across all pages */}
     //   <Navbar />
@@ -40,11 +40,11 @@ function App() {
     //   </Routes>
 
     //   {/* Footer placed outside Routes to persist across all pages */}
-    //   <Footer />
+      // <Footer />
     // </>
-    <div className="flex items-center justify-center h-screen bg-white">
-    <h1 className="text-4xl font-bold text-gray-800">Coming Soon</h1>
-  </div>  );
+
+    <ComingSoon />
+  );
 }
 
 export default App;
