@@ -42,8 +42,9 @@ function App() {
     //   {/* Footer placed outside Routes to persist across all pages */}
     //   <Footer />
     // </>
-    <>Comming Soon</>
-  );
+    <div className="flex items-center justify-center h-screen bg-white">
+    <h1 className="text-4xl font-bold text-gray-800">Coming Soon</h1>
+  </div>  );
 }
 
 export default App;
