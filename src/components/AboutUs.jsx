@@ -1,6 +1,4 @@
 import { useEffect, useRef } from "react";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./App.css";
 import ParallaxComponent from "./ParllaxComponent";
 
@@ -44,13 +42,13 @@ export default function AboutUs() {
     {
       name: "Abhinav Mars",
       description: ["SLC President"],
-      image: "./assets/AboutUs/frame.png",
+      image: "./assets/AboutUs/AbhinavMars.png",
       bgColor: "black",
     },
     {
       name: "Poojyanth",
       description: ["SLC Vice President"],
-      image: "./assets/AboutUs/frame.png",
+      image: "./assets/AboutUs/Poojyanth.png",
       bgColor: "black",
     },
     {
@@ -80,13 +78,13 @@ export default function AboutUs() {
     {
       name: "Santhosh",
       description: ["SLC Secretary Hostel Boys"],
-      image: "./assets/AboutUs/frame.png",
+      image: "./assets/AboutUs/Santhosh.png",
       bgColor: "black",
     },
     {
       name: "Teja Sri",
       description: ["SLC Secretary Hostel Girls"],
-      image: "./assets/AboutUs/frame.png",
+      image: "./assets/AboutUs/TejaSri.png",
       bgColor: "black",
     },
     {
@@ -141,7 +139,7 @@ export default function AboutUs() {
     },
     {
       name: "Sai Vineel",
-      description: ["Tech Team", "Assistant Co-Lead"],
+      description: ["Tech Team", "Member"],
       position: "Member",
       image: "./assets/AboutUs/SaiVineel.png",
       linkedin: "https://www.linkedin.com/in/sai-vineel-96946b27b/",
@@ -206,51 +204,6 @@ export default function AboutUs() {
       bgColor: "black",
     },
   ];
-
-  useEffect(() => {
-    const initCarousel = () => {
-      if (carouselRef.current && window.jQuery) {
-        const $ = window.jQuery;
-        $(carouselRef.current).owlCarousel({
-          loop: true,
-          margin: 20,
-          nav: true,
-          dots: true,
-          dotsEach: true,
-          autoplay: true,
-          autoplayTimeout: 3000,
-          autoplayHoverPause: true,
-          center: true,
-          navText: [
-            `<div class="nav-btn prev-btn">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M15 18l-6-6 6-6" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>`,
-            `<div class="nav-btn next-btn">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M9 18l6-6-6-6" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>`,
-          ],
-          responsive: {
-            0: { items: 1, margin: 10, center: true },
-            576: { items: 2, margin: 15, center: false },
-            992: { items: 3, margin: 20, center: true },
-          },
-        });
-      }
-    };
-
-    setTimeout(initCarousel, 100);
-
-    return () => {
-      if (carouselRef.current && window.jQuery) {
-        const $ = window.jQuery;
-        $(carouselRef.current).trigger("destroy.owl.carousel");
-      }
-    };
-  }, []);
 
   const groupedMembers = teamMembers.reduce((acc, member) => {
     if (member.title) {
