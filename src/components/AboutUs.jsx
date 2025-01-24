@@ -239,14 +239,14 @@ export default function AboutUs() {
           <div key={index} className="group-section flex flex-col items-center">
             {group.title != "newLine" && (
               <div className="width-[1000px] mt-[100px]">
-                <h2 className="group-title text-[#fff] font-mysticalFont text-[50px]">
+                <h2 className="group-title text-[#fff] font-mysticalFont text-[30px] md:text-[50px] text-center">
                   {group.title}
                 </h2>
               </div>
             )}
-            <div className="flex flex-wrap items-center justify-center gap-8">
+            <div className="flex flex-wrap items-center gap-8">
               {group.members.map((member, idx) => (
-                <div key={idx} className="frame flex flex-col items-center">
+                  <div key={idx} className="frame flex flex-col items-center justify-start">
                   <div className="image-container">
                     <img
                       className="featured-image"
