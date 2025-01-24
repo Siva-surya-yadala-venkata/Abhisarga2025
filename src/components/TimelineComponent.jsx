@@ -119,7 +119,7 @@ const Timeline = () => {
           <motion.img
             src="./assets/harrypotter.gif"
             alt="Fixed Decorative"
-            className="hidden lg:block fixed bottom-10 left-10 object-cover opacity-80  z-10"
+            className="hidden 2xl:block fixed bottom-10 left-10 object-cover opacity-80  z-10"
             width={400}
             initial={{ opacity: 0, scale: 0.8, x: -50, y: 50 }}
             animate={{
@@ -146,7 +146,7 @@ const Timeline = () => {
           <motion.img
             src="/Magic-hat.gif"
             alt="Fixed Decorative"
-            className="hidden lg:block fixed top-20 right-10 object-cover opacity-80 z-10"
+            className="hidden 2xl:block fixed top-20 right-10 object-cover opacity-80 z-10"
             width={200}
             initial={{ opacity: 0, scale: 0.8, x: 50, y: 50 }}
             animate={{
@@ -234,7 +234,7 @@ const Timeline = () => {
             >
               {/* Content Area */}
               <div
-                className={`relative w-1/2 px-5 py-5 bg-gradient-to-r ${
+                className={`relative w-full sm:w-1/2 px-5 py-5 bg-gradient-to-r ${
                   index % 2 === 0
                     ? "from-[#24222d] to-[#131433]"
                     : "from-[#131433] to-[#24222d]"
@@ -244,7 +244,7 @@ const Timeline = () => {
                 <div className="absolute inset-0 bg-black opacity-50 backdrop-blur-md rounded-lg"></div>
 
                 {/* Content (Text remains unaffected by backdrop opacity) */}
-                <div className="relative z-10">
+                <div className="relative z-10 text-center">
                   <h2 className="text-2xl font-semibold">{item.title}</h2>
                   <p className="mt-2">{item.description}</p>
                   <p className="mt-2 text-sm italic">{item.date}</p>
@@ -252,14 +252,14 @@ const Timeline = () => {
 
                 {/* Decorative Circle */}
                 <div
-                  className={` absolute top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-[#F7E290] border-4 border-[#131433] ${
+                  className={`hidden sm:block absolute top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-[#F7E290] border-4 border-[#131433] ${
                     index % 2 !== 0 ? "-right-3" : "-left-3"
                   }`}
                 ></div>
               </div>
 
               {/* Image Area */}
-              <div className="w-1/2 flex justify-center">
+              <div className="hidden sm:flex w-1/2 justify-center">
                 <img
                   src={item.image}
                   alt={item.title}

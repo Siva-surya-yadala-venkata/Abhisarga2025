@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const AccomodationCard = ({ title, details, price, gradient, image }) => {
   return (
     <motion.div
-      className="mr-5 mb-5 bg-[#24222d]/50 backdrop-blur-sm min-w-[400px] w-full max-w-[450px] mx-auto  shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl"
+      className="bg-[#24222d]/50 backdrop-blur-sm w-full max-w-[450px] mx-auto  shadow-lg rounded-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl"
       initial={{ opacity: 0, scale: 0.9 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true, amount: 0.1 }}

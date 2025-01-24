@@ -133,7 +133,7 @@ export default function AccommodationPage() {
         </motion.section>
 
         {/* Main Content */}
-        <main className="main-container mx-auto px-4 py-12 space-y-16">
+        <main className="main-container mx-auto py-12 space-y-16">
           {/* Accommodation Details */}
           <img src="/divider.png" className="mx-auto block" alt="" />
 
@@ -141,7 +141,7 @@ export default function AccommodationPage() {
             className="flex flex-wrap items-center justify-center gap-8"
             animate={inView ? "visible" : "hidden"}
           >
-            <div className="p-6 bg-[#24222d]/50 backdrop-blur-sm border border-[#F7E290]/20 rounded-lg w-[450px] h-[250px] flex flex-col justify-between mr-5 ml-5">
+            <div className="p-6 bg-[#24222d]/50 backdrop-blur-sm border border-[#F7E290]/20 rounded-lg w-[450px] h-[300px] flex flex-col justify-between mr-5 ml-5">
               <div className="flex items-center gap-2 mb-4">
                 <Moon className="w-6 h-6" style={{ color: "#F7E290" }} />
                 <h2
@@ -159,7 +159,7 @@ export default function AccommodationPage() {
               </p>
             </div>
 
-            <div className="p-6 bg-[#24222d]/50 backdrop-blur-sm border border-[#F7E290]/20 rounded-lg w-[450px] h-[250px] flex flex-col justify-between mr-5 ml-5">
+            <div className="p-6 bg-[#24222d]/50 backdrop-blur-sm border border-[#F7E290]/20 rounded-lg w-[450px] h-[300px] flex flex-col justify-between mr-5 ml-5">
               <div className="flex items-center gap-2 mb-4">
                 <Sparkles className="w-6 h-6" style={{ color: "#F7E290" }} />
                 <h2
@@ -179,7 +179,7 @@ export default function AccommodationPage() {
             </div>
           </motion.section>
 
-          <div className="w-full flex flex-wrap justify-center gap-5">
+          <div className="w-full flex flex-wrap justify-center items-center flex-grow">
             {cardsData.map((card, index) => (
               <motion.div
                 key={index}
@@ -190,6 +190,7 @@ export default function AccommodationPage() {
                   delay: index * 0.1,
                 }}
                 viewport={{ once: true, amount: 0.3 }}
+                className="flex flex-wrap justify-center items-center m-5 w-[400px]"
               >
                 <AccomodationCard
                   title={card.title}
@@ -204,7 +205,7 @@ export default function AccommodationPage() {
 
           {/* Contact Information */}
           <div
-            className="min-h-screen p-4 xl:p-16 bg-center bg-no-repeat bg-cover xl:bg-[url('/video-frame.webp')]"
+            className="min-h-screen p-4 xl:p-16 bg-center bg-no-repeat bg-cover"
             style={{
               backgroundSize: "contain",
             }}
@@ -212,7 +213,7 @@ export default function AccommodationPage() {
             <div className="grid p-4 xl:p-8 md:grid-cols-2 gap-8 items-start max-w-7xl mx-auto">
               {/* Contact Information Section */}
               <motion.section
-                className="space-y-8 mr-8"
+                className="space-y-8 mr-0 md:mr-8"
                 initial="hidden"
                 animate="visible"
               >

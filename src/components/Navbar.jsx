@@ -65,7 +65,7 @@ const Navbar = () => {
         </Link>
 
         <div
-          className="md:hidden text-[#F7E290] text-2xl cursor-pointer"
+          className="xl:hidden text-[#F7E290] text-2xl cursor-pointer"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <motion.div
@@ -77,7 +77,7 @@ const Navbar = () => {
           </motion.div>
         </div>
 
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden xl:flex space-x-6">
           {navItems.map((item, index) => (
             <motion.div
               key={item.name}
@@ -112,7 +112,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="absolute top-full left-0 w-full bg-black bg-opacity-90 md:hidden"
+            className="absolute top-full left-0 w-full bg-black bg-opacity-90 xl:hidden"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -128,7 +128,7 @@ const Navbar = () => {
               >
                 <Link
                   to={item.path}
-                  className="block text-[#F7E290] text-lg py-3 px-6 hover:bg-[#F7E290] hover:text-black transition duration-300"
+                  className="block text-[#F7E290] text-lg py-3 px-6 transition duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <span className="flex items-center font-mysticalFont font-[400]">

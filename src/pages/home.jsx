@@ -14,7 +14,7 @@ function Home() {
       <SplashScreen />
       {/* Main Content */}
       <AboutPage />
-      <div className="flex-grow mt-10">
+      <div className="flex-grow">
         <ImageCarousel />
       </div>
       {/* Timeline */}
