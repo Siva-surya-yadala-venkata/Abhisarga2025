@@ -244,9 +244,9 @@ export default function AboutUs() {
                 </h2>
               </div>
             )}
-            <div className="flex flex-wrap items-center gap-8">
+            <div className="flex flex-wrap items-center  justify-center gap-8">
               {group.members.map((member, idx) => (
-                  <div key={idx} className="frame flex flex-col items-center justify-start">
+                  <div key={idx} className="frame flex flex-col items-center justify-center">
                   <div className="image-container">
                     <img
                       className="featured-image"
