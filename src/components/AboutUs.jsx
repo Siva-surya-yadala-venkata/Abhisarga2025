@@ -118,7 +118,7 @@ export default function AboutUs() {
       title: "The Magicians Behind the Website",
     },
     {
-      name: "Naveen Kumar",
+      name: "Naveen Kumar L",
       description: ["Tech Team", "Lead"],
       position: "Lead",
       image: "./assets/AboutUs/NaveenKumar.png",
@@ -145,7 +145,7 @@ export default function AboutUs() {
       bgColor: "black",
     },
     {
-      name: "SIVA SURYA",
+      name: "Siva Surya",
       description: ["Tech Team", "Member"],
       position: "Member",
       image: "./assets/AboutUs/SivaSurya.png",
@@ -162,7 +162,7 @@ export default function AboutUs() {
       bgColor: "black",
     },
     {
-      name: "NARASIMHA",
+      name: "Narasimha",
       description: ["Tech Team", "Member"],
       position: "Member",
       image: "./assets/AboutUs/LakshmiNarasimha.png",
