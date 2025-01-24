@@ -296,9 +296,6 @@
 }
 
 @media (max-width: 768px) {
-  .magicians-container {
-    padding: 10px;
-  }
 
   .frames-grid {
     grid-template-columns: 1fr;
