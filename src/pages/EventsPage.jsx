@@ -1,6 +1,5 @@
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import {  CalendarDays, MapPin, Users, Sparkles } from "lucide-react";
+
+import {  CalendarDays, MapPin, Sparkles } from "lucide-react";
 import React, { useState,} from "react";
 
 const events = [
@@ -71,7 +70,7 @@ const events = [
     image2: "/Comming_Soom.png"
   },
 ];
-import ParallaxComponent from './ParllaxComponent'
+import ParallaxComponent from '../components/ParllaxComponent'
 function App() {
   function toggleCard(cardContainer) {
     // Check if the card is already rotated

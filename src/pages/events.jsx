@@ -25,8 +25,8 @@ function App() {
 
   const handleShare = async (platform) => {
     const eventUrl = window.location.href;
-    const title = "Tech Innovation Summit 2024";
-    const text = "Join us for the premier tech innovation event of the year!";
+    const title = "Coming Soon";
+    const text = "Stay tuned for more information!";
 
     switch (platform) {
       case 'twitter':
@@ -47,11 +47,7 @@ function App() {
   };
 
   const details = [
-    {
-      icon: <Users className="w-5 h-5" />,
-      title: "Attendees",
-      value: "500+ Expected"
-    },
+  
     {
       icon: <Sparkles className="w-5 h-5" />,
       title: "Experience Level",
@@ -110,8 +106,8 @@ function App() {
           <div className="flex justify-between items-start relative">
             <div>
               <h1 className={styles.heading}>
-                Tech Innovation
-                <span className="block text-[#F7E270]">Summit 2024</span>
+                Coming Soon
+                <span className="block text-[#F7E270]">Stay tuned for more information!</span>
               </h1>
             </div>
             <div className="relative">
@@ -144,15 +140,15 @@ function App() {
           <div className="mt-8 space-y-4 border-b border-white/10 pb-6">
             <div className="flex items-center gap-3 text-white group hover:text-[#F7E270] transition-colors duration-300">
               <Calendar className="w-5 h-5" />
-              <span>March 15, 2024</span>
+              <span>Saving the date...</span>
             </div>
             <div className="flex items-center gap-3 text-white group hover:text-[#F7E270] transition-colors duration-300">
               <Clock className="w-5 h-5" />
-              <span>9:00 AM - 5:00 PM PST</span>
+              <span>Coming soon...</span>
             </div>
             <div className="flex items-center gap-3 text-white group hover:text-[#F7E270] transition-colors duration-300">
               <MapPin className="w-5 h-5" />
-              <span>Innovation Center, 123 Tech Boulevard, San Francisco, CA</span>
+              <span>Location TBD</span>
             </div>
           </div>
 
@@ -175,9 +171,9 @@ function App() {
 
           {/* Description */}
           <div className="mt-8">
-            <h2 className={styles.subheading}>About This Event</h2>
+            <h2 className={styles.subheading}>Stay tuned for more information!</h2>
             <p className="text-white/80 leading-relaxed">
-              Join us for the premier tech innovation event of the year! The Tech Innovation Summit brings together industry leaders, innovators, and tech enthusiasts for a day of inspiring talks, workshops, and networking opportunities. Discover the latest trends in AI, blockchain, and sustainable technology while connecting with like-minded professionals.
+              We're working on something new and exciting, and we can't wait to share it with you. Stay tuned for more information, and thank you for your patience!
             </p>
           </div>
 
@@ -187,7 +183,7 @@ function App() {
               <div className="absolute -inset-1 bg-gradient-to-r from-white/20 to-[#F7E270]/20 rounded-lg blur-lg opacity-70 group-hover:opacity-100 transition duration-300" />
               <div className="relative px-8 py-3 bg-[#0A0A0A] rounded-lg border border-[#F7E270] leading-none flex items-center">
                 <span className="text-[#F7E270] group-hover:text-white transition duration-200 font-medium">
-                  Register Now
+                  Stay tuned
                 </span>
               </div>
             </button>
