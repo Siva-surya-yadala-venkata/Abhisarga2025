@@ -73,6 +73,16 @@ const events = [
 ];
 import ParallaxComponent from './ParllaxComponent'
 function App() {
+  function toggleCard(cardContainer) {
+    // Check if the card is already rotated
+    const card = cardContainer.querySelector('.card');
+    if (card.style.transform === 'rotateY(180deg)') {
+      card.style.transform = 'rotateY(0deg)';
+    } else {
+      card.style.transform = 'rotateY(180deg)';
+    }
+  }
+  
   const [selectedclub, setSelectedclub] = useState("");
   const [selectedType, setSelectedType] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
@@ -189,7 +199,6 @@ function App() {
           whileHover={{ scale: 1.05 }}
         >
           <div className="card">
-            {/* Front Face */}
             <div className="card-face card-front">
               <img
                 src={event.image}
@@ -198,7 +207,7 @@ function App() {
               />
             </div>
 
-            {/* Back Face */}
+           
             <div 
   className="card-face card-back relative overflow-hidden rounded-2xl p-6 backdrop-blur-md bg-black/40 border border-gray-800 shadow-lg transition-all duration-300 hover:shadow-amber-500/10 group"
   style={{
@@ -208,11 +217,9 @@ function App() {
     `
   }}
 >
-  {/* Corner decorations */}
   <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-amber-500/20 rounded-tl-2xl"></div>
   <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-amber-500/20 rounded-br-2xl"></div>
 
-  {/* Content */}
   <div className="relative z-10">
     <h2 className="text-3xl font-bold text-amber-500 mb-4 tracking-wide font-serif">{event.title}</h2>
     <p className="text-gray-300/90 text-lg leading-relaxed mb-6">{event.description}</p>
@@ -241,7 +248,6 @@ function App() {
     </a>
   </div>
 
-  {/* Subtle top and bottom borders */}
   <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent"></div>
   <div className="absolute bottom-0 right-0 w-full h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent"></div>
 </div>
@@ -249,6 +255,60 @@ function App() {
           </div>
         </motion.div>
       ))}
+
+{filteredEvents.map((event) => (
+  <div key={event.title} className="card-container"   onClick={() => toggleCard(this)}>
+  <div className="card" >
+    <div className="card-img" style={{backgroundImage: `url(${event.image})`}}></div>
+    <div className="card-body">
+        <span className="bg"></span>
+        <span className="bg"></span>
+        <span className="bg"></span>
+        <div className="content">
+          
+              {/* Corner decorations */}
+              <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-amber-500/20 rounded-tl-2xl"></div>
+              <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-amber-500/20 rounded-br-2xl"></div>
+
+              {/* Content */}
+              <div className="relative z-10  rounded-lg  lg:max-w-md w-full">
+      <h2 className="text-2xl lg:text-3xl font-bold text-amber-500 mb-4 tracking-wide font-poppins">
+        {event.title}
+      </h2>
+      <p className="text-gray-300 text-base lg:text-lg leading-relaxed mb-6 font-poppins">
+        {event.description}
+      </p>
+      <div className="space-y-3 text-sm text-gray-400">
+        <div className="flex items-center gap-3">
+          <CalendarDays className="w-5 h-5 text-amber-500/70" />
+          <span className="font-poppins text-sm lg:text-base">
+            {new Date(event.date).toLocaleDateString()}
+          </span>
+        </div>
+        <div className="flex items-center gap-3">
+          <MapPin className="w-5 h-5 text-amber-500/70" />
+          <span className="font-poppins text-sm lg:text-base">{event.location}</span>
+        </div>
+      </div>
+      <a href={`/event/${event.title}`} className="block mt-6">
+        <button className="w-full px-6 py-3 bg-gradient-to-r from-gray-900 to-black border border-amber-500/30 hover:border-amber-500/50 rounded-lg text-amber-500 font-semibold font-poppins transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/10 group relative overflow-hidden">
+          <span className="relative z-10 flex items-center justify-center gap-2">
+            Know More
+            <Sparkles className="w-5 h-5 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </span>
+          <span className="absolute inset-0 bg-gradient-to-r from-amber-950/30 to-amber-900/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+        </button>
+      </a>
+    </div>
+
+              {/* Subtle top and bottom borders */}
+              <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent"></div>
+              <div className="absolute bottom-0 right-0 w-full h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent"></div>
+            </div>
+        </div>
+    </div>
+ </div>
+))}
     </div>
   </div>
 </div>
