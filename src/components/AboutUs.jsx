@@ -89,7 +89,7 @@ export default function AboutUs() {
     },
     {
       name: "Venkatesh Naidu",
-      description: ["Marketing", "Lead"],
+      description: ["Marketing"],
       image: "./assets/AboutUs/venkateshNaidu.png",
       bgColor: "black",
     },
@@ -98,25 +98,25 @@ export default function AboutUs() {
     },
     {
       name: "Shree Raj",
-      description: ["Sponsorship", "Lead"],
+      description: ["Sponsorship"],
       image: "./assets/AboutUs/ShreeRaj.png",
       bgColor: "black",
     },
     {
       name: "Venkata Sai Reddy",
-      description: ["Design", "Lead"],
+      description: ["Design"],
       image: "./assets/AboutUs/VenkataSaiReddy.png",
       bgColor: "black",
     },
     {
       name: "Shanmathe S A",
-      description: ["Proshows", "Co - Lead"],
+      description: ["Proshows"],
       image: "./assets/AboutUs/Shanmathe.png",
       bgColor: "black",
     },
     {
       name: "Sai Hyndavi Barla",
-      description: ["Invitation", "Lead"],
+      description: ["Invitation"],
       image: "./assets/AboutUs/SaiHyndaviBarla.png",
       bgColor: "black",
     },
