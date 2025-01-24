@@ -115,12 +115,6 @@ export default function AboutUs() {
       bgColor: "black",
     },
     {
-      name: "Sai Hyndavi Barla",
-      description: ["Invitation"],
-      image: "./assets/AboutUs/SaiHyndaviBarla.png",
-      bgColor: "black",
-    },
-    {
       title: "The Magicians Behind the Screen",
     },
     {
