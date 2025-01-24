@@ -1,6 +1,6 @@
-import  { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   FaBars,
   FaTimes,
@@ -12,20 +12,20 @@ import {
   FaTshirt,
   FaHandshake,
   FaAward,
-} from "react-icons/fa"
+} from "react-icons/fa";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
+      setIsScrolled(window.scrollY > 50);
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
     { name: "Home", path: "/", icon: FaHome },
@@ -34,14 +34,20 @@ const Navbar = () => {
     { name: "Contact", path: "/contact", icon: FaEnvelope },
     { name: "Accommodation", path: "/accommodation", icon: FaBed },
     { name: "Merch", path: "/merch", icon: FaTshirt },
-    { name: "Call For Sponsors", path: "/call-for-sponsors", icon: FaHandshake },
+    {
+      name: "Call For Sponsors",
+      path: "/call-for-sponsors",
+      icon: FaHandshake,
+    },
     { name: "Sponsors", path: "/sponsors", icon: FaAward },
-  ]
+  ];
 
   return (
     <motion.nav
       className={`fixed top-0 left-0 w-full z-50 py-4 px-6 transition-all duration-300 ${
-        isScrolled || isMenuOpen ? "backdrop-blur-lg bg-black bg-opacity-50" : "bg-transparent"
+        isScrolled || isMenuOpen
+          ? "backdrop-blur-lg bg-black bg-opacity-50"
+          : "bg-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -58,8 +64,15 @@ const Navbar = () => {
           </motion.div>
         </Link>
 
-        <div className="md:hidden text-[#F7E290] text-2xl cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          <motion.div initial={{ rotate: 0 }} animate={{ rotate: isMenuOpen ? 90 : 0 }} transition={{ duration: 0.3 }}>
+        <div
+          className="md:hidden text-[#F7E290] text-2xl cursor-pointer"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <motion.div
+            initial={{ rotate: 0 }}
+            animate={{ rotate: isMenuOpen ? 90 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
             {isMenuOpen ? <FaTimes /> : <FaBars />}
           </motion.div>
         </div>
@@ -76,7 +89,15 @@ const Navbar = () => {
                 to={item.path}
                 className="text-[#F7E290] hover:text-[#F7E290] transition duration-300 font-harrypotter relative group"
               >
-                <span className="relative z-10">{item.name}</span>
+                <span
+                  className="relative z-10"
+                  style={{
+                    fontFamily: "MedievalSharp, serif",
+                    fontWeight: "600",
+                  }}
+                >
+                  {item.name}
+                </span>
                 <motion.span
                   className="absolute bottom-0 left-0 w-full h-0.5 bg-[#F7E290] transform origin-left"
                   initial={{ scaleX: 0 }}
@@ -113,10 +134,16 @@ const Navbar = () => {
               >
                 <Link
                   to={item.path}
-                  className="block text-[#F7E290] text-lg py-3 px-6 hover:bg-[#F7E290] hover:text-black transition duration-300 font-harrypotter"
+                  className="block text-[#F7E290] text-lg py-3 px-6 hover:bg-[#F7E290] hover:text-black transition duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <span className="flex items-center">
+                  <span
+                    className="flex items-center"
+                    style={{
+                      fontFamily: "MedievalSharp, serif",
+                      fontWeight: "400",
+                    }}
+                  >
                     <item.icon className="mr-2" />
                     {item.name}
                   </span>
@@ -127,9 +154,7 @@ const Navbar = () => {
         )}
       </AnimatePresence>
     </motion.nav>
-  )
-}
+  );
+};
 
-
-export default Navbar
-
+export default Navbar;
