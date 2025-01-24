@@ -14,7 +14,6 @@
 
 .magicians-container {
   width: 100%;
-  /* max-width: 1400px; */
   margin: 0 auto;
   padding: 0px;
   display: flex;
@@ -67,7 +66,7 @@
 .frame {
   text-align: center;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 40px;
+  padding: 30px;
   padding-bottom: 0px;
   height: 500px;
   background: transparent;
