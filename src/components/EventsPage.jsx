@@ -192,7 +192,7 @@ function App() {
     `}</style>
 
     <div className="container mx-auto flex flex-wrap justify-around gap-8">
-      {filteredEvents.map((event) => (
+      {/* {filteredEvents.map((event) => (
         <motion.div
           key={event.id}
           className="card-container"
@@ -254,7 +254,7 @@ function App() {
 
           </div>
         </motion.div>
-      ))}
+      ))} */}
 
 {filteredEvents.map((event) => (
   <div key={event.title} className="card-container"   onClick={() => toggleCard(this)}>
