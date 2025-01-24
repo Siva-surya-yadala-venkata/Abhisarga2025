@@ -41,7 +41,7 @@ export default function ImageCarousel() {
   };
 
   return (
-    <div className=" h-screen relative overflow-hidden" style={{ fontFamily: 'MedievalSharp'}}>
+    <div className=" h-screen relative overflow-hidden font-mysticalFont">
       {/* Progress bar - full width on all screens */}
       {/* <ProgressBar progress={progress} /> */}
       {/* Navigation - responsive padding */}

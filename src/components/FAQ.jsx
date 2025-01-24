@@ -98,15 +98,18 @@ const FAQ = () => {
     },
     {
       question: "What is the schedule of events?",
-      answer: "The detailed event schedule is present in the fest's website timeline page.",
+      answer:
+        "The detailed event schedule is present in the fest's website timeline page.",
     },
     {
       question: "Are all events open to everyone?",
-      answer: "Some events may have specific eligibility criteria. Please refer to the event pages for details.",
+      answer:
+        "Some events may have specific eligibility criteria. Please refer to the event pages for details.",
     },
     {
       question: "Will there be concerts?",
-      answer: "Yes, concerts will be part of Abhisarga 2025. Stay tuned for updates on the artist lineup and timings.",
+      answer:
+        "Yes, concerts will be part of Abhisarga 2025. Stay tuned for updates on the artist lineup and timings.",
     },
     {
       question: "How can I attend the concerts?",
@@ -114,7 +117,8 @@ const FAQ = () => {
     },
     {
       question: "Whom should I contact for queries?",
-      answer: "Check the contact page for details on reaching out to the organizing team.",
+      answer:
+        "Check the contact page for details on reaching out to the organizing team.",
     },
   ];
 
@@ -184,10 +188,7 @@ const FAQ = () => {
           alt=""
           className="h-3 transform scale-x-[-1] mb-10"
         />
-        <h1
-          className="text-4xl font-bold text-center text-[#F7E290] mb-10"
-          style={{ fontFamily: "MedievalSharp, serif" }}
-        >
+        <h1 className="text-4xl font-bold text-center text-[#F7E290] mb-10 font-mysticalFont font-[400]">
           Frequently Asked Questions
         </h1>
         <img src="/assets/header-flourish.svg" alt="" className="h-3 mb-10" />

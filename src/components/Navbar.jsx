@@ -89,13 +89,7 @@ const Navbar = () => {
                 to={item.path}
                 className="text-[#F7E290] hover:text-[#F7E290] transition duration-300 font-harrypotter relative group"
               >
-                <span
-                  className="relative z-10"
-                  style={{
-                    fontFamily: "MedievalSharp, serif",
-                    fontWeight: "600",
-                  }}
-                >
+                <span className="relative z-10 font-mysticalFont font-[600]">
                   {item.name}
                 </span>
                 <motion.span
@@ -137,13 +131,7 @@ const Navbar = () => {
                   className="block text-[#F7E290] text-lg py-3 px-6 hover:bg-[#F7E290] hover:text-black transition duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <span
-                    className="flex items-center"
-                    style={{
-                      fontFamily: "MedievalSharp, serif",
-                      fontWeight: "400",
-                    }}
-                  >
+                  <span className="flex items-center font-mysticalFont font-[400]">
                     <item.icon className="mr-2" />
                     {item.name}
                   </span>

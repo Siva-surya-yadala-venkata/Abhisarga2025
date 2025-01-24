@@ -86,8 +86,7 @@ function Footer() {
           className="h-4 md:h-5 my-4"
         />
         <p
-          className="text-sm md:text-base font-serif mb-4"
-          style={{ fontFamily: "MedievalSharp, serif", color: "#AE8E48" }}
+          className="text-sm md:text-base font-serif mb-4 font-mysticalFont text-[#AE8E48]"
         >
           Designed with by IIITS Team
         </p>

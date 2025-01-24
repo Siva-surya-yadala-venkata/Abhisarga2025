@@ -40,13 +40,7 @@ const AboutPage = () => {
                 ABOUT{" "}
               </span>
             </h1>
-            <div
-              className="text-[40px] xl:text-[80px] text-white"
-              style={{
-                fontFamily: "MedievalSharp, serif",
-                fontWeight: "400",
-              }}
-            >
+            <div className="text-[40px] xl:text-[80px] text-white font-mysticalFont font-[400]">
               ABHISARGA
             </div>
           </div>
@@ -82,13 +76,7 @@ const AboutPage = () => {
                 ABOUT{" "}
               </span>
             </h1>
-            <div
-              className="text-[40px] xl:text-[80px] text-white"
-              style={{
-                fontFamily: "MedievalSharp, serif",
-                fontWeight: "400",
-              }}
-            >
+            <div className="text-[40px] xl:text-[80px] text-white font-mysticalFont font-[400]">
               IIIT SRICITY
             </div>
           </div>

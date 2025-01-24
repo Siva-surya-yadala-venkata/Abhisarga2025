@@ -6,6 +6,7 @@ export default {
       
       fontFamily: {
         cinzelDecorative: ["Cinzel Decorative", "sans-serif"], // Google Font
+        mysticalFont: ["MedievalSharp", "serif"], // Custom Font
       },
       animation: {
         marquee: "marquee var(--duration) linear infinite",

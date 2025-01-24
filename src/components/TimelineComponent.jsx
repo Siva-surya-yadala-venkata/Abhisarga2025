@@ -201,8 +201,7 @@ const Timeline = () => {
           className="h-3 transform scale-x-[-1] mb-10"
         />
         <h1
-          className="text-4xl font-bold text-center text-[#F7E290] mb-10"
-          style={{ fontFamily: "MedievalSharp, serif" }}
+          className="text-4xl font-bold text-center text-[#F7E290] mb-10 font-mysticalFont"
         >
           Mystical Timeline
         </h1>

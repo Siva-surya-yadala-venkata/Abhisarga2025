@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion'; // Make sure to install framer-motion if not already installed
+import React from "react";
+import { motion } from "framer-motion"; // Make sure to install framer-motion if not already installed
 
-export default function ParallaxComponent({ backgroundImage , heading }) {
+export default function ParallaxComponent({ backgroundImage, heading }) {
   return (
     <div>
       <div className="relative h-[500px] w-[100vw] mb-16">
@@ -18,7 +18,9 @@ export default function ParallaxComponent({ backgroundImage , heading }) {
                 animate={{ opacity: 1, y: 0 }}
                 className="text-6xl md:text-8xl font-bold mb-4 font-magical text-white"
               >
-                <span className="text-[#F7E290]" style={{fontFamily: 'MedievalSharp'}}>{heading}</span>
+                <span className="text-[#F7E290] font-mysticalFont">
+                  {heading}
+                </span>
               </motion.h1>
             </div>
           </div>

@@ -232,13 +232,10 @@ export default function AboutUs() {
       <div className="featured-frames">
         {groupedMembers.map((group, index) => (
           <div key={index} className="group-section">
-            {group.title && <h2 className="group-title">{group.title}</h2>}
+            {group.title && <h2 className="group-title text-[#fff] font-mysticalFont">{group.title}</h2>}
             <div className="frames-grid">
               {group.members.map((member, idx) => (
-                <div
-                  key={idx}
-                  className="frame"
-                >
+                <div key={idx} className="frame">
                   <div className="image-container">
                     <img
                       className="featured-image"
