@@ -115,7 +115,7 @@ export default function AboutUs() {
       bgColor: "black",
     },
     {
-      title: "The Magicians Behind the Screen",
+      title: "The Magicians Behind the Website",
     },
     {
       name: "Naveen Kumar",
