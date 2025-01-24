@@ -3,16 +3,16 @@ import React from "react";
 export default function CarouselSlide({ item, isActive }) {
   return (
     <div
-      className={`absolute inset-0 transition-all duration-700 ease-in-out bg-black
+      className={`absolute inset-0 transition-all duration-300 ease-in-out bg-black
         ${isActive ? "opacity-100 visible" : "opacity-0 invisible"}`}
     >
       {/* Top-to-Bottom Gradient Overlay */}
       <div
-        className="absolute inset-0 bg-gradient-to-b "
+        className="absolute inset-0"
         style={{
           background: `
-            linear-gradient(to bottom, #000000, transparent 30%, #000000),
-            linear-gradient(to right, #000000, transparent 50%)
+            linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent),
+            rgba(0, 0, 0, 0.2)
           `,
         }}
       />
