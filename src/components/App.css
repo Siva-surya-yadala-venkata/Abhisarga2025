@@ -43,15 +43,22 @@
   margin-bottom: 50px;
 }
 
+.group-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .featured-frames {
   width: 100%;
-  max-width: 1400px;
-  margin: 60px auto;
+  margin: 0px 0px 0px 60px;
   padding: 0 20px;
 }
 
 .frames-grid {
   display: grid;
+  max-width: 1200px;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   justify-content: center;
@@ -61,6 +68,7 @@
   text-align: center;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
+  height: 500px;
   /* background: rgba(255, 255, 255, 0.05); */
   background: transparent;
   border-radius: 20px;
@@ -143,19 +151,15 @@
 
 .featured-name {
   color: white;
-  font-size: clamp(2rem, 20px, 2.5rem);
-  margin: 20px 0 0px;
+  font-size: clamp(2rem, 15px, 2.5rem);
+  /* margin: 20px 0 0px; */
   position: relative;
   transition: color 0.3s ease;
 }
 
-.frame:hover .featured-name {
-  /* color: #f7e290; */
-}
-
 .featured-description {
   color: #f7e290;
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-size: clamp(10px, 15px, 1rem);
   margin: 0;
   opacity: 0.8;
   transition: opacity 0.3s ease;
@@ -500,10 +504,10 @@
   }
 }
 
-.featured-name:hover {
+/* .featured-name:hover {
   animation: nameGlow 2s infinite;
   color: #f7e290;
-}
+} */
 
 
 /* Add zoom animation for Our Magicians */

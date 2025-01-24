@@ -16,6 +16,9 @@ export default function AboutUs() {
       bgColor: "black",
     },
     {
+      title: "newLine",
+    },
+    {
       name: "Charvi Palem",
       description: ["Co-Convenor"],
       image: "./assets/AboutUs/CharviPalem.png",
@@ -28,7 +31,7 @@ export default function AboutUs() {
       bgColor: "black",
     },
     {
-      title: "SDC President",
+      title: "Members",
     },
     {
       name: "Kannan M",
@@ -36,9 +39,6 @@ export default function AboutUs() {
       image: "./assets/AboutUs/KannanM.png",
       bgColor: "black",
     },
-    // {
-    //   title: "SLC President",
-    // },
     {
       name: "Abhinav Mars",
       description: ["SLC President"],
@@ -52,18 +52,12 @@ export default function AboutUs() {
       bgColor: "black",
     },
     {
+      title: "newLine",
+    },
+    {
       name: "Monish B",
       description: ["SDC Treasurer"],
       image: "./assets/AboutUs/Monish.png",
-      bgColor: "black",
-    },
-    // {
-    //   title: "Development",
-    // },
-    {
-      name: "Kaushal Edara",
-      description: ["Joint Secretary Technical SDC"],
-      image: "./assets/AboutUs/KaushalEdara.png",
       bgColor: "black",
     },
     {
@@ -72,9 +66,15 @@ export default function AboutUs() {
       image: "./assets/AboutUs/ManojVarmaDatla.png",
       bgColor: "black",
     },
-    // {
-    //   title: "SLC",
-    // },
+    {
+      name: "Kaushal Edara",
+      description: ["Joint Secretary Technical SDC"],
+      image: "./assets/AboutUs/KaushalEdara.png",
+      bgColor: "black",
+    },
+    {
+      title: "newLine",
+    },
     {
       name: "Santhosh",
       description: ["SLC Secretary Hostel Boys"],
@@ -94,6 +94,9 @@ export default function AboutUs() {
       bgColor: "black",
     },
     {
+      title: "newLine",
+    },
+    {
       name: "Shree Raj",
       description: ["Sponsorship", "Lead"],
       image: "./assets/AboutUs/ShreeRaj.png",
@@ -105,7 +108,6 @@ export default function AboutUs() {
       image: "./assets/AboutUs/VenkataSaiReddy.png",
       bgColor: "black",
     },
-
     {
       name: "Shanmathe S A",
       description: ["Proshows", "Co - Lead"],
@@ -119,10 +121,10 @@ export default function AboutUs() {
       bgColor: "black",
     },
     {
-      title: "Technical Team",
+      title: "The Magicians Behind the Screen",
     },
     {
-      name: "Lankotu Naveen Kumar",
+      name: "Naveen Kumar",
       description: ["Tech Team", "Lead"],
       position: "Lead",
       image: "./assets/AboutUs/NaveenKumar.png",
@@ -136,6 +138,9 @@ export default function AboutUs() {
       image: "./assets/AboutUs/PinnuKoushik.png",
       linkedin: "https://www.linkedin.com/in/koushik-pinnu-ba0873297/",
       bgColor: "black",
+    },
+    {
+      title: "newLine",
     },
     {
       name: "Sai Vineel",
@@ -229,13 +234,19 @@ export default function AboutUs() {
         backgroundImage={"/AccomodationBg.jpg"}
         heading={"Our Magicians"}
       />
-      <div className="featured-frames">
+      <div className="featured-frames flex flex-wrap justify-center gap-8">
         {groupedMembers.map((group, index) => (
-          <div key={index} className="group-section">
-            {group.title && <h2 className="group-title text-[#fff] font-mysticalFont">{group.title}</h2>}
-            <div className="frames-grid">
+          <div key={index} className="group-section flex flex-col items-center">
+            {group.title != "newLine" && (
+              <div className="width-[1000px] mt-[100px]">
+                <h2 className="group-title text-[#fff] font-mysticalFont text-[50px]">
+                  {group.title}
+                </h2>
+              </div>
+            )}
+            <div className="flex flex-wrap items-center justify-center gap-8">
               {group.members.map((member, idx) => (
-                <div key={idx} className="frame">
+                <div key={idx} className="frame flex flex-col items-center">
                   <div className="image-container">
                     <img
                       className="featured-image"
@@ -243,12 +254,14 @@ export default function AboutUs() {
                       alt={member.name}
                     />
                   </div>
-                  <h3 className="featured-name">{member.name}</h3>
-                  {member.description.map((desc, i) => (
-                    <p key={i} className="featured-description">
-                      {desc}
-                    </p>
-                  ))}
+                  <div>
+                    <h3 className="featured-name">{member.name}</h3>
+                    {member.description.map((desc, i) => (
+                      <p key={i} className="featured-description">
+                        {desc}
+                      </p>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
