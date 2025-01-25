@@ -38,7 +38,6 @@ function App() {
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="*" element={<div>Page Not Found</div>} />
       </Routes>
-
       {/* Footer placed outside Routes to persist across all pages */}
       <Footer />
     </>
