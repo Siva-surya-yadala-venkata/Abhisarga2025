@@ -12,7 +12,7 @@ export default function AboutUs() {
     {
       name: "Yashwanth S",
       description: ["Convenor"],
-      image: "./assets/AboutUs/YashwanthS.png",
+      image: "./assets/AboutUs/YashwanthS.webp",
       bgColor: "black",
     },
     {
@@ -21,13 +21,13 @@ export default function AboutUs() {
     {
       name: "Charvi Palem",
       description: ["Co-Convenor"],
-      image: "./assets/AboutUs/CharviPalem.png",
+      image: "./assets/AboutUs/CharviPalem.webp",
       bgColor: "black",
     },
     {
       name: "Suayash Tiwari",
       description: ["Co-Convenor"],
-      image: "./assets/AboutUs/SuayashTiwari.png",
+      image: "./assets/AboutUs/SuayashTiwari.webp",
       bgColor: "black",
     },
     {
@@ -36,19 +36,19 @@ export default function AboutUs() {
     {
       name: "Kannan M",
       description: ["SDC President"],
-      image: "./assets/AboutUs/KannanM.png",
+      image: "./assets/AboutUs/KannanM.webp",
       bgColor: "black",
     },
     {
       name: "Abhinav Mars",
       description: ["SLC President"],
-      image: "./assets/AboutUs/AbhinavMars.png",
+      image: "./assets/AboutUs/AbhinavMars.webp",
       bgColor: "black",
     },
     {
       name: "Poojyanth",
       description: ["SLC Vice President"],
-      image: "./assets/AboutUs/Poojyanth.png",
+      image: "./assets/AboutUs/Poojyanth.webp",
       bgColor: "black",
     },
     {
@@ -57,19 +57,19 @@ export default function AboutUs() {
     {
       name: "Monish B",
       description: ["SDC Treasurer"],
-      image: "./assets/AboutUs/Monish.png",
+      image: "./assets/AboutUs/Monish.webp",
       bgColor: "black",
     },
     {
       name: "Manoj Varma Datla",
       description: ["Joint Secretary Non Technical SDC"],
-      image: "./assets/AboutUs/ManojVarmaDatla.png",
+      image: "./assets/AboutUs/ManojVarmaDatla.webp",
       bgColor: "black",
     },
     {
       name: "Kaushal Edara",
       description: ["Joint Secretary Technical SDC"],
-      image: "./assets/AboutUs/KaushalEdara.png",
+      image: "./assets/AboutUs/KaushalEdara.webp",
       bgColor: "black",
     },
     {
@@ -78,19 +78,19 @@ export default function AboutUs() {
     {
       name: "Santhosh",
       description: ["SLC Secretary Hostel Boys"],
-      image: "./assets/AboutUs/Santhosh.png",
+      image: "./assets/AboutUs/Santhosh.webp",
       bgColor: "black",
     },
     {
       name: "Teja Sri",
       description: ["SLC Secretary Hostel Girls"],
-      image: "./assets/AboutUs/TejaSri.png",
+      image: "./assets/AboutUs/TejaSri.webp",
       bgColor: "black",
     },
     {
       name: "Venkatesh Naidu",
       description: ["Marketing"],
-      image: "./assets/AboutUs/venkateshNaidu.png",
+      image: "./assets/AboutUs/venkateshNaidu.webp",
       bgColor: "black",
     },
     {
@@ -99,19 +99,19 @@ export default function AboutUs() {
     {
       name: "Shree Raj",
       description: ["Sponsorship"],
-      image: "./assets/AboutUs/ShreeRaj.png",
+      image: "./assets/AboutUs/ShreeRaj.webp",
       bgColor: "black",
     },
     {
       name: "Venkata Sai Reddy",
       description: ["Design"],
-      image: "./assets/AboutUs/VenkataSaiReddy.png",
+      image: "./assets/AboutUs/VenkataSaiReddy.webp",
       bgColor: "black",
     },
     {
       name: "Shanmathe S A",
       description: ["Proshows"],
-      image: "./assets/AboutUs/Shanmathe.png",
+      image: "./assets/AboutUs/Shanmathe.webp",
       bgColor: "black",
     },
     {
@@ -121,7 +121,7 @@ export default function AboutUs() {
       name: "Naveen Kumar L",
       description: ["Tech Team", "Lead"],
       position: "Lead",
-      image: "./assets/AboutUs/NaveenKumar.png",
+      image: "./assets/AboutUs/NaveenKumar.webp",
       linkedin: "https://www.linkedin.com/in/naveen-kumar-lankotu",
       bgColor: "black",
     },
@@ -129,7 +129,7 @@ export default function AboutUs() {
       name: "Pinnu Koushik",
       description: ["Tech Team", "Co-Lead"],
       position: "Co-Lead",
-      image: "./assets/AboutUs/PinnuKoushik.png",
+      image: "./assets/AboutUs/PinnuKoushik.webp",
       linkedin: "https://www.linkedin.com/in/koushik-pinnu-ba0873297/",
       bgColor: "black",
     },
@@ -140,7 +140,7 @@ export default function AboutUs() {
       name: "Sai Vineel",
       description: ["Tech Team", "Member"],
       position: "Member",
-      image: "./assets/AboutUs/SaiVineel.png",
+      image: "./assets/AboutUs/SaiVineel.webp",
       linkedin: "https://www.linkedin.com/in/sai-vineel-96946b27b/",
       bgColor: "black",
     },
@@ -148,7 +148,7 @@ export default function AboutUs() {
       name: "Siva Surya",
       description: ["Tech Team", "Member"],
       position: "Member",
-      image: "./assets/AboutUs/SivaSurya.png",
+      image: "./assets/AboutUs/SivaSurya.webp",
       linkedin:
         "https://www.linkedin.com/in/yadala-venkata-siva-surya-1a1a3b256",
       bgColor: "black",
@@ -157,7 +157,7 @@ export default function AboutUs() {
       name: "Lokesh Kudipudi ",
       description: ["Tech Team", "Member"],
       position: "Member",
-      image: "./assets/AboutUs/LokeshKudipudi.png",
+      image: "./assets/AboutUs/LokeshKudipudi.webp",
       linkedin: "https://www.linkedin.com/in/lokesh-kudipudi",
       bgColor: "black",
     },
@@ -165,7 +165,7 @@ export default function AboutUs() {
       name: "Narasimha",
       description: ["Tech Team", "Member"],
       position: "Member",
-      image: "./assets/AboutUs/LakshmiNarasimha.png",
+      image: "./assets/AboutUs/LakshmiNarasimha.webp",
       linkedin: "https://www.linkedin.com/in/y-l-narasimha-500346270",
       bgColor: "black",
     },
@@ -173,7 +173,7 @@ export default function AboutUs() {
       name: "Venkata Sai Pranav",
       description: ["Tech Team", "Member"],
       position: "Member",
-      image: "./assets/AboutUs/VenkataSaiPranav.png",
+      image: "./assets/AboutUs/VenkataSaiPranav.webp",
       linkedin: "https://www.linkedin.com/in/moparthi-pranav-441b40206",
       bgColor: "black",
     },
@@ -181,7 +181,7 @@ export default function AboutUs() {
       name: "Monu Agrahari",
       description: ["Tech Team", "Member"],
       position: "Member",
-      image: "./assets/AboutUs/MonuAgrahari.png",
+      image: "./assets/AboutUs/MonuAgrahari.webp",
       linkedin: "https://www.linkedin.com/in/monu-agrhari-255889323/",
       bgColor: "black",
     },
@@ -189,7 +189,7 @@ export default function AboutUs() {
       name: "Aadesh Phadake",
       description: ["Tech Team", "Member"],
       position: "Member",
-      image: "./assets/AboutUs/AadeshPhadake.png",
+      image: "./assets/AboutUs/AadeshPhadake.webp",
       linkedin: "https://www.linkedin.com/in/aadesh-phadake-96554123b/",
       bgColor: "black",
     },
@@ -197,7 +197,7 @@ export default function AboutUs() {
       name: "Arun M",
       description: ["Tech Team", "Member"],
       position: "Member",
-      image: "./assets/AboutUs/Arun.png",
+      image: "./assets/AboutUs/Arun.webp",
       linkedin:
         "https://www.linkedin.com/in/arun-52094b297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       bgColor: "black",
@@ -219,8 +219,8 @@ export default function AboutUs() {
       className="magicians-container"
       style={{
         background: `
-  linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-      url('https://png.pngtree.com/thumb_back/fh260/background/20231225/pngtree-fairytale-castle-and-a-mythical-fire-breathing-dragon-guarding-it-on-image_15513889.jpg') center/cover no-repeat fixed,
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url('https://webp.webptree.com/thumb_back/fh260/background/20231225/webptree-fairytale-castle-and-a-mythical-fire-breathing-dragon-guarding-it-on-image_15513889.jpg') center/cover no-repeat fixed,
       radial-gradient(circle at top, #24222d, #131433)
     `,
       }}
