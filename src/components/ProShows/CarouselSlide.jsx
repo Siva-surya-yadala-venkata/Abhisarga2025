@@ -11,8 +11,9 @@ export default function CarouselSlide({ item, isActive }) {
         className="absolute inset-0"
         style={{
           background: `
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent, rgba(0, 0, 0, 0.7)),
             linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent),
-            rgba(0, 0, 0, 0.2)
+            rgba(0, 0, 0, 0.3)
           `,
         }}
       />

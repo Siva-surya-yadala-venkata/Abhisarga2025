@@ -1,7 +1,7 @@
 export const carouselData = [
   {
     id: 1,
-    image: '/assets/SponsorsAssets/ProShow1.jpg', // Relative path from public
+    image: '/assets/SponsorsAssets/ProShow1.webp', // Relative path from public
     author: 'ABHISARGA',
     date: '2025',
     title: 'DJ RHEA',
@@ -10,7 +10,7 @@ export const carouselData = [
   },
   {
     id: 2,
-    image: '/assets/SponsorsAssets/ProShow2.jpg',
+    image: '/assets/SponsorsAssets/ProShow2.webp',
     author: 'ABHISARGA',
     date: '2025',
     title: 'TECH EXPO',
@@ -19,7 +19,7 @@ export const carouselData = [
   },
   {
     id: 3,
-    image: '/assets/SponsorsAssets/ProShow3.jpg',
+    image: '/assets/SponsorsAssets/ProShow3.webp',
     author: 'ABHISARGA',
     date: '2025',
     title: 'DIGITAL ART',

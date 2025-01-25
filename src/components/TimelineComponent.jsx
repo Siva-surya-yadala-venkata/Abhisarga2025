@@ -274,4 +274,4 @@ const Timeline = () => {
   );
 };
 
-export default Timeline;
+export default React.memo(Timeline);
