@@ -38,6 +38,7 @@ body {
 body {
   font-family: 'CustomFont', sans-serif;
 } */
+
 .card-container {
   perspective: 1000px;
   transform-style: preserve-3d;
@@ -55,7 +56,6 @@ body {
   width: 100%;
   height: 100%;
   background-size: cover;
-  border-radius: 20px;
   transform: translateZ(40px);
 }
 .card-body {
@@ -124,4 +124,4 @@ body {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 1s; /* Matches the delay for .bg animations */
-}
+} 

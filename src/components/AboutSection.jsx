@@ -47,7 +47,7 @@ const AboutPage = () => {
 
           <div className="relative z-10 max-w-md space-y-4 text-gray-400 text-sm md:text-lg mt-6 text-[16px] text-center xl:text-left  md:text-[20px] xl:text-[22px]">
             <p>
-              Abhisarga is IIIT Sricity's annual techno-cultural fest. It
+              Abhisarga is IIIT Sri City's annual techno-cultural fest. It
               combines technology, culture, and entertainment, creating a
               vibrant platform for talent and innovation.
             </p>
@@ -77,13 +77,13 @@ const AboutPage = () => {
               </span>
             </h1>
             <div className="text-[40px] xl:text-[80px] text-white font-mysticalFont font-[400]">
-              IIIT SRICITY
+              IIIT SRI CITY
             </div>
           </div>
 
           <div className="relative z-10 max-w-md space-y-4 text-gray-400 text-sm md:text-lg mt-6 text-[16px] text-center xl:text-left md:text-[20px] xl:text-[22px]">
             <p>
-              IIIT Sricity, established in 2013, is one of India's premier
+              IIIT Sri City, established in 2013, is one of India's premier
               institutions for Information Technology education, research, and
               development. It stands as a beacon of excellence in technology and
               innovation.

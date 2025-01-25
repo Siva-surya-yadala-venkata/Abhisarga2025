@@ -110,40 +110,41 @@ function App() {
     backgroundImage={"/EventBg.jpg"}
     heading={"Events"}
   />
-  <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-full max-w-2xl px-4">
-    <div className="grid grid-cols-3 gap-4 backdrop-blur-xl bg-[#24222f]/30 p-4 rounded-xl border border-[#24222f]/20 shadow-lg shadow-[#24222f]/10">
-      <select
-        value={selectedclub}
-        onChange={(e) => setSelectedclub(e.target.value)}
-        className="w-full px-3 py-2 rounded-lg bg-[#24222f]/30 border border-[#24222f]/20 text-[#F7E290] focus:outline-none focus:ring-2 focus:ring-[#F7E290]/50"
-      >
-        <option value="">Filter by club</option>
-        <option value="Epoch">Epoch</option>
-        <option value="GDG">GDG</option>
-        <option value="Iota">Iota</option>
-        <option value="Enigma">Enigma</option>
-        <option value="Meraki">Meraki</option>
-      </select>
+ <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-full max-w-2xl px-4">
+  <div className="grid grid-cols-3 gap-4 backdrop-blur-xl bg-[#24222f]/30 p-4 rounded-xl border border-[#24222f]/20 shadow-lg shadow-[#24222f]/10">
+    <select
+      value={selectedclub}
+      onChange={(e) => setSelectedclub(e.target.value)}
+      className="w-full px-3 py-2 rounded-lg bg-[#24222f]/30 border border-[#24222f]/20 text-[#F7E290] focus:outline-none focus:ring-2 focus:ring-[#F7E290]/50"
+    >
+      <option value="" className="bg-[#24222f] text-[#F7E290]">Filter by club</option>
+      <option value="Epoch" className="bg-[#24222f] text-[#F7E290]">Epoch</option>
+      <option value="GDG" className="bg-[#24222f] text-[#F7E290]">GDG</option>
+      <option value="Iota" className="bg-[#24222f] text-[#F7E290]">Iota</option>
+      <option value="Enigma" className="bg-[#24222f] text-[#F7E290]">Enigma</option>
+      <option value="Meraki" className="bg-[#24222f] text-[#F7E290]">Meraki</option>
+    </select>
 
-      <select
-        value={selectedType}
-        onChange={(e) => setSelectedType(e.target.value)}
-        className="w-full px-3 py-2 rounded-lg bg-[#24222f]/30 border border-[#24222f]/20 text-[#F7E290] focus:outline-none focus:ring-2 focus:ring-[#F7E290]/50"
-      >
-        <option value="">Filter by Type</option>
-        <option value="Technical">Technical</option>
-        <option value="Non-Technical">Non-Technical</option>
-      </select>
+    <select
+      value={selectedType}
+      onChange={(e) => setSelectedType(e.target.value)}
+      className="w-full px-3 py-2 rounded-lg bg-[#24222f]/30 border border-[#24222f]/20 text-[#F7E290] focus:outline-none focus:ring-2 focus:ring-[#F7E290]/50"
+    >
+      <option value="" className="bg-[#24222f] text-[#F7E290]">Filter by Type</option>
+      <option value="Technical" className="bg-[#24222f] text-[#F7E290]">Technical</option>
+      <option value="Non-Technical" className="bg-[#24222f] text-[#F7E290]">Non-Technical</option>
+    </select>
 
-      <input
-        type="text"
-        placeholder="Search events..."
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-        className="w-full px-3 py-2 rounded-lg bg-[#24222f]/30 border border-[#24222f]/20 text-[#F7E290] placeholder-[#F7E290]/50 focus:outline-none focus:ring-2 focus:ring-[#F7E290]/50"
-      />
-    </div>
+    <input
+      type="text"
+      placeholder="Search events..."
+      value={searchQuery}
+      onChange={(e) => setSearchQuery(e.target.value)}
+      className="w-full px-3 py-2 rounded-lg bg-[#24222f]/30 border border-[#24222f]/20 text-[#F7E290] placeholder-[#F7E290]/50 focus:outline-none focus:ring-2 focus:ring-[#F7E290]/50"
+    />
   </div>
+</div>
+
 </div>
 
 <div>
@@ -270,7 +271,7 @@ function App() {
               <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-amber-500/20 rounded-br-2xl"></div>
 
               {/* Content */}
-              <div className="relative z-10  rounded-lg  lg:max-w-md w-full">
+              <div className="relative z-10    lg:max-w-md w-full">
       <h2 className="text-2xl lg:text-3xl font-bold text-amber-500 mb-4 tracking-wide font-poppins">
         {event.title}
       </h2>
