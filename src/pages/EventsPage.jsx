@@ -1,7 +1,7 @@
 
-import {  CalendarDays, MapPin, Sparkles } from "lucide-react";
+import {  CalendarDays, MapPin, Sparkles , Users } from "lucide-react";
 import React, { useState,} from "react";
-
+import {motion} from 'framer-motion'
 const events = [
   {
     id: 1,
@@ -254,8 +254,8 @@ function App() {
           </div>
         </motion.div>
       ))} */}
-
-{filteredEvents.map((event) => (
+  
+  {filteredEvents.map((event) => (
   <div key={event.title} className="card-container"   onClick={() => toggleCard(this)}>
   <div className="card" >
     <div className="card-img" style={{backgroundImage: `url(${event.image})`}}></div>
@@ -310,6 +310,7 @@ function App() {
 ))}
     </div>
   </div>
+
 </div>
 
     </div>
