@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
@@ -49,7 +50,7 @@ const FAQ = () => {
     {
       question: "Is there a registration fee?",
       answer:
-        "Some events may have a nominal registration fee. Details can be found on the event-specific pages.",
+        "Some events may have nominal registration fee. Details can be found on the event-specific pages.",
     },
     {
       question: "What is the theme of Abhisarga 2025?",

@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 import { SponsorCard } from './sponsor-card';
 import {
-  FloatingCandles,
   MagicSparkles,
 } from "./magical-effects";
 import { BenefitsModal } from "./benefits-modal";
