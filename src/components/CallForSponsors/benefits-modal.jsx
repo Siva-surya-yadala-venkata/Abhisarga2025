@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { motion, AnimatePresence } from "framer-motion"
-import { Wand2, X } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion";
+import { Wand2, X } from "lucide-react";
 
 const benefits = [
   "Link to your website on our fest's website",
@@ -20,22 +20,22 @@ const benefits = [
   "Head/CEO to be honored at stage",
   "Logos on certificates/invitation & merch",
   "1-on-1 meetings",
-  "Multiplicity exposure"
-]
+  "Multiplicity exposure",
+];
 
 const tierLevels = {
   "Title Sponsor": 17,
-  "Diamond Sponsor": 14,
-  "Platinum Sponsor": 11,
-  "Gold Sponsor": 8,
-  "Silver Sponsor": 5,
-  "Bronze Sponsor": 3
-}
+  "Diamond Sponsor": 13,
+  "Platinum Sponsor": 10,
+  "Gold Sponsor": 7,
+  "Silver Sponsor": 4,
+  "Bronze Sponsor": 2,
+};
 
 export function BenefitsModal({ isOpen, onClose, tier }) {
-  const benefitCount = tierLevels[tier] || 0
+  const benefitCount = tierLevels[tier] || 0;
 
-  if (!isOpen) return null
+  if (!isOpen) return null;
 
   return (
     <AnimatePresence>
@@ -72,11 +72,7 @@ export function BenefitsModal({ isOpen, onClose, tier }) {
                   transition={{ delay: index * 0.05 }}
                   className={`flex items-center space-x-4 p-4 rounded-xl transition-all duration-300
                     backdrop-blur-md border border-gray-700
-                    ${
-                      index < benefitCount
-                        ? ""
-                        : "bg-gray-800 opacity-40"
-                    }`}
+                    ${index < benefitCount ? "" : "bg-gray-800 opacity-40"}`}
                 >
                   {index < benefitCount ? (
                     <motion.div
@@ -85,7 +81,7 @@ export function BenefitsModal({ isOpen, onClose, tier }) {
                       transition={{
                         delay: index * 0.05 + 0.2,
                         type: "spring",
-                        stiffness: 200
+                        stiffness: 200,
                       }}
                       className="relative"
                     >
@@ -121,5 +117,5 @@ export function BenefitsModal({ isOpen, onClose, tier }) {
         </motion.div>
       </motion.div>
     </AnimatePresence>
-  )
+  );
 }

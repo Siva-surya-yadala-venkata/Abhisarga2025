@@ -11,13 +11,13 @@ import CallForSponsors from "./components/CallForSponsors/page";
 import SplashCursor from "./components/SplashCursor";
 import Sponsors from "./pages/Sponsors";
 import ComingSoon from "./pages/comingSoon";
-
+import ScrollToTop from './components/ScrollToTop'
 function App() {
   return (
     <>
       {/* Navbar placed outside Routes to persist across all pages */}
       <Navbar />
-
+      <ScrollToTop/>
       {/* Routes for page navigation */}
       <Routes>
         <Route
