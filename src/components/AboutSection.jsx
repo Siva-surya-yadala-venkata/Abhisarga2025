@@ -5,7 +5,7 @@ import { Marquee3D } from "./ui/Marquee3D";
 
 const AboutPage = () => {
   return (
-    <div className="relative min-h-screen h-[2vh] overflow-hidden flex items-center justify-center">
+    <div className="relative min-h-[900px] h-[100vh] overflow-hidden flex items-center justify-center">
       {/* Background Image (lowest layer) */}
       <div className="absolute inset-0 bg-black opacity-90 rounded-lg z-0"></div>
 
