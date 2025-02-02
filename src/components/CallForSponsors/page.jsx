@@ -21,7 +21,7 @@ export default function CallForSponsors() {
   return (
     <>
      <ParallaxComponent
-            backgroundImage={"/CallForSponsors.jpg"}
+            backgroundImage={"/CallForSponsors.jpeg"}
             heading={"Call For Sponsors"}
           />
     <main 
@@ -29,7 +29,7 @@ export default function CallForSponsors() {
     style={{
       background: `
   linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-      url('https://img.freepik.com/free-photo/apocalyptic-landscape-with-war-zone-destruction_23-2150985699.jpg?ga=GA1.1.2092140943.1701793667&semt=ais_incoming') center/cover no-repeat fixed,
+      url('CallForSponsorBg.jpeg') center/cover no-repeat fixed,
       radial-gradient(circle at top, #24222d, #131433)
     `,
     }}
@@ -93,7 +93,7 @@ function SponsorTiers() {
     style={{
       background: `
   linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-      url('https://img.freepik.com/free-photo/apocalyptic-landscape-with-war-zone-destruction_23-2150985699.jpg?ga=GA1.1.2092140943.1701793667&semt=ais_incoming') center/cover no-repeat fixed,
+      url('CallForSponsorMiddle.jpeg') center/cover no-repeat fixed,
       radial-gradient(circle at top, #24222d, #131433)
     `,
     }}

@@ -71,7 +71,7 @@ export default function AccommodationPage() {
       style={{
         background: `
     linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-        url('https://png.pngtree.com/thumb_back/fh260/background/20231225/pngtree-fairytale-castle-and-a-mythical-fire-breathing-dragon-guarding-it-on-image_15513889.jpg') center/cover no-repeat fixed,
+        url('AccomodationMain.jpeg') center/cover no-repeat fixed,
         radial-gradient(circle at top, #24222d, #131433)
       `,
       }}

@@ -100,14 +100,14 @@ function App() {
     style={{
       background: `
   linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.5)),
-      url('/EventMainBg.jpg') center/cover no-repeat fixed,
+      url('/EventMainBg.jpeg') center/cover no-repeat fixed,
       radial-gradient(circle at top, #24222d, #131433)
     `,
     }}
     >
      <div className="relative h-[500px] mb-16">
   <ParallaxComponent
-    backgroundImage={"/EventBg.jpg"}
+    backgroundImage={"/EventBg.jpeg"}
     heading={"Events"}
   />
  <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-full max-w-2xl px-4">

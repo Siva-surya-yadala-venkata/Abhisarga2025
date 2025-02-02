@@ -93,13 +93,13 @@ export default function Sponsors() {
   
   return (
     <>
-    <ParallaxComponent backgroundImage="/SponsorsHero.jpg" heading="Sponsors" />
+    <ParallaxComponent backgroundImage="/SponsorsHero.jpeg" heading="Sponsors" />
     <div 
       className="min-h-screen relative overflow-hidden bg-black"
       style={{
         background: `
           linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-          url('/SponsorsBg.jpg') center/cover no-repeat fixed
+          url('/SponsorsBg.jpeg') center/cover no-repeat fixed
         `,
       }}
       

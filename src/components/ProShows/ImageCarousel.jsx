@@ -81,7 +81,7 @@ export default function ImageCarousel() {
       <NavigationArrows
         onPrev={handlePrev}
         onNext={handleNext}
-        className="absolute inset-y-0 w-full flex items-center justify-between px-4 sm:px-6 lg:px-8 z-20"
+        className="absolute inset-y-0 w-full flex items-center justify-between px-4 sm:px-6 lg:px-8 z-2"
       />
 
       {/* Mobile-only indicators */}
