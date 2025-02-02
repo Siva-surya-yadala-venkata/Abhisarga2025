@@ -12,7 +12,6 @@ export function SponsorCard({ tier, index }) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: index * 0.1 }}
-        className="relative bg-gray-900 border border-yellow-500/20 rounded-lg p-6 hover:border-yellow-500/50 transition-all duration-300 overflow-hidden group shadow-lg"
       >
         <motion.div
           className="absolute -right-20 -top-20 w-40 h-40 bg-yellow-500/10 rounded-full blur-xl"

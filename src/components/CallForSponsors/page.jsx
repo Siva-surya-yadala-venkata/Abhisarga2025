@@ -16,6 +16,7 @@ import {
 } from "./magical-effects";
 import { BenefitsModal } from "./benefits-modal";
 import { useState } from "react";
+import SpotlightCard from '../ui/SpotLightCard'
 import ParallaxComponent from '../ParllaxComponent'
 export default function CallForSponsors() {
   return (
@@ -133,6 +134,11 @@ function SponsorTiers() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {tiers.map((tier, index) => (
+            <SpotlightCard 
+        className="relative bg-gray-900 border border-yellow-500/20 rounded-lg p-6 hover:border-yellow-500/50 transition-all duration-300 overflow-hidden group shadow-lg"
+        key={tier} 
+      >
+
             <SponsorCard
               onopen={() => {
                 setIsOpen(true);
@@ -142,6 +148,7 @@ function SponsorTiers() {
               tier={tier}
               index={index}
             />
+            </SpotlightCard>
           ))}
         </div>
 
@@ -164,11 +171,13 @@ function SponsorTiers() {
             "Event Partner",
           ].map((partner) => (
             <motion.div
-              key={partner}
+             key={partner}
               className="bg-gray-900/30 backdrop-blur-sm border border-gray-700 rounded-lg p-6 transform transition-all duration-300 hover:shadow-xl hover:scale-105 relative group"
               whileHover={{ scale: 1.1 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/0 via-yellow-500/20 to-yellow-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              <div 
+              className="absolute inset-0 bg-gradient-to-r from-yellow-500/0 via-yellow-500/20 to-yellow-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" 
+              />
               <span className="relative z-10 text-yellow-400 font-semibold text-lg tracking-wide">
                 {partner}
               </span>
