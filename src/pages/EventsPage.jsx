@@ -5,30 +5,30 @@ const events = [
   {
     id: 1,
     title: "Mystique Moves",
-    date: "28th Feb - 2nd Mar",
+    date: "2nd Mar",
     location: "TBD",
     type: "Non-Technical",
     club: "Beatripperz",
     attendees: 500,
-    image: "/Comming_Soon.png",
+    image: "/assets/Events/MystiqueMoves.webp",
     image2: "/Comming_Soom.png",
   },
   {
     id: 2,
     title: "Enchanted Frames",
     date: "28th Feb - 2nd Mar",
-    location: "Quidditch Pitch",
+    location: "TBD",
     type: "Non-Technical",
     club: "F/Stops",
     attendees: 300,
-    image: "/Comming_Soon.png",
+    image: "/assets/Events/EnchantedFrames.webp",
     image2: "/Comming_Soom.png",
   },
   {
     id: 3,
     title: "Rhythm Riots 2.0",
     date: "28th Feb - 2nd Mar",
-    location: "Great Hall",
+    location: "TBD",
     type: "Non-Technical",
     club: "Reverb",
     attendees: 400,
@@ -39,11 +39,22 @@ const events = [
     id: 4,
     title: "MMUN(Mystic-Model United Nations)",
     date: "28th Feb - 2nd Mar",
-    location: "Defense Classroom",
+    location: "TBD",
     type: "Non-Technical",
     club: "Keynote",
     attendees: 30,
-    image: "/Comming_Soon.png",
+    image: "/assets/Events/MMUN.webp",
+    image2: "/Comming_Soom.png",
+  },
+  {
+    id: 4,
+    title: "Paint The Prophecy-Tarrot Crad Creation",
+    date: "28th Feb - 2nd Mar",
+    location: "TBD",
+    type: "Non-Technical",
+    club: "Meraki",
+    attendees: 30,
+    image: "/assets/Events/PainTheProphecy.webp",
     image2: "/Comming_Soom.png",
   },
 ];
@@ -80,7 +91,7 @@ function App() {
       className="min-h-screen relative overflow-hidden pb-5"
       style={{
         background: `
-  linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.5)),
+  linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7)),
       url('/EventMainBg.jpeg') center/cover no-repeat fixed,
       radial-gradient(circle at top, #24222d, #131433)
     `,
@@ -148,8 +159,8 @@ function App() {
 
       .card {
         position: relative;
-        width: 300px;
-        height: 400px;
+        width: 350px;
+        height: 500px;
         transform-style: preserve-3d;
         transition: transform 0.6s ease;
       }
@@ -251,25 +262,28 @@ function App() {
             {filteredEvents.map((event) => (
               <div
                 key={event.title}
-                className="card-container"
+                className="card-container p-4"
                 onClick={() => toggleCard(this)}
               >
                 <div className="card">
                   <div
                     className="card-img"
-                    style={{ backgroundImage: `url(${event.image})` }}
+                    style={{
+                      backgroundImage: `url(${event.image})`,
+                      backgroundSize: "contain",
+                    }}
                   ></div>
                   <div className="card-body">
                     <span className="bg"></span>
                     <span className="bg"></span>
                     <span className="bg"></span>
-                    <div className="content">
+                    <div className="content h-full">
                       {/* Corner decorations */}
                       <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-amber-500/20 rounded-tl-2xl"></div>
                       <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-amber-500/20 rounded-br-2xl"></div>
 
                       {/* Content */}
-                      <div className="relative z-10    lg:max-w-md w-full">
+                      <div className="relative z-10 lg:max-w-md w-full flex flex-col items-center justify-center h-[100%]">
                         <h2 className="text-2xl lg:text-3xl font-bold text-amber-500 mb-4 tracking-wide font-poppins">
                           {event.title}
                         </h2>

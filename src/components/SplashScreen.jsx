@@ -21,7 +21,7 @@ function SplashScreen() {
       {/* Content */}
       <div className="absolute z-10 flex flex-col items-center justify-center">
         <img
-          className={`h-[200px] transform transition-transform duration-1000 p-4 ${
+          className={`max-w-[700px] w-[300px] md:w-[700px] md:h-[300px] transform transition-transform duration-1000 p-4 ${
             isLoaded ? "scale-100 opacity-100" : "scale-0 opacity-0"
           }`}
           src="/assets/new_logo.png"
