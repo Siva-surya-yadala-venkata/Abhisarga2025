@@ -12,7 +12,7 @@ function SplashScreen() {
     <div
       className="relative flex items-center justify-center h-screen bg-black bg-cover bg-center"
       style={{
-        backgroundImage: `url('/assets/homePageBG.jpeg')`,
+        backgroundImage: `url('/assets/image.jpeg')`,
       }}
     >
       {/* Backdrop overlay */}
@@ -21,10 +21,10 @@ function SplashScreen() {
       {/* Content */}
       <div className="absolute z-10 flex flex-col items-center justify-center">
         <img
-          className={`w-1/2 transform transition-transform duration-1000 ${
+          className={`h-[200px] transform transition-transform duration-1000 p-4 ${
             isLoaded ? "scale-100 opacity-100" : "scale-0 opacity-0"
           }`}
-          src="/Abhisarga.png"
+          src="/assets/new_logo.png"
           alt="Logo"
         />
       </div>

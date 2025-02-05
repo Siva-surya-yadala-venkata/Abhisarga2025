@@ -11,7 +11,7 @@ export default function AboutUs() {
     },
     {
       name: "Yashwanth S",
-      description: ["Convenor"],
+      description: ["Chair"],
       image: "./assets/AboutUs/YashwanthS.webp",
       bgColor: "black",
     },
@@ -20,13 +20,13 @@ export default function AboutUs() {
     },
     {
       name: "Charvi Palem",
-      description: ["Co-Convenor"],
+      description: ["Co-Chair"],
       image: "./assets/AboutUs/CharviPalem.webp",
       bgColor: "black",
     },
     {
       name: "Suayash Tiwari",
-      description: ["Co-Convenor"],
+      description: ["Co-Chair"],
       image: "./assets/AboutUs/SuayashTiwari.webp",
       bgColor: "black",
     },

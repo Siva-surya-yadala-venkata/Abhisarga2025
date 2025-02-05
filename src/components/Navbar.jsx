@@ -32,7 +32,7 @@ const Navbar = () => {
     { name: "About", path: "/about", icon: FaInfoCircle },
     { name: "Events", path: "/events", icon: FaCalendarAlt },
     { name: "Contact", path: "/contact", icon: FaEnvelope },
-    { name: "Accommodation", path: "/accommodation", icon: FaBed },
+    // { name: "Accommodation", path: "/accommodation", icon: FaBed },
     { name: "Merch", path: "/merch", icon: FaTshirt },
     {
       name: "Call For Sponsors",
@@ -60,7 +60,7 @@ const Navbar = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <img src="/full_logo.png" alt="Logo" className="w-30 h-10 mr-2" />
+            <img src="/assets/new_logo.png" alt="Logo" className="w-25 h-12 mr-2" />
           </motion.div>
         </Link>
 

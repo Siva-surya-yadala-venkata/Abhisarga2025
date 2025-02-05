@@ -88,7 +88,7 @@ function Footer() {
         <p
           className="text-sm md:text-base font-serif mb-4 font-mysticalFont text-[#AE8E48]"
         >
-          Designed with by IIITS Team
+          Designed by IIITS Team
         </p>
       </div>
 
