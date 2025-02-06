@@ -1,23 +1,40 @@
-import React, { useState, useEffect } from 'react';
-import { Calendar, Clock, MapPin, Share2, Users, Sparkles, Gift } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import {
+  Calendar,
+  Clock,
+  MapPin,
+  Share2,
+  Users,
+  Sparkles,
+  Gift,
+} from "lucide-react";
+import { events } from "./EventsPage";
 
 function App() {
+  const { name } = useParams();
+
+  const event = events.find(
+    (event) => event.title.replaceAll(" ", "-") === name
+  );
+  console.log(event);
   const [showShareMenu, setShowShareMenu] = useState(false);
 
   useEffect(() => {
     // Load fonts dynamically
-    const link = document.createElement('link');
-    link.href = 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap';
-    link.rel = 'stylesheet';
+    const link = document.createElement("link");
+    link.href =
+      "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap";
+    link.rel = "stylesheet";
     document.head.appendChild(link);
-    
+
     // Apply base styles
-    document.body.style.margin = '0';
-    document.body.style.minWidth = '320px';
-    document.body.style.minHeight = '100vh';
+    document.body.style.margin = "0";
+    document.body.style.minWidth = "320px";
+    document.body.style.minHeight = "100vh";
     document.body.style.fontFamily = "'Montserrat', sans-serif";
-    document.body.style.perspective = '1000px';
-    
+    document.body.style.perspective = "1000px";
+
     return () => {
       document.head.removeChild(link);
     };
@@ -29,35 +46,46 @@ function App() {
     const text = "Stay tuned for more information!";
 
     switch (platform) {
-      case 'twitter':
-        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(eventUrl)}`);
+      case "twitter":
+        window.open(
+          `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+            text
+          )}&url=${encodeURIComponent(eventUrl)}`
+        );
         break;
-      case 'facebook':
-        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(eventUrl)}`);
+      case "facebook":
+        window.open(
+          `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+            eventUrl
+          )}`
+        );
         break;
-      case 'linkedin':
-        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(eventUrl)}`);
+      case "linkedin":
+        window.open(
+          `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+            eventUrl
+          )}`
+        );
         break;
-      case 'copy':
+      case "copy":
         await navigator.clipboard.writeText(eventUrl);
-        alert('Link copied to clipboard!');
+        alert("Link copied to clipboard!");
         break;
     }
     setShowShareMenu(false);
   };
 
   const details = [
-  
     {
       icon: <Sparkles className="w-5 h-5" />,
       title: "Experience Level",
-      value: "All Levels"
+      value: "All Levels",
     },
     {
       icon: <Gift className="w-5 h-5" />,
       title: "Perks",
-      value: "Swag, Lunch, Networking"
-    }
+      value: "Swag, Lunch, Networking",
+    },
   ];
 
   const styles = {
@@ -80,15 +108,15 @@ function App() {
     subheading: `
       text-2xl font-semibold text-white mb-4 
       font-['Playfair_Display',serif]
-    `
+    `,
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-[#0A0A0A]">
       {/* Hero Section */}
-      <div className="relative h-[40vh] overflow-hidden">
+      <div className="relative h-[50vh] overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80"
+          src={event.image2}
           alt="Event cover"
           className="w-full h-full object-cover"
         />
@@ -106,30 +134,32 @@ function App() {
           <div className="flex justify-between items-start relative">
             <div>
               <h1 className={styles.heading}>
-                Coming Soon
-                <span className="block text-[#F7E270]">Stay tuned for more information!</span>
+                {/* {event.title} */}
+                <span className="block text-[#F7E270]">{event.title}</span>
               </h1>
             </div>
             <div className="relative">
-              <button 
+              <button
                 onClick={() => setShowShareMenu(!showShareMenu)}
                 className="p-2 text-white hover:text-[#F7E270] hover:bg-white/5 rounded-full transition-all duration-300"
               >
                 <Share2 className="w-6 h-6" />
               </button>
-              
+
               {showShareMenu && (
                 <div className="absolute right-0 mt-2 w-48 bg-[#0A0A0A] border border-white/10 rounded-lg shadow-xl z-50 backdrop-blur-xl">
                   <div className="p-2 space-y-1">
-                    {['Twitter', 'Facebook', 'LinkedIn', 'Copy Link'].map((platform) => (
-                      <button
-                        key={platform}
-                        onClick={() => handleShare(platform.toLowerCase())}
-                        className="w-full text-left px-4 py-2 text-white hover:text-[#F7E270] hover:bg-white/5 rounded-md transition-all duration-300"
-                      >
-                        {platform}
-                      </button>
-                    ))}
+                    {["Twitter", "Facebook", "LinkedIn", "Copy Link"].map(
+                      (platform) => (
+                        <button
+                          key={platform}
+                          onClick={() => handleShare(platform.toLowerCase())}
+                          className="w-full text-left px-4 py-2 text-white hover:text-[#F7E270] hover:bg-white/5 rounded-md transition-all duration-300"
+                        >
+                          {platform}
+                        </button>
+                      )
+                    )}
                   </div>
                 </div>
               )}
@@ -140,12 +170,12 @@ function App() {
           <div className="mt-8 space-y-4 border-b border-white/10 pb-6">
             <div className="flex items-center gap-3 text-white group hover:text-[#F7E270] transition-colors duration-300">
               <Calendar className="w-5 h-5" />
-              <span>Saving the date...</span>
+              <span>{event.date}</span>
             </div>
-            <div className="flex items-center gap-3 text-white group hover:text-[#F7E270] transition-colors duration-300">
+            {/* <div className="flex items-center gap-3 text-white group hover:text-[#F7E270] transition-colors duration-300">
               <Clock className="w-5 h-5" />
               <span>Coming soon...</span>
-            </div>
+            </div> */}
             <div className="flex items-center gap-3 text-white group hover:text-[#F7E270] transition-colors duration-300">
               <MapPin className="w-5 h-5" />
               <span>Location TBD</span>
@@ -153,7 +183,7 @@ function App() {
           </div>
 
           {/* Quick Info */}
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
             {details.map((detail, index) => (
               <div key={index} className={styles.infoCard}>
                 <div className="relative flex items-center gap-4">
@@ -161,32 +191,40 @@ function App() {
                     {detail.icon}
                   </div>
                   <div>
-                    <p className="text-sm text-white/60 group-hover:text-white/80">{detail.title}</p>
-                    <p className="text-white group-hover:text-[#F7E270] font-medium">{detail.value}</p>
+                    <p className="text-sm text-white/60 group-hover:text-white/80">
+                      {detail.title}
+                    </p>
+                    <p className="text-white group-hover:text-[#F7E270] font-medium">
+                      {detail.value}
+                    </p>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* Description */}
           <div className="mt-8">
-            <h2 className={styles.subheading}>Stay tuned for more information!</h2>
+            {/* <h2 className={styles.subheading}>
+              Stay tuned for more information!
+            </h2> */}
             <p className="text-white/80 leading-relaxed">
-              We're working on something new and exciting, and we can't wait to share it with you. Stay tuned for more information, and thank you for your patience!
+              {event.description}
             </p>
           </div>
 
           {/* CTA Button */}
           <div className="mt-12 flex justify-center">
-            <button className="relative group transform transition-all duration-300 hover:scale-105">
-              <div className="absolute -inset-1 bg-gradient-to-r from-white/20 to-[#F7E270]/20 rounded-lg blur-lg opacity-70 group-hover:opacity-100 transition duration-300" />
-              <div className="relative px-8 py-3 bg-[#0A0A0A] rounded-lg border border-[#F7E270] leading-none flex items-center">
-                <span className="text-[#F7E270] group-hover:text-white transition duration-200 font-medium">
-                  Stay tuned
-                </span>
-              </div>
-            </button>
+            <a href={event.register} target="_blank">
+              <button className="relative group transform transition-all duration-300 hover:scale-105">
+                <div className="absolute -inset-1 bg-gradient-to-r from-white/20 to-[#F7E270]/20 rounded-lg blur-lg opacity-70 group-hover:opacity-100 transition duration-300" />
+                <div className="relative px-8 py-3 bg-[#0A0A0A] rounded-lg border border-[#F7E270] leading-none flex items-center">
+                  <span className="text-[#F7E270] group-hover:text-white transition duration-200 font-medium">
+                    Register
+                  </span>
+                </div>
+              </button>
+            </a>
           </div>
         </div>
       </div>
