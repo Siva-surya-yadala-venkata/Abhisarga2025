@@ -233,7 +233,7 @@ const FAQ = () => {
       <div className="mt-8">
         <button
           onClick={toggleShowAll}
-          className="px-6 py-2 bg-[#F7E290] text-black rounded-full font-semibold hover:bg-[#edd472] transition"
+          className=" button px-6 py-2 bg-[#F7E290] text-black rounded-full font-semibold hover:bg-[#edd472] transition"
         >
           {showAll ? "Show Less" : "Show More"}
         </button>

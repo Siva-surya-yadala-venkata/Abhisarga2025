@@ -22,7 +22,7 @@ const merchandiseItems = [
 export default function Merch() {
   const [selectedItem, setSelectedItem] = useState(0)
 
-  const availableSizes = ["XS", "S", "M", "L", "XL", "XXL"]
+  const availableSizes = [ "S", "M", "L", "XL"]
   const getCardStyle = (index) => {
     const baseStyle = "absolute w-full h-full transition-all duration-500 ease-in-out rounded-lg cursor-pointer"
     if (index === selectedItem) {
@@ -67,18 +67,26 @@ export default function Merch() {
           <div className="relative w-full h-full">
             {merchandiseItems.map((item, index) => (
               <div key={index} className={getCardStyle(index)} onClick={() => setSelectedItem(index)}>
-                <div className="relative h-full bg-[#0D1117] rounded-lg overflow-hidden border border-[#B8860B]/20">
-                  <img
-                    src={item.image || "/placeholder.svg"}
-                    alt={item.title}
-                    className="w-full h-[200px] sm:h-[300px] object-cover"
-                  />
-                  <div className="absolute bottom-0 w-full bg-gradient-to-t from-[#0D1117] to-transparent p-2 sm:p-4">
-                    <h3 className="text-lg sm:text-xl font-bold text-[#B8860B] mb-1 sm:mb-2 text-center">
-                      {item.title}
-                    </h3>
+                  <div className="relative h-full bg-[#0D1117] rounded-lg overflow-hidden border border-[#B8860B]/20">
+                    <div className="relative w-full h-[200px] sm:h-[300px]">
+                      <img
+                        src={
+                          item.image ||
+                           "/placeholder.svg"}
+                        alt={item.title}
+                        className="w-full h-full object-cover blur-sm "
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/50">
+                        <span className="text-white text-lg sm:text-2xl font-bold">Coming Soon</span>
+                      </div>
+                    </div>
+                    <div className="absolute bottom-0 w-full bg-gradient-to-t from-[#0D1117] to-transparent p-2 sm:p-4">
+                      <h3 className="text-lg sm:text-xl font-bold text-[#B8860B] mb-1 sm:mb-2 text-center">
+                        {item.title}
+                      </h3>
+                    </div>
                   </div>
-                </div>
+
               </div>
             ))}
           </div>
@@ -97,7 +105,7 @@ export default function Merch() {
             ))}
           </div>
           <div className="mb-4 sm:mb-6">
-            <h4 className="text-[#B8860B] font-semibold mb-2 sm:mb-3">Select Size</h4>
+            <h4 className="text-[#B8860B] font-semibold mb-2 sm:mb-3">Available Sizes</h4>
             <div className="flex flex-wrap justify-center gap-2">
               {availableSizes.map((size) => (
                 <button
@@ -110,12 +118,12 @@ export default function Merch() {
               ))}
             </div>
           </div>
-          <div className="inline-block bg-[#0D1117] p-3 sm:p-4 rounded-lg border border-[#B8860B]/20">
+          {/* <div className="inline-block bg-[#0D1117] p-3 sm:p-4 rounded-lg border border-[#B8860B]/20">
             <span className="text-xl sm:text-2xl font-bold text-[#B8860B] mr-2 sm:mr-4">₹229.99</span>
             <button className="px-4 sm:px-6 py-2 bg-[#B8860B] text-black font-semibold rounded-md hover:bg-[#9A7209] transition-colors text-sm sm:text-base">
               Buy Now
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
