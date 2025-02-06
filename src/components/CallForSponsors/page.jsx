@@ -10,42 +10,38 @@ import {
   Trophy,
   Wand2,
 } from "lucide-react";
-import { SponsorCard } from './sponsor-card';
-import {
-  MagicSparkles,
-} from "./magical-effects";
+import { SponsorCard } from "./sponsor-card";
+import { MagicSparkles } from "./magical-effects";
 import { BenefitsModal } from "./benefits-modal";
 import { useState } from "react";
-import SpotlightCard from '../ui/SpotLightCard'
-import ParallaxComponent from '../ParllaxComponent'
+import SpotlightCard from "../ui/SpotLightCard";
+import ParallaxComponent from "../ParllaxComponent";
 export default function CallForSponsors() {
   return (
     <>
-     <ParallaxComponent
-            backgroundImage={"/CallForSponsors.jpeg"}
-            heading={"Call For Sponsors"}
-          />
-    <main 
-    className="min-h-screen bg-gradient-to-b from-midnight-blue via-deep-purple to-midnight-blue text-white overflow-hidden relative"
-    style={{
-      background: `
-  linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-      url('CallForSponsorBg.jpeg') center/cover no-repeat fixed,
-      radial-gradient(circle at top, #24222d, #131433)
-    `,
-    }}
-    >
-      <div className="stars"></div>
-      <div className="twinkling"></div>
-      <MagicSparkles />
-      <SponsorTiers />
-      <Contact />
-    </main>
+      <ParallaxComponent
+        backgroundImage={"/CallForSponsors.jpeg"}
+        heading={"Call For Sponsors"}
+      />
+      <div
+        className="min-h-screen text-white overflow-hidden relative "
+        style={
+          {
+            background: `
+            linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.85 )),
+            url('CallForSponsorBg.jpeg') center/cover no-repeat fixed,
+            radial-gradient(circle at top, #24222d, #131433)
+            `,
+          }
+        }
+      >
+        {/* <MagicSparkles /> */}
+        <SponsorTiers />
+        <Contact />
+      </div>
     </>
   );
 }
-
-
 
 function SponsorTiers() {
   const tiers = [
@@ -53,7 +49,8 @@ function SponsorTiers() {
       name: "Title Sponsor",
       amount: "₹12 Lakhs",
       icon: Crown,
-      description: "The Grand Sorcerer tier, commanding the highest magical influence",
+      description:
+        "The Grand Sorcerer tier, commanding the highest magical influence",
     },
     {
       name: "Diamond Sponsor",
@@ -90,14 +87,16 @@ function SponsorTiers() {
   const [tier, setTier] = useState("");
 
   return (
-    <section id="sponsor-tiers" className="py-20 px-4 relative bg-black text-gold"
-    style={{
-      background: `
-  linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-      url('CallForSponsorMiddle.jpeg') center/cover no-repeat fixed,
-      radial-gradient(circle at top, #24222d, #131433)
-    `,
-    }}
+    <div
+      id="sponsor-tiers"
+      className="py-20 px-4 relative text-gold"
+      //     style={{
+      //       background: `
+      // linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+      //     url('CallForSponsorMiddle.jpeg') center/cover no-repeat fixed,
+      //     radial-gradient(circle at top, #24222d, #131433)
+      //   `,
+      //     }}
     >
       {isOpen && (
         <BenefitsModal
@@ -107,7 +106,6 @@ function SponsorTiers() {
         />
       )}
       <div className="max-w-6xl mx-auto">
-     
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -119,7 +117,8 @@ function SponsorTiers() {
               Sponsorship Tiers
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Choose your tier and join us in creating an unforgettable experience.
+              Choose your tier and join us in creating an unforgettable
+              experience.
             </p>
           </motion.div>
         </div>
@@ -129,25 +128,24 @@ function SponsorTiers() {
             download
             className="bg-gold text-white  px-8 py-3 rounded-full font-bold text-lg hover:bg-yellow-500 transition-colors duration-300"
           >
-             Brochure
+            Brochure
           </a>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {tiers.map((tier, index) => (
-            <SpotlightCard 
-        className="relative bg-gray-900 border border-yellow-500/20 rounded-lg p-6 hover:border-yellow-500/50 transition-all duration-300 overflow-hidden group shadow-lg"
-        key={tier} 
-      >
-
-            <SponsorCard
-              onopen={() => {
-                setIsOpen(true);
-                setTier(tier);
-              }}
-              key={tier.name}
-              tier={tier}
-              index={index}
-            />
+            <SpotlightCard
+              className="relative bg-gray-900 border border-yellow-500/20 rounded-lg p-6 hover:border-yellow-500/50 transition-all duration-300 overflow-hidden group shadow-lg"
+              key={tier}
+            >
+              <SponsorCard
+                onopen={() => {
+                  setIsOpen(true);
+                  setTier(tier);
+                }}
+                key={tier.name}
+                tier={tier}
+                index={index}
+              />
             </SpotlightCard>
           ))}
         </div>
@@ -171,13 +169,11 @@ function SponsorTiers() {
             "Event Partner",
           ].map((partner) => (
             <motion.div
-             key={partner}
+              key={partner}
               className="bg-gray-900/30 backdrop-blur-sm border border-gray-700 rounded-lg p-6 transform transition-all duration-300 hover:shadow-xl hover:scale-105 relative group"
               whileHover={{ scale: 1.1 }}
             >
-              <div 
-              className="absolute inset-0 bg-gradient-to-r from-yellow-500/0 via-yellow-500/20 to-yellow-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" 
-              />
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/0 via-yellow-500/20 to-yellow-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               <span className="relative z-10 text-yellow-400 font-semibold text-lg tracking-wide">
                 {partner}
               </span>
@@ -185,13 +181,13 @@ function SponsorTiers() {
           ))}
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 }
 
 export function Contact() {
   return (
-    <section id="contact" className="py-20 px-4 relative">
+    <div id="contact" className="py-20 px-4 relative">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -204,7 +200,8 @@ export function Contact() {
             Contact the Wizards
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Ready to join the magical journey? Our wizards are waiting to hear from you!
+            Ready to join the magical journey? Our wizards are waiting to hear
+            from you!
           </p>
         </motion.div>
 
@@ -247,11 +244,9 @@ export function Contact() {
               abhisarga.sponsorships@iiits.in
             </motion.span>
           </a>
-
-        
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 }
 
@@ -271,11 +266,13 @@ function ContactInfo({ title, contacts }) {
             key={index}
             className="flex items-center space-x-3"
             whileHover={{ x: 5 }}
-            transition={{ type: 'spring', stiffness: 300 }}
+            transition={{ type: "spring", stiffness: 300 }}
           >
             <Wand2 className="w-4 h-4 text-yellow-400" />
             <div>
-              <span className="font-semibold block text-white">{contact.name}</span>
+              <span className="font-semibold block text-white">
+                {contact.name}
+              </span>
               <span className="text-gray-400">{contact.phone}</span>
             </div>
           </motion.li>
@@ -284,4 +281,3 @@ function ContactInfo({ title, contacts }) {
     </motion.div>
   );
 }
-

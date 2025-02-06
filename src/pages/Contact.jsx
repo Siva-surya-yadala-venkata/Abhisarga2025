@@ -17,7 +17,7 @@ export default function Contact() {
         backgroundImage="/contact.webp"
         heading="Contact Us"
       />
-      <img src="/divider.png" className="mx-auto block" alt="" />
+      <img src="/divider.png" className="mt-16 mx-auto block" alt="" />
       <div className="max-w-7xl mx-auto px-4 py-8 sm:py-16">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#B8860B] mb-4 flex items-center justify-center gap-2">
@@ -32,17 +32,17 @@ export default function Contact() {
             {[
               {
                 title: "Yashwanth S",
-                subtitle: "Convernor",
+                subtitle: "Chair",
                 content: "+91 6369096042",
               },
               {
                 title: "Charvi Palem",
-                subtitle: "Co-Convernor",
+                subtitle: "Co-Chair",
                 content: "+91 7671075067",
               },
               {
                 title: "Suyash Tiwari",
-                subtitle: "Co-Convernor",
+                subtitle: "Co-Chair",
                 content: "+91 9755000981",
               },
               {

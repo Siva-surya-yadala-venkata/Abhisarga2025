@@ -4,7 +4,7 @@ import { motion } from "framer-motion"; // Make sure to install framer-motion if
 export default function ParallaxComponent({ backgroundImage, heading }) {
   return (
     <div>
-      <div className="relative h-[500px] w-[100vw] mb-16">
+      <div className="relative h-[500px] w-[100vw]">
         <div
           className="parallax h-[500px] bg-cover bg-center bg-attachment-fixed"
           style={{
@@ -16,7 +16,7 @@ export default function ParallaxComponent({ backgroundImage, heading }) {
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-5xl md:text-8xl font-bold mb-4 font-magical text-white"
+                className="text-5xl md:text-8xl font-bold font-magical text-white"
               >
                 <span className="text-[#F7E290] font-mysticalFont">
                   {heading}

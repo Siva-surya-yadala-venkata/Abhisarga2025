@@ -7,7 +7,7 @@ export default function AboutUs() {
 
   const teamMembers = [
     {
-      title: "Convenor",
+      title: "Chair",
     },
     {
       name: "Yashwanth S",
