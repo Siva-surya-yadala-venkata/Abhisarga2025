@@ -11,10 +11,10 @@ export default function Sponsors() {
   }, []);
   const sponsors = [
     {
-      category: "Platinum Sponsors",
+      category: "Sponsors",
       items: [
         {
-          name: "",
+          name: "canaraBank",
           logo: "/assets/SponsorsAssets/canaraBank.svg",
         },
       ],
@@ -23,7 +23,7 @@ export default function Sponsors() {
       category: "",
       items: [
         {
-          name: "",
+          name: "cityUnionBank",
           logo: "/assets/SponsorsAssets/cityUnionBank.png",
         },
       ],
@@ -32,8 +32,52 @@ export default function Sponsors() {
       category: "",
       items: [
         {
-          name: "",
+          name: "IndianBank",
           logo: "/assets/SponsorsAssets/IndianBank.png",
+        },
+      ],
+    },
+    {
+      category: "",
+      items: [
+        {
+          name: "StationS",
+          logo: "/assets/SponsorsAssets/StationS.png",
+        },
+      ],
+    },
+    {
+      category: "",
+      items: [
+        {
+          name: "Infinity",
+          logo: "/assets/SponsorsAssets/Infinity.jpeg",
+        },
+        {
+          name: "HotelSowmiya",
+          logo: "/assets/SponsorsAssets/HotelSowmiya.png",
+        },
+      ],
+    },
+    {
+      category: "",
+      items: [
+        {
+          name: "NandhaInfotech",
+          logo: "/assets/SponsorsAssets/NandhaInfotech.png",
+        },
+        {
+          name: "TechSoftZets",
+          logo: "/assets/SponsorsAssets/TechSoftZets.png",
+        },
+      ],
+    },
+    {
+      category: "Credential Partner",
+      items: [
+        {
+          name: "TruScholar",
+          logo: "/assets/SponsorsAssets/TruScholar.png",
         },
       ],
     },
@@ -66,52 +110,48 @@ export default function Sponsors() {
                   transition={{ duration: 0.8, delay: sectionIndex * 0.2 }}
                   className="mb-20 first:mt-20"
                 >
-                  <motion.h2
-                    className="text-4xl text-center text-[#F7E290] mb-12 font-serif relative inline-block w-full cursor-pointer"
-                    initial={{ letterSpacing: "0.5em", opacity: 0 }}
-                    animate={{ letterSpacing: "0.1em", opacity: 1 }}
-                    whileHover={{ scale: 1.2 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    {section.category.split("").map((char, index) => (
-                      <motion.span
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                  {section.category !== "" && (
+                    <motion.h2
+                      className="text-2xl sm:text-4xl text-center text-[#F7E290] mb-12 font-serif relative inline-block w-full cursor-pointer"
+                      initial={{ letterSpacing: "0.5em", opacity: 0 }}
+                      animate={{ letterSpacing: "0.1em", opacity: 1 }}
+                      whileHover={{ scale: 1.2 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {section.category.split("").map((char, index) => (
+                        <motion.span
+                          key={index}
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{
+                            duration: 0.5,
+                            delay: sectionIndex * 0.2 + index * 0.05,
+                          }}
+                        >
+                          {char}
+                        </motion.span>
+                      ))}
+                      <motion.div
+                        className="absolute -bottom-2 left-1/4 right-1/4 h-0.5"
+                        initial={{ scaleX: 0 }}
+                        animate={{ scaleX: 1 }}
                         transition={{
-                          duration: 0.5,
-                          delay: sectionIndex * 0.2 + index * 0.05,
+                          duration: 1.5,
+                          delay: sectionIndex * 0.2 + 0.5,
                         }}
-                      >
-                        {char}
-                      </motion.span>
-                    ))}
-                    <motion.div
-                      className="absolute -bottom-2 left-1/4 right-1/4 h-0.5"
-                      initial={{ scaleX: 0 }}
-                      animate={{ scaleX: 1 }}
-                      transition={{
-                        duration: 1.5,
-                        delay: sectionIndex * 0.2 + 0.5,
-                      }}
-                      style={{
-                        background:
-                          "linear-gradient(90deg, transparent, #F7E290, transparent)",
-                      }}
-                    />
-                  </motion.h2>
+                        style={{
+                          background:
+                            "linear-gradient(90deg, transparent, #F7E290, transparent)",
+                        }}
+                      />
+                    </motion.h2>
+                  )}
 
-                  <div
-                    className={`grid ${
-                      section.items.length > 1
-                        ? "md:grid-cols-2"
-                        : "md:grid-cols-1"
-                    } gap-4 justify-items-center`}
-                  >
+                  <div className="flex flex-wrap justify-center gap-4">
                     {section.items.map((sponsor, index) => (
                       <motion.div
                         key={sponsor.name}
-                        className="w-full max-w-md"
+                        className="w-full max-w-md flex justify-center"
                         initial={{ opacity: 0, rotateX: -30 }}
                         animate={{ opacity: 1, rotateX: 0 }}
                         transition={{
@@ -122,44 +162,24 @@ export default function Sponsors() {
                         onMouseLeave={() => setHoveredCard(null)}
                       >
                         <motion.div
-                          className="absolute inset-0"
-                          animate={{
-                            scale: hoveredCard === sponsor.name ? 1.1 : 1,
-                            opacity: hoveredCard === sponsor.name ? 1 : 0,
-                          }}
-                        />
-
-                        <div className="p-8 relative z-10">
-                          <motion.div
-                            className="relative"
-                            whileHover={{ scale: 1.05 }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                          >
-                            <motion.img
-                              src={sponsor.logo}
-                              alt={sponsor.name}
-                              className="w-full h-auto object-contain max-h-40 mb-6"
-                              animate={{
-                                scale: hoveredCard === sponsor.name ? 1.1 : 1,
-                                filter:
-                                  hoveredCard === sponsor.name
-                                    ? "brightness(1.2)"
-                                    : "brightness(1)",
-                              }}
-                              transition={{ duration: 0.3 }}
-                            />
-                          </motion.div>
-
-                          <motion.h3
-                            className="text-xl text-white text-center mt-4 font-medium"
+                          className="p-8 relative z-10 flex items-center"
+                          whileHover={{ scale: 1.05 }}
+                          transition={{ type: "spring", stiffness: 300 }}
+                        >
+                          <motion.img
+                            src={sponsor.logo}
+                            alt={sponsor.name}
+                            className="w-full h-auto object-contain max-h-40 mb-6"
                             animate={{
-                              scale: hoveredCard === sponsor.name ? 1.2 : 1,
+                              scale: hoveredCard === sponsor.name ? 1.1 : 1,
+                              filter:
+                                hoveredCard === sponsor.name
+                                  ? "brightness(1.2)"
+                                  : "brightness(1)",
                             }}
                             transition={{ duration: 0.3 }}
-                          >
-                            {sponsor.name}
-                          </motion.h3>
-                        </div>
+                          />
+                        </motion.div>
                       </motion.div>
                     ))}
                   </div>
@@ -185,10 +205,7 @@ function Stars() {
             top: Math.random() * 100 + "%",
             left: Math.random() * 100 + "%",
           }}
-          animate={{
-            opacity: [0, 1, 0],
-            scale: [0, 1, 0],
-          }}
+          animate={{ opacity: [0, 1, 0], scale: [0, 1, 0] }}
           transition={{
             duration: Math.random() * 3 + 2,
             repeat: Number.POSITIVE_INFINITY,
