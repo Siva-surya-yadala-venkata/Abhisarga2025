@@ -36,7 +36,7 @@ const events = [
     image2: "/Comming_Soom.png",
   },
   {
-    id: 4,
+    id: 5,
     title: "MMUN(Mystic-Model United Nations)",
     date: "27th Feb - 28th Feb",
     location: "TBD",
@@ -60,16 +60,51 @@ const events = [
 ];
 import ParallaxComponent from "../components/ParllaxComponent";
 function App() {
-  function toggleCard(cardContainer) {
+  function toggleCard(cardId) {
+    // Check if the device is mobile
+    console.log(cardId);
     // Check if the card is already rotated
-    const card = cardContainer.querySelector(".card");
+    const card = document.getElementById(cardId);
+    const cardContainer = card.closest('.card-container');
+    const cardBody = card.querySelector('.card-body');
+    const cardBodyBgs = cardBody.querySelectorAll('.bg');
+    const content = cardBody.querySelector('.content');
+    console.log(card);
+    
     if (card.style.transform === "rotateY(180deg)") {
+      // Reset card
       card.style.transform = "rotateY(0deg)";
+      
+      // Reset card body backgrounds
+      cardBodyBgs.forEach((bg, index) => {
+        bg.style.width = "0%";
+        bg.style.transitionDelay = "0s";
+      });
+      
+      // Reset content
+      if (content) {
+        content.style.opacity = "0";
+        content.style.transform = "translateY(20px)";
+        content.style.transitionDelay = "0s";
+      }
     } else {
+      // Rotate card
       card.style.transform = "rotateY(180deg)";
+      
+      // Animate card body backgrounds
+      cardBodyBgs.forEach((bg, index) => {
+        bg.style.width = "200%";
+        bg.style.transitionDelay = index === 1 ? "0.5s" : index === 2 ? "0.5s" : "0s";
+      });
+      
+      // Animate content
+      if (content) {
+        content.style.opacity = "1";
+        content.style.transform = "translateY(0)";
+        content.style.transitionDelay = "1s";
+      }
     }
   }
-
   const [selectedclub, setSelectedclub] = useState("");
   const [selectedType, setSelectedType] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
@@ -164,9 +199,12 @@ function App() {
         transform-style: preserve-3d;
         transition: transform 0.6s ease;
       }
-     .card-container:hover .card {
-        transform: rotateY(180deg);
-      } 
+
+      @media (min-width: 1024px) {
+        .card-container:hover .card {
+          transform: rotateY(180deg);
+        }
+      }
 
       .card-face {
         position: absolute;
@@ -201,75 +239,15 @@ function App() {
     `}</style>
 
           <div className="container mx-auto flex flex-wrap justify-around gap-8">
-            {/* {filteredEvents.map((event) => (
-        <motion.div
-          key={event.id}
-          className="card-container"
-          whileHover={{ scale: 1.05 }}
-        >
-          <div className="card">
-            <div className="card-face card-front">
-              <img
-                src={event.image}
-                alt={event.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-           
-            <div 
-  className="card-face card-back relative overflow-hidden rounded-2xl p-6 backdrop-blur-md bg-black/40 border border-gray-800 shadow-lg transition-all duration-300 hover:shadow-amber-500/10 group"
-  style={{
-    background: `
-      linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)),
-      url(${event.image2}) center/cover no-repeat
-    `
-  }}
->
-  <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-amber-500/20 rounded-tl-2xl"></div>
-  <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-amber-500/20 rounded-br-2xl"></div>
-
-  <div className="relative z-10">
-    <h2 className="text-3xl font-bold text-amber-500 mb-4 tracking-wide font-serif">{event.title}</h2>
-    <p className="text-gray-300/90 text-lg leading-relaxed mb-6">{event.description}</p>
-    <div className="space-y-3 text-sm text-gray-400">
-      <div className="flex items-center gap-3">
-        <CalendarDays className="w-5 h-5 text-amber-500/70" />
-        <span>{new Date(event.date).toLocaleDateString()}</span>
-      </div>
-      <div className="flex items-center gap-3">
-        <MapPin className="w-5 h-5 text-amber-500/70" />
-        <span>{event.location}</span>
-      </div>
-      <div className="flex items-center gap-3">
-        <Users className="w-5 h-5 text-amber-500/70" />
-        <span>{event.attendees} attendees</span>
-      </div>
-    </div>
-    <a href={`/event/${event.title}`}>
-    <button className="mt-6 w-full px-6 py-3 bg-gradient-to-r from-gray-900 to-black border border-amber-500/30 hover:border-amber-500/50 rounded-lg text-amber-500 font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/10 group relative overflow-hidden">
-      <span className="relative z-10 flex items-center justify-center gap-2">
-        Know More 
-        <Sparkles className="w-5 h-5 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      </span>
-      <span className="absolute inset-0 bg-gradient-to-r from-amber-950/30 to-amber-900/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-    </button>
-    </a>
-  </div>
-
-  <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent"></div>
-  <div className="absolute bottom-0 right-0 w-full h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent"></div>
-</div>
-
-          </div>
-        </motion.div>
-      ))} */}
-
             {filteredEvents.map((event) => (
               <div
+              id={`${event.id}`}
                 key={event.title}
                 className="card-container p-4 "
-                onClick={() => toggleCard(this)}
+                onClick={() => {
+                  console.log(event.id);
+                  toggleCard(event.id)
+                }}
               >
                 <div className="card">
                   <div

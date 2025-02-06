@@ -71,9 +71,7 @@ body {
   background-size: cover;
   border: 2px solid #F7E290;
 }
-.card-container:hover .card {
-  transform: rotateY(180deg);
-}
+
 .card-body .bg {
   position: absolute;
   background-color: black;
@@ -104,13 +102,13 @@ body {
   transform: rotate(-10deg);
 }
 .card-container:hover .card-body .bg {
-  width: 200%;
+  width: 0%;
 }
 .card-container:hover .card-body .bg:nth-child(2) {
-  transition-delay: 0.5s;
+  transition-delay: 0s;
 }
 .card-container:hover .card-body .bg:nth-child(3) {
-  transition-delay: 0.5s;
+  transition-delay: 0s;
 }
 .content {
   position: relative;
@@ -118,10 +116,30 @@ body {
   transition: opacity 0.5s ease, transform 0.5s ease;
   padding: 40px 10px;
   text-align: center;
-  transform: translateY(20px);
+  /* transform: translateY(20px); */
 }
 .card-container:hover .content {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 1s; /* Matches the delay for .bg animations */
-} 
+  opacity: 0;
+  transform: translateY(20px);
+  transition-delay: 0s; /* Matches the delay for .bg animations */
+}
+
+@media (min-width: 1024px) {
+  .card-container:hover .card {
+    transform: rotateY(180deg);
+  }
+  .card-container:hover .card-body .bg {
+    width: 200%;
+  }
+  .card-container:hover .card-body .bg:nth-child(2) {
+    transition-delay: 0.5s;
+  }
+  .card-container:hover .card-body .bg:nth-child(3) {
+    transition-delay: 0.5s;
+  }
+  .card-container:hover .content {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1s; /* Matches the delay for .bg animations */
+  }
+}
