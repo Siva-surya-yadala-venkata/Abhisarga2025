@@ -40,7 +40,7 @@ const AboutPage = () => {
                 ABOUT{" "}
               </span>
             </h1>
-            <div className="text-[40px] 22xl:text-[80px] text-white font-mysticalFont font-[400]">
+            <div className="text-[40px] 2xl:text-[80px] text-white font-mysticalFont font-[400]">
               ABHISARGA
             </div>
           </div>

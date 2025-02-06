@@ -1,7 +1,8 @@
 import { CalendarDays, ClubIcon, MapPin, Sparkles, Users } from "lucide-react";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-const events = [
+import ParallaxComponent from "../components/ParllaxComponent";
+
+export const events = [
   {
     id: 1,
     title: "Mystique Moves",
@@ -11,7 +12,9 @@ const events = [
     club: "Beatripperz",
     attendees: 500,
     image: "/assets/Events/MystiqueMoves.webp",
-    image2: "/Comming_Soom.png",
+    image2: "https://d8it4huxumps7.cloudfront.net/uploads/images/opportunity/banner/67a302e609dba_mystique-moves-group-dance-competition.webp?d=1920x557",
+    register: "https://unstop.com/p/mystique-moves-group-dance-competition-abhisarga-2025-indian-institute-of-information-technology-iiit-sri-city-1389091",
+    description: "Mystique Moves is a theme-based group dance competition that invites teams to showcase their creativity, coordination, and artistry. Each team is tasked with crafting a performance that seamlessly incorporates the given themes, delivering a routine that captivates the audience and judges alike.",
   },
   {
     id: 2,
@@ -22,7 +25,9 @@ const events = [
     club: "F/Stops",
     attendees: 300,
     image: "/assets/Events/EnchantedFrames.webp",
-    image2: "/Comming_Soom.png",
+    image2: "https://d8it4huxumps7.cloudfront.net/uploads/images/opportunity/banner/67a38fed21a3f_echanted-frames-photography-competition.webp?d=1920x557",
+    register: "https://unstop.com/o/x1VcYdk?lb=w1cVYeX&utm_medium=Share&utm_source=shortUrl",
+    description: "Enchanted Frames is a team-based photography competition that brings creativity and magic to life through two exciting rounds. In Round 1 (Online), participants capture portraits of mystical beings like wizards, witches, or detectives with dramatic lighting and effects. In Round 2 (Offline), teams use light painting techniques to create magical, glowing visuals using long exposure photography.",
   },
   {
     id: 3,
@@ -33,10 +38,12 @@ const events = [
     club: "Reverb",
     attendees: 400,
     image: "/Comming_Soon.png",
-    image2: "/Comming_Soom.png",
+    image2: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80",
+    register: "https://unstop.com/p/rhythm-riots-20-abhisarga-2025-indian-institute-of-information-technology-iiit-sri-city-1389467",
+    description: "Rhythm Riot 2.0 is a musical band competition where teams compete to showcase their talent and win exciting prizes. Bands will go through online screening, an offline semi-final, and a grand finale on Abhisarga's main stage. ",
   },
   {
-    id: 5,
+    id: 4,
     title: "MMUN(Mystic-Model United Nations)",
     date: "27th Feb - 28th Feb",
     location: "TBD",
@@ -44,10 +51,12 @@ const events = [
     club: "Keynote",
     attendees: 30,
     image: "/assets/Events/MMUN.webp",
-    image2: "/Comming_Soom.png",
+    image2: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80",
+    register: "https://unstop.com/p/mystic-model-united-nationsmmun-abhisarga-2025-indian-institute-of-information-technology-iiit-sri-city-1388122",
+    description: "The Mystic Model United Nations (MMUN) will transport participants into an enchanting realm where global diplomacy intersects with mystery, unveiling hidden truths and solving critical global issues.",
   },
   {
-    id: 4,
+    id: 5,
     title: "Paint The Prophecy-Tarrot Crad Creation",
     date: "28th Feb - 2nd Mar",
     location: "TBD",
@@ -55,10 +64,24 @@ const events = [
     club: "Meraki",
     attendees: 30,
     image: "/assets/Events/PainTheProphecy.webp",
-    image2: "/Comming_Soom.png",
+    image2: "https://d8it4huxumps7.cloudfront.net/uploads/images/opportunity/banner/67a2582acee66_paint-the-prophecy-tarot-card-creation.webp?d=1920x557",
+    register: "https://unstop.com/o/UCtLam2?lb=BQETOdz&utm_medium=Share&utm_source=shortUrl",
+    description: "Creation Of tarrot Cards using the given materials based on the cards designed participants have to write a story",
+  },
+  {
+    id: 6,
+    title: "cineMAGIC",
+    date: "28th Feb - 2nd Mar",
+    location: "TBD",
+    type: "Non-Technical",
+    club: "Mise-en-scene ",
+    attendees: 30,
+    image: "/Comming_Soon.png",
+    image2: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80",
+    register: "https://unstop.com/o/8bRv3Yu?lb=STH4l18&utm_medium=Share&utm_source=shortUrl",
+    description: "Video making on promoting tirupati tourism ",
   },
 ];
-import ParallaxComponent from "../components/ParllaxComponent";
 function App() {
   function toggleCard(cardId) {
     // Check if the device is mobile
@@ -69,7 +92,6 @@ function App() {
     const cardBody = card.querySelector('.card-body');
     const cardBodyBgs = cardBody.querySelectorAll('.bg');
     const content = cardBody.querySelector('.content');
-    console.log(card);
     
     if (card.style.transform === "rotateY(180deg)") {
       // Reset card
@@ -272,9 +294,9 @@ function App() {
                         <h2 className="text-2xl lg:text-3xl font-bold text-amber-500 mb-4 tracking-wide font-poppins">
                           {event.title}
                         </h2>
-                        <p className="text-gray-300 text-base lg:text-lg leading-relaxed mb-6 font-poppins">
+                        {/* <p className="text-gray-300 text-base lg:text-lg leading-relaxed mb-6 font-poppins">
                           {event.description}
-                        </p>
+                        </p> */}
                         <div className="space-y-3 text-sm text-gray-400">
                           <div className="flex items-center gap-3">
                             <CalendarDays className="w-5 h-5 text-amber-500/70" />
@@ -290,7 +312,7 @@ function App() {
                           </div>
                         </div>
                         <a
-                          href={`/event/${event.title}`}
+                          href={`/event/${event.title.replaceAll(" ", "-")}`}
                           className="block mt-6"
                         >
                           <button className="w-full px-6 py-3 bg-gradient-to-r from-gray-900 to-black border border-amber-500/30 hover:border-amber-500/50 rounded-lg text-amber-500 font-semibold font-poppins transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/10 group relative overflow-hidden">
