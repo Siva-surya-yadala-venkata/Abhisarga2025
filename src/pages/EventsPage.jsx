@@ -38,7 +38,7 @@ const events = [
   {
     id: 4,
     title: "MMUN(Mystic-Model United Nations)",
-    date: "28th Feb - 2nd Mar",
+    date: "27th Feb - 28th Feb",
     location: "TBD",
     type: "Non-Technical",
     club: "Keynote",
@@ -262,7 +262,7 @@ function App() {
             {filteredEvents.map((event) => (
               <div
                 key={event.title}
-                className="card-container p-4"
+                className="card-container p-4 "
                 onClick={() => toggleCard(this)}
               >
                 <div className="card">
@@ -271,6 +271,7 @@ function App() {
                     style={{
                       backgroundImage: `url(${event.image})`,
                       backgroundSize: "contain",
+                      backgroundPosition: "center",
                     }}
                   ></div>
                   <div className="card-body">
