@@ -192,6 +192,12 @@ function App() {
         justify-content: center;
         padding: 16px;
       }
+      @media (max-width: 640px) { /* Tailwind's sm breakpoint */
+       .card {
+          width: 280px; /* Adjust width for small screens */
+          height: 400px; /* Adjust height if necessary */
+        }
+      }
     `}</style>
 
           <div className="container mx-auto flex flex-wrap justify-around gap-8">
