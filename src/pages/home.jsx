@@ -18,7 +18,7 @@ function Home() {
         <ImageCarousel />
       </div>
       {/* Timeline */}
-      <TimeLine />
+      {/* <TimeLine /> */}
       {/* FAQ */}
       <FAQ />
       {/* <SponsorCarousel/> */}
