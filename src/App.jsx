@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
@@ -18,6 +18,21 @@ const Contact = lazy(() => import("./pages/Contact"));
 const ComingSoon = lazy(() => import("./pages/comingSoon"));
 const SplashCursor = lazy(() => import("./components/SplashCursor"));
 
+function useIsLargeScreen() {
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 640); // sm = 640px
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth > 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return isLargeScreen;
+}
+
 function App() {
   return (
     <>
@@ -30,7 +45,7 @@ function App() {
             path="/"
             element={
               <>
-                <SplashCursor />
+                {useIsLargeScreen() && <SplashCursor />}
                 <Home />
               </>
             }
@@ -39,7 +54,7 @@ function App() {
             path="/events"
             element={
               <>
-                <SplashCursor />
+                {useIsLargeScreen() && <SplashCursor />}
                 <EventsPage />
               </>
             }
@@ -48,7 +63,7 @@ function App() {
             path="/about"
             element={
               <>
-                <SplashCursor />
+                {useIsLargeScreen() && <SplashCursor />}
                 <AboutUs />{" "}
               </>
             }
@@ -57,7 +72,7 @@ function App() {
             path="/accommodation"
             element={
               <>
-                <SplashCursor />
+                {useIsLargeScreen() && <SplashCursor />}
                 <AccommodationPage />
               </>
             }
@@ -66,7 +81,7 @@ function App() {
             path="/event/:name"
             element={
               <>
-                <SplashCursor />
+                {useIsLargeScreen() && <SplashCursor />}
                 <Event />
               </>
             }
@@ -75,7 +90,7 @@ function App() {
             path="/merch"
             element={
               <>
-                <SplashCursor />
+                {useIsLargeScreen() && <SplashCursor />}
                 <Merch />
               </>
             }
@@ -84,7 +99,7 @@ function App() {
             path="/contact"
             element={
               <>
-                <SplashCursor />
+                {useIsLargeScreen() && <SplashCursor />}
                 <Contact />
               </>
             }
@@ -93,7 +108,7 @@ function App() {
             path="/call-for-sponsors"
             element={
               <>
-                <SplashCursor />
+                {useIsLargeScreen() && <SplashCursor />}
                 <CallForSponsors />
               </>
             }
@@ -102,7 +117,7 @@ function App() {
             path="/sponsors"
             element={
               <>
-                <SplashCursor />
+                {useIsLargeScreen() && <SplashCursor />}
                 <Sponsors />
               </>
             }
