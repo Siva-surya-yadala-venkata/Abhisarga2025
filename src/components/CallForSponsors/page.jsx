@@ -207,7 +207,7 @@ export function Contact() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <ContactInfo
-            title="Convenors"
+            title="Chair"
             contacts={[
               { name: "Yashwanth S", phone: "+916369096042" },
               { name: "Charvi Palem", phone: "+917671075067" },

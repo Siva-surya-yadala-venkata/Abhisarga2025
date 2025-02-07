@@ -8,20 +8,14 @@ import ScrollToTop from "./components/ScrollToTop";
 const Home = lazy(() => import("./pages/home"));
 const EventsPage = lazy(() => import("./pages/EventsPage"));
 const AboutUs = lazy(() => import("./components/AboutUs"));
-const AccommodationPage = lazy(() =>
-  import("./components/Accommodation")
-);
+const AccommodationPage = lazy(() => import("./components/Accommodation"));
 const Event = lazy(() => import("./pages/events"));
 const Merch = lazy(() => import("./components/Merch"));
-const CallForSponsors = lazy(() =>
-  import("./components/CallForSponsors/page")
-);
+const CallForSponsors = lazy(() => import("./components/CallForSponsors/page"));
 const Sponsors = lazy(() => import("./pages/Sponsors"));
 const Contact = lazy(() => import("./pages/Contact"));
 const ComingSoon = lazy(() => import("./pages/comingSoon"));
-const SplashCursor = lazy(() =>
-  import("./components/SplashCursor")
-);
+const SplashCursor = lazy(() => import("./components/SplashCursor"));
 
 // Fallback UI while components load
 const Loading = () => <div>Loading...</div>;
@@ -38,25 +32,83 @@ function App() {
             path="/"
             element={
               <>
-                {/* <SplashCursor /> */}
+                <SplashCursor />
                 <Home />
               </>
             }
           />
-          <Route path="/events" element={<EventsPage />} />
-          <Route path="/about" element={<AboutUs />} />
+          <Route
+            path="/events"
+            element={
+              <>
+                <SplashCursor />
+                <EventsPage />
+              </>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <>
+                <SplashCursor />
+                <AboutUs />{" "}
+              </>
+            }
+          />
           <Route
             path="/accommodation"
-            element={<AccommodationPage />}
+            element={
+              <>
+                <SplashCursor />
+                <AccommodationPage />
+              </>
+            }
           />
-          <Route path="/event/:name" element={<Event />} />
-          <Route path="/merch" element={<Merch />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route
+            path="/event/:name"
+            element={
+              <>
+                <SplashCursor />
+                <Event />
+              </>
+            }
+          />
+          <Route
+            path="/merch"
+            element={
+              <>
+                <SplashCursor />
+                <Merch />
+              </>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <>
+                <SplashCursor />
+                <Contact />
+              </>
+            }
+          />
           <Route
             path="/call-for-sponsors"
-            element={<CallForSponsors />}
+            element={
+              <>
+                <SplashCursor />
+                <CallForSponsors />
+              </>
+            }
           />
-          <Route path="/sponsors" element={<Sponsors />} />
+          <Route
+            path="/sponsors"
+            element={
+              <>
+                <SplashCursor />
+                <Sponsors />
+              </>
+            }
+          />
           <Route path="*" element={<div>Page Not Found</div>} />
         </Routes>
       </Suspense>
