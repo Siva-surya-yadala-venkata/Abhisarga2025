@@ -32,7 +32,7 @@ const tierLevels = {
   "Bronze Sponsor": 2,
 };
 
-export function BenefitsModal({ isOpen, onClose, tier }) {
+export default function BenefitsModal({ isOpen, onClose, tier }) {
   const benefitCount = tierLevels[tier] || 0;
 
   if (!isOpen) return null;

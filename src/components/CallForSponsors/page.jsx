@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { SponsorCard } from "./sponsor-card";
 import { MagicSparkles } from "./magical-effects";
-import { BenefitsModal } from "./benefits-modal";
+import BenefitsModal from "./benefits-modal";
 import { useState } from "react";
 import SpotlightCard from "../ui/SpotLightCard";
 import ParallaxComponent from "../ParllaxComponent";
@@ -25,15 +25,13 @@ export default function CallForSponsors() {
       />
       <div
         className="min-h-screen text-white overflow-hidden relative "
-        style={
-          {
-            background: `
+        style={{
+          background: `
             linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.85 )),
             url('CallForSponsorBg.jpeg') center/cover no-repeat fixed,
             radial-gradient(circle at top, #24222d, #131433)
             `,
-          }
-        }
+        }}
       >
         {/* <MagicSparkles /> */}
         <SponsorTiers />
@@ -126,7 +124,7 @@ function SponsorTiers() {
           <a
             href="/Final_Draft_Sponsorship.pdf"
             download
-            className="bg-gold text-white  px-8 py-3 rounded-full font-bold text-lg hover:bg-yellow-500 transition-colors duration-300"
+            className="bg-gold text-white  px-8 py-3 rounded-full font-bold text-lg bg-yellow-500 transition-colors duration-300"
           >
             Brochure
           </a>
@@ -135,7 +133,7 @@ function SponsorTiers() {
           {tiers.map((tier, index) => (
             <SpotlightCard
               className="relative bg-gray-900 border border-yellow-500/20 rounded-lg p-6 hover:border-yellow-500/50 transition-all duration-300 overflow-hidden group shadow-lg"
-              key={tier}
+              key={tier.name}
             >
               <SponsorCard
                 onopen={() => {

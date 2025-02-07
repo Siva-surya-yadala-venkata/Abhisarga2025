@@ -1,6 +1,8 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { BenefitsModal } from './benefits-modal';
+import { useState, lazy, Suspense } from "react";
+import { motion } from "framer-motion";
+
+// Lazy load BenefitsModal
+const BenefitsModal = lazy(() => import("./benefits-modal"));
 
 export function SponsorCard({ tier, index }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,7 +24,7 @@ export function SponsorCard({ tier, index }) {
           transition={{
             duration: 3,
             repeat: Infinity,
-            ease: 'easeInOut',
+            ease: "easeInOut",
           }}
         />
         <div className="flex items-center justify-between mb-4">
@@ -40,11 +42,16 @@ export function SponsorCard({ tier, index }) {
         </motion.button>
       </motion.div>
 
-      <BenefitsModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        tier={tier.name}
-      />
+      {/* Lazy load BenefitsModal only when opened */}
+      {isModalOpen && (
+        <Suspense fallback={<div className="text-yellow-400">Loading...</div>}>
+          <BenefitsModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            tier={tier.name}
+          />
+        </Suspense>
+      )}
     </>
   );
 }

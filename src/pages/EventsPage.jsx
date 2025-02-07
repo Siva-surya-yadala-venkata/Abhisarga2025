@@ -13,9 +13,12 @@ export const events = [
     club: "Beatripperz",
     attendees: 500,
     image: "/assets/Events/MystiqueMoves.webp",
-    image2: "https://d8it4huxumps7.cloudfront.net/uploads/images/opportunity/banner/67a302e609dba_mystique-moves-group-dance-competition.webp?d=1920x557",
-    register: "https://unstop.com/p/mystique-moves-group-dance-competition-abhisarga-2025-indian-institute-of-information-technology-iiit-sri-city-1389091",
-    description: "Mystique Moves is a theme-based group dance competition that invites teams to showcase their creativity, coordination, and artistry. Each team is tasked with crafting a performance that seamlessly incorporates the given themes, delivering a routine that captivates the audience and judges alike.",
+    image2:
+      "https://d8it4huxumps7.cloudfront.net/uploads/images/opportunity/banner/67a302e609dba_mystique-moves-group-dance-competition.webp?d=1920x557",
+    register:
+      "https://unstop.com/p/mystique-moves-group-dance-competition-abhisarga-2025-indian-institute-of-information-technology-iiit-sri-city-1389091",
+    description:
+      "Mystique Moves is a theme-based group dance competition that invites teams to showcase their creativity, coordination, and artistry. Each team is tasked with crafting a performance that seamlessly incorporates the given themes, delivering a routine that captivates the audience and judges alike.",
   },
   {
     id: 2,
@@ -26,9 +29,12 @@ export const events = [
     club: "F/Stops",
     attendees: 300,
     image: "/assets/Events/EnchantedFrames.webp",
-    image2: "https://d8it4huxumps7.cloudfront.net/uploads/images/opportunity/banner/67a38fed21a3f_echanted-frames-photography-competition.webp?d=1920x557",
-    register: "https://unstop.com/o/x1VcYdk?lb=w1cVYeX&utm_medium=Share&utm_source=shortUrl",
-    description: "Enchanted Frames is a team-based photography competition that brings creativity and magic to life through two exciting rounds. In Round 1 (Online), participants capture portraits of mystical beings like wizards, witches, or detectives with dramatic lighting and effects. In Round 2 (Offline), teams use light painting techniques to create magical, glowing visuals using long exposure photography.",
+    image2:
+      "https://d8it4huxumps7.cloudfront.net/uploads/images/opportunity/banner/67a38fed21a3f_echanted-frames-photography-competition.webp?d=1920x557",
+    register:
+      "https://unstop.com/o/x1VcYdk?lb=w1cVYeX&utm_medium=Share&utm_source=shortUrl",
+    description:
+      "Enchanted Frames is a team-based photography competition that brings creativity and magic to life through two exciting rounds. In Round 1 (Online), participants capture portraits of mystical beings like wizards, witches, or detectives with dramatic lighting and effects. In Round 2 (Offline), teams use light painting techniques to create magical, glowing visuals using long exposure photography.",
   },
   {
     id: 3,
@@ -39,9 +45,12 @@ export const events = [
     club: "Reverb",
     attendees: 400,
     image: "/Comming_Soon.png",
-    image2: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80",
-    register: "https://unstop.com/p/rhythm-riots-20-abhisarga-2025-indian-institute-of-information-technology-iiit-sri-city-1389467",
-    description: "Rhythm Riot 2.0 is a musical band competition where teams compete to showcase their talent and win exciting prizes. Bands will go through online screening, an offline semi-final, and a grand finale on Abhisarga's main stage. ",
+    image2:
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80",
+    register:
+      "https://unstop.com/p/rhythm-riots-20-abhisarga-2025-indian-institute-of-information-technology-iiit-sri-city-1389467",
+    description:
+      "Rhythm Riot 2.0 is a musical band competition where teams compete to showcase their talent and win exciting prizes. Bands will go through online screening, an offline semi-final, and a grand finale on Abhisarga's main stage. ",
   },
   {
     id: 4,
@@ -52,9 +61,12 @@ export const events = [
     club: "Keynote",
     attendees: 30,
     image: "/assets/Events/MMUN.webp",
-    image2: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80",
-    register: "https://unstop.com/p/mystic-model-united-nationsmmun-abhisarga-2025-indian-institute-of-information-technology-iiit-sri-city-1388122",
-    description: "The Mystic Model United Nations (MMUN) will transport participants into an enchanting realm where global diplomacy intersects with mystery, unveiling hidden truths and solving critical global issues.",
+    image2:
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80",
+    register:
+      "https://unstop.com/p/mystic-model-united-nationsmmun-abhisarga-2025-indian-institute-of-information-technology-iiit-sri-city-1388122",
+    description:
+      "The Mystic Model United Nations (MMUN) will transport participants into an enchanting realm where global diplomacy intersects with mystery, unveiling hidden truths and solving critical global issues.",
   },
   {
     id: 5,
@@ -65,9 +77,12 @@ export const events = [
     club: "Meraki",
     attendees: 30,
     image: "/assets/Events/PainTheProphecy.webp",
-    image2: "https://d8it4huxumps7.cloudfront.net/uploads/images/opportunity/banner/67a2582acee66_paint-the-prophecy-tarot-card-creation.webp?d=1920x557",
-    register: "https://unstop.com/o/UCtLam2?lb=BQETOdz&utm_medium=Share&utm_source=shortUrl",
-    description: "Creation Of tarrot Cards using the given materials based on the cards designed participants have to write a story",
+    image2:
+      "https://d8it4huxumps7.cloudfront.net/uploads/images/opportunity/banner/67a2582acee66_paint-the-prophecy-tarot-card-creation.webp?d=1920x557",
+    register:
+      "https://unstop.com/o/UCtLam2?lb=BQETOdz&utm_medium=Share&utm_source=shortUrl",
+    description:
+      "Creation Of tarrot Cards using the given materials based on the cards designed participants have to write a story",
   },
   {
     id: 6,
@@ -78,8 +93,10 @@ export const events = [
     club: "Mise-en-scene ",
     attendees: 30,
     image: "/Comming_Soon.png",
-    image2: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80",
-    register: "https://unstop.com/o/8bRv3Yu?lb=STH4l18&utm_medium=Share&utm_source=shortUrl",
+    image2:
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80",
+    register:
+      "https://unstop.com/o/8bRv3Yu?lb=STH4l18&utm_medium=Share&utm_source=shortUrl",
     description: "Video making on promoting tirupati tourism ",
   },
 ];
@@ -93,8 +110,8 @@ function App() {
 
   useEffect(() => {
     // Preload all event images
-    const imagesToPreload = events.map(event => event.image);
-    const imagePromises = imagesToPreload.map(src => {
+    const imagesToPreload = events.map((event) => event.image);
+    const imagePromises = imagesToPreload.map((src) => {
       return new Promise((resolve, reject) => {
         const img = new Image();
         img.onload = () => resolve(src);
@@ -132,23 +149,23 @@ function App() {
     // Check if the device is mobile
     console.log(cardId);
     // Check if the card is already rotated
-    if(window.innerWidth >1024) return
+    if (window.innerWidth > 1024) return;
     const card = document.getElementById(cardId);
-    const cardContainer = card.closest('.card-container');
-    const cardBody = card.querySelector('.card-body');
-    const cardBodyBgs = cardBody.querySelectorAll('.bg');
-    const content = cardBody.querySelector('.content');
-    
+    const cardContainer = card.closest(".card-container");
+    const cardBody = card.querySelector(".card-body");
+    const cardBodyBgs = cardBody.querySelectorAll(".bg");
+    const content = cardBody.querySelector(".content");
+
     if (card.style.transform === "rotateY(180deg)") {
       // Reset card
       card.style.transform = "rotateY(0deg)";
-      
+
       // Reset card body backgrounds
       cardBodyBgs.forEach((bg, index) => {
         bg.style.width = "0%";
         bg.style.transitionDelay = "0s";
       });
-      
+
       // Reset content
       if (content) {
         content.style.opacity = "0";
@@ -158,13 +175,14 @@ function App() {
     } else {
       // Rotate card
       card.style.transform = "rotateY(180deg)";
-      
+
       // Animate card body backgrounds
       cardBodyBgs.forEach((bg, index) => {
         bg.style.width = "200%";
-        bg.style.transitionDelay = index === 1 ? "0.5s" : index === 2 ? "0.5s" : "0s";
+        bg.style.transitionDelay =
+          index === 1 ? "0.5s" : index === 2 ? "0.5s" : "0s";
       });
-      
+
       // Animate content
       if (content) {
         content.style.opacity = "1";
@@ -172,13 +190,15 @@ function App() {
         content.style.transitionDelay = "1s";
       }
     }
-  }
+  };
 
   return (
     <>
       {isLoading && <Loader />}
       <div
-        className={`min-h-screen relative overflow-hidden pb-5 ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-500`}
+        className={`min-h-screen relative overflow-hidden pb-5 ${
+          isLoading ? "opacity-0" : "opacity-100"
+        } transition-opacity duration-500`}
         style={{
           background: `
             linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7)),
@@ -193,7 +213,7 @@ function App() {
             heading={"Events"}
           />
           <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-full max-w-2xl px-4">
-            <div className="grid grid-cols-3 gap-4 backdrop-blur-xl bg-[#24222f]/30 p-4 rounded-xl border border-[#24222f]/20 shadow-lg shadow-[#24222f]/10">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 backdrop-blur-xl bg-[#24222f]/30 p-4 rounded-xl border border-[#24222f]/20 shadow-lg shadow-[#24222f]/10">
               <select
                 value={selectedclub}
                 onChange={(e) => setSelectedclub(e.target.value)}
@@ -218,7 +238,10 @@ function App() {
                 <option value="" className="bg-[#24222f] text-[#F7E290]">
                   Tech & Cultural
                 </option>
-                <option value="Technical" className="bg-[#24222f] text-[#F7E290]">
+                <option
+                  value="Technical"
+                  className="bg-[#24222f] text-[#F7E290]"
+                >
                   Technical
                 </option>
                 <option
@@ -296,12 +319,12 @@ function App() {
             <div className="container mx-auto flex flex-wrap justify-around gap-8">
               {filteredEvents.map((event) => (
                 <div
-                id={`${event.id}`}
+                  id={`${event.id}`}
                   key={event.title}
                   className="card-container p-4 "
                   onClick={() => {
                     console.log(event.id);
-                    toggleCard(event.id)
+                    toggleCard(event.id);
                   }}
                 >
                   <div className="card">
