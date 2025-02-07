@@ -3,6 +3,7 @@ import { lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import Loader from "./components/Loader";
 
 // Lazy loading components
 const Home = lazy(() => import("./pages/home"));
@@ -17,16 +18,13 @@ const Contact = lazy(() => import("./pages/Contact"));
 const ComingSoon = lazy(() => import("./pages/comingSoon"));
 const SplashCursor = lazy(() => import("./components/SplashCursor"));
 
-// Fallback UI while components load
-const Loading = () => <div>Loading...</div>;
-
 function App() {
   return (
     <>
       <Navbar />
       <ScrollToTop />
 
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route
             path="/"
