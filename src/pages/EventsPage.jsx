@@ -216,7 +216,7 @@ function App() {
                 className="w-full px-3 py-2 rounded-lg bg-[#24222f]/30 border border-[#24222f]/20 text-[#F7E290] focus:outline-none focus:ring-2 focus:ring-[#F7E290]/50"
               >
                 <option value="" className="bg-[#24222f] text-[#F7E290]">
-                  Tech & Non - Tech
+                  Tech & Cultural
                 </option>
                 <option value="Technical" className="bg-[#24222f] text-[#F7E290]">
                   Technical
