@@ -76,7 +76,7 @@ export default function AboutUs() {
       title: "newLine",
     },
     {
-      name: "Santhosh",
+      name: "Santosh Kiran",
       description: ["SLC Secretary Hostel Boys"],
       image: "./assets/AboutUs/Santhosh.webp",
       bgColor: "black",

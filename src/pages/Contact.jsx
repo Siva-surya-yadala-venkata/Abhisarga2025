@@ -33,32 +33,32 @@ export default function Contact() {
               {
                 title: "Yashwanth S",
                 subtitle: "Chair",
-                content: "+91 6369096042",
+                content: "yashwanth.s22@iiits.in"//"+91 6369096042",
               },
               {
                 title: "Charvi Palem",
                 subtitle: "Co-Chair",
-                content: "+91 7671075067",
+                content: "charvi.p22@iiits.in"//"+91 7671075067",
               },
               {
                 title: "Suyash Tiwari",
                 subtitle: "Co-Chair",
-                content: "+91 9755000981",
+                content: "suyash.t22@iiits.in"//"+91 9755000981",
               },
               {
                 title: "Abhinav Mars",
                 subtitle: "SLC President",
-                content: "+91 7569833006",
+                content: "president.slc@iiits.in"//"+91 7569833006",
               },
               {
                 title: "Kannan M",
                 subtitle: "SDC President",
-                content: "+91 9843323497",
+                content: "president.sdc@iiits.in" //"+91 9843323497",
               },
               {
                 title: "Shreeraj M",
                 subtitle: "Sponsorship Lead",
-                content: "+91 8143272388",
+                content: "abhisarga.sponsorship@iiits.in"//"+91 8143272388",
               },
             ].map((item, index) => (
               <motion.div

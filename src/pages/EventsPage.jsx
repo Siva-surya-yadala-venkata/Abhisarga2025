@@ -9,7 +9,7 @@ export const events = [
     title: "Mystique Moves",
     date: "2nd Mar",
     location: "TBD",
-    type: "Non-Technical",
+    type: "Cultural",
     club: "Beatripperz",
     attendees: 500,
     image: "/assets/Events/MystiqueMoves.webp",
@@ -22,7 +22,7 @@ export const events = [
     title: "Enchanted Frames",
     date: "28th Feb - 2nd Mar",
     location: "TBD",
-    type: "Non-Technical",
+    type: "Cultural",
     club: "F/Stops",
     attendees: 300,
     image: "/assets/Events/EnchantedFrames.webp",
@@ -35,7 +35,7 @@ export const events = [
     title: "Rhythm Riots 2.0",
     date: "28th Feb - 2nd Mar",
     location: "TBD",
-    type: "Non-Technical",
+    type: "Cultural",
     club: "Reverb",
     attendees: 400,
     image: "/Comming_Soon.png",
@@ -48,7 +48,7 @@ export const events = [
     title: "MMUN(Mystic-Model United Nations)",
     date: "27th Feb - 28th Feb",
     location: "TBD",
-    type: "Non-Technical",
+    type: "Cultural",
     club: "Keynote",
     attendees: 30,
     image: "/assets/Events/MMUN.webp",
@@ -61,7 +61,7 @@ export const events = [
     title: "Paint The Prophecy-Tarrot Crad Creation",
     date: "28th Feb - 2nd Mar",
     location: "TBD",
-    type: "Non-Technical",
+    type: "Cultural",
     club: "Meraki",
     attendees: 30,
     image: "/assets/Events/PainTheProphecy.webp",
@@ -74,7 +74,7 @@ export const events = [
     title: "cineMAGIC",
     date: "28th Feb - 2nd Mar",
     location: "TBD",
-    type: "Non-Technical",
+    type: "Cultural",
     club: "Mise-en-scene ",
     attendees: 30,
     image: "/Comming_Soon.png",
@@ -222,10 +222,10 @@ function App() {
                   Technical
                 </option>
                 <option
-                  value="Non-Technical"
+                  value="Cultural"
                   className="bg-[#24222f] text-[#F7E290]"
                 >
-                  Non-Technical
+                  Cultural
                 </option>
               </select>
 
