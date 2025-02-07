@@ -44,7 +44,7 @@ export const events = [
     type: "Cultural",
     club: "Reverb",
     attendees: 400,
-    image: "/Comming_Soon.png",
+    image: "/assets/Events/RhythmRiots.webp",
     image2:
       "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80",
     register:
@@ -92,7 +92,7 @@ export const events = [
     type: "Cultural",
     club: "Mise-en-scene ",
     attendees: 30,
-    image: "/Comming_Soon.png",
+    image: "/assets/Events/MiseEnScene.webp",
     image2:
       "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80",
     register:
@@ -201,7 +201,7 @@ function App() {
         } transition-opacity duration-500`}
         style={{
           background: `
-            linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7)),
+            linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.85)),
             url('/EventMainBg.jpeg') center/cover no-repeat fixed,
             radial-gradient(circle at top, #24222d, #131433)
           `,
@@ -272,7 +272,7 @@ function App() {
 
         .card {
           position: relative;
-          width: 350px;
+          width: 300px;
           height: 500px;
           transform-style: preserve-3d;
           transition: transform 0.6s ease;
