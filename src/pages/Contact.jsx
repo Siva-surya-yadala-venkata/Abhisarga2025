@@ -33,7 +33,7 @@ export default function Contact() {
               {
                 title: "Yashwanth S",
                 subtitle: "Chair",
-                content: "yashwanth.s22@iiits.in"//"+91 6369096042",
+                content: "secretary.sdc@iiits.in"//"+91 6369096042",
               },
               {
                 title: "Charvi Palem",
