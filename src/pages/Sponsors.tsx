@@ -11,7 +11,7 @@ export default function Sponsors() {
   }, []);
   const sponsors = [
     {
-      category: "Sponsors",
+      category: "Title Sponsors",
       items: [
         {
           name: "canaraBank",
@@ -20,7 +20,7 @@ export default function Sponsors() {
       ],
     },
     {
-      category: "",
+      category: "Diamond Sponsors",
       items: [
         {
           name: "cityUnionBank",
@@ -29,7 +29,7 @@ export default function Sponsors() {
       ],
     },
     {
-      category: "",
+      category: "Platinum Sponsors",
       items: [
         {
           name: "IndianBank",
@@ -38,7 +38,7 @@ export default function Sponsors() {
       ],
     },
     {
-      category: "",
+      category: "Gold Sponsors",
       items: [
         {
           name: "StationS",

@@ -5,6 +5,70 @@ import Loader from "../components/Loader";
 
 export const events = [
   {
+    id: 7,
+    title: "Hack The Threat",
+    date: "27thFeb (05:00 PM) -2nd Mar (08:00 AM)",
+    location: "TBD",
+    type: "Technical",
+    club: "Enigma, GDG",
+    attendees: 500,
+    image: "/assets/Events/HackTheThreat.webp",
+    image2:
+      "https://d8it4huxumps7.cloudfront.net/uploads/images/opportunity/banner/67a4de9234e9e_hackthethreat-hackathon.webp?d=1920x557",
+    register:
+      "https://unstop.com/hackathons/hackthethreat-hackathon-abhisarga-2025-indian-institute-of-information-technology-iiit-sricity-1390425",
+    description:
+      "In today's world, cyber threats are growing at an alarming rate. From phishing and ransomware to AI-driven attacks, digital security is more critical than ever. Hack The Threat is a cybersecurity and AI hackathon where participants will develop innovative solutions to detect, prevent, and respond to modern cyber threats.",
+  },
+  {
+    id: 8,
+    title: "Agriai",
+    date: "27thFeb (05:00 PM) -2nd Mar (08:00 AM)",
+    location: "TBD",
+    type: "Technical",
+    club: "IOTA",
+    attendees: 500,
+    image: "/assets/Events/Agriai.webp",
+    image2:
+      "https://d8it4huxumps7.cloudfront.net/uploads/images/opportunity/banner/67a457b4aceb3_agriai-hackathon.webp?d=1920x557",
+    register:
+      "https://unstop.com/hackathons/agriai-hackathon-abhisarga-2025-indian-institute-of-information-technology-iiit-sricity-1390394",
+    description:
+      "Farmers face significant challenges in optimizing crop growth due to unpredictable soil conditions, pest infestations, and diseases. This hackathon aims to develop an AI-powered agricultural decision-support system that provides real-time, data-driven insights, enabling farmers to make informed decisions, reduce losses, and enhance sustainability.",
+  },
+  {
+    id: 9,
+    title: "Agentica",
+    date: "27thFeb (05:00 PM) -2nd Mar (08:00 AM)",
+    location: "TBD",
+    type: "Technical",
+    club: "Matrix,NexSync",
+    attendees: 500,
+    image: "/assets/Events/Agentica.webp",
+    image2:
+      "https://d8it4huxumps7.cloudfront.net/uploads/images/opportunity/banner/67a4ded848612_agentica-powered-by-station-s.webp?d=1920x557",
+    register:
+      "https://unstop.com/hackathons/agentica-powered-by-station-s-abhisarga-2025-indian-institute-of-information-technology-iiit-sricity-1390193",
+    description:
+      "Get ready to embark on an electrifying journey of innovation, creativity, and problem-solving! Agentica brings together the brightest minds to tackle challenges, pushing the boundaries of AI and technology. Over an intense and immersive experience, you'll collaborate, code, and compete to build groundbreaking solutions that make a real impact. Whether you're a seasoned hacker or a first-time participant, this is your opportunity to showcase your talent, learn from industry experts, and leave your mark. The clock is ticking are you ready to innovate?",
+  },
+  {
+    id: 10,
+    title: "International Healthcare Hackathon",
+    date: "27thFeb (05:00 PM) -2nd Mar (08:00 AM)",
+    location: "TBD",
+    type: "Technical",
+    club: "Epoch,Gradient",
+    attendees: 500,
+    image: "/assets/Events/HealthcareHackathon.webp",
+    image2:
+      "https://d8it4huxumps7.cloudfront.net/uploads/images/opportunity/banner/67a4c180ca59f_iiit-sricity-international-healthcare-hackathon-2025.webp?d=1920x557",
+    register:
+      "https://unstop.com/hackathons/iiit-sricity-international-healthcare-hackathon-abhisarga-2025-indian-institute-of-information-technology-iii-1391398",
+    description:
+      "After the tremendous success of the IIIT Sricity National Healthcare Hackathon over the past two years, we are excited to announce the International Healthcare Hackathon 2025. This year, we’re taking innovation global, bringing together brilliant minds from all around the world to tackle pressing healthcare challenges.",
+  },
+  {
     id: 1,
     title: "Mystique Moves",
     date: "2nd Mar",
@@ -132,7 +196,7 @@ function App() {
   }, []);
 
   const filteredEvents = events.filter((event) => {
-    const matchesclub = selectedclub ? event.club === selectedclub : true;
+    const matchesclub = selectedclub ? event.club.includes(selectedclub) : true;
     const matchesType = selectedType ? event.type === selectedType : true;
     const matchesSearch =
       event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -142,7 +206,7 @@ function App() {
 
   const clubOptions = [
     "All Clubs",
-    ...new Set(events.map((event) => event.club)),
+    ...new Set(events.flatMap((event) => event.club.split(","))),
   ];
 
   const toggleCard = (cardId) => {
@@ -272,8 +336,8 @@ function App() {
 
         .card {
           position: relative;
-          width: 300px;
-          height: 500px;
+          width: 400px;
+          height: 700px;
           transform-style: preserve-3d;
           transition: transform 0.6s ease;
         }
@@ -311,7 +375,7 @@ function App() {
         @media (max-width: 640px) { /* Tailwind's sm breakpoint */
          .card {
             width: 280px; /* Adjust width for small screens */
-            height: 400px; /* Adjust height if necessary */
+            height: 490px; /* Adjust height if necessary */
           }
         }
       `}</style>
@@ -364,6 +428,12 @@ function App() {
                               <MapPin className="w-5 h-5 text-amber-500/70" />
                               <span className="font-poppins text-sm lg:text-base">
                                 {event.location}
+                              </span>
+                            </div>
+                            <div className="flex items-center gap-3">
+                              <MapPin className="w-5 h-5 text-amber-500/70" />
+                              <span className="font-poppins text-sm lg:text-base">
+                                {event.club}
                               </span>
                             </div>
                           </div>
