@@ -118,7 +118,7 @@ export const events = [
   },
   {
     id: 4,
-    title: "MMUN(Mystic-Model United Nations)",
+    title: "Mystic-Model United Nations)",
     date: "27th Feb - 28th Feb",
     location: "TBD",
     type: "Cultural",
@@ -126,7 +126,7 @@ export const events = [
     attendees: 30,
     image: "/assets/Events/MMUN.webp",
     image2:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80",
+      "https://d8it4huxumps7.cloudfront.net/uploads/images/opportunity/banner/67a7d3c9374b9_mystic-model-united-nations.webp?d=1920x557",
     register:
       "https://unstop.com/p/mystic-model-united-nationsmmun-abhisarga-2025-indian-institute-of-information-technology-iiit-sri-city-1388122",
     description:
