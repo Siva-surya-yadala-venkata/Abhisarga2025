@@ -118,7 +118,7 @@ export const events = [
   },
   {
     id: 4,
-    title: "Mystic-Model United Nations)",
+    title: "Mystic-Model United Nations",
     date: "27th Feb - 28th Feb",
     location: "TBD",
     type: "Cultural",
