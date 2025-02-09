@@ -1,4 +1,4 @@
-import { CalendarDays, ClubIcon, MapPin, Sparkles, Users } from "lucide-react";
+import { CalendarDays, MapPin, Sparkles, Users } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import ParallaxComponent from "../components/ParllaxComponent";
 import Loader from "../components/Loader";
@@ -7,7 +7,7 @@ export const events = [
   {
     id: 7,
     title: "Hack The Threat",
-    date: "27thFeb (05:00 PM) -2nd Mar (08:00 AM)",
+    date: "27thFeb - 2nd Mar",
     location: "TBD",
     type: "Technical",
     club: "Enigma, GDG",
@@ -23,7 +23,7 @@ export const events = [
   {
     id: 8,
     title: "Agriai",
-    date: "27thFeb (05:00 PM) -2nd Mar (08:00 AM)",
+    date: "27thFeb - 2nd Mar",
     location: "TBD",
     type: "Technical",
     club: "IOTA",
@@ -39,7 +39,7 @@ export const events = [
   {
     id: 9,
     title: "Agentica",
-    date: "27thFeb (05:00 PM) -2nd Mar (08:00 AM)",
+    date: "27thFeb - 2nd Mar",
     location: "TBD",
     type: "Technical",
     club: "Matrix,NexSync",
@@ -55,7 +55,7 @@ export const events = [
   {
     id: 10,
     title: "International Healthcare Hackathon",
-    date: "27thFeb (05:00 PM) -2nd Mar (08:00 AM)",
+    date: "27thFeb - 2nd Mar",
     location: "TBD",
     type: "Technical",
     club: "Epoch,Gradient",
@@ -431,7 +431,7 @@ function App() {
                               </span>
                             </div>
                             <div className="flex items-center gap-3">
-                              <MapPin className="w-5 h-5 text-amber-500/70" />
+                              <Users className="w-5 h-5 text-amber-500/70" />
                               <span className="font-poppins text-sm lg:text-base">
                                 {event.club}
                               </span>
