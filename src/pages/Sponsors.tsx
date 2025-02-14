@@ -15,7 +15,7 @@ export default function Sponsors() {
       items: [
         {
           name: "canaraBank",
-          logo: "/assets/SponsorsAssets/canaraBank.svg",
+          logo: "/assets/SponsorsAssets/canaraBank.webp",
         },
       ],
     },
@@ -24,7 +24,7 @@ export default function Sponsors() {
       items: [
         {
           name: "cityUnionBank",
-          logo: "/assets/SponsorsAssets/cityUnionBank.png",
+          logo: "/assets/SponsorsAssets/cityUnionBank.webp",
         },
       ],
     },
@@ -33,7 +33,7 @@ export default function Sponsors() {
       items: [
         {
           name: "IndianBank",
-          logo: "/assets/SponsorsAssets/IndianBank.png",
+          logo: "/assets/SponsorsAssets/IndianBank.webp",
         },
       ],
     },
@@ -42,7 +42,7 @@ export default function Sponsors() {
       items: [
         {
           name: "StationS",
-          logo: "/assets/SponsorsAssets/StationS.png",
+          logo: "/assets/SponsorsAssets/StationS.webp",
         },
       ],
     },
@@ -51,7 +51,7 @@ export default function Sponsors() {
       items: [
         {
           name: "Infinity",
-          logo: "/assets/SponsorsAssets/Infinity.jpeg",
+          logo: "/assets/SponsorsAssets/Infinity.webp",
         },
         {
           name: "HotelSowmiya",
@@ -64,11 +64,11 @@ export default function Sponsors() {
       items: [
         {
           name: "NandhaInfotech",
-          logo: "/assets/SponsorsAssets/NandhaInfotech.png",
+          logo: "/assets/SponsorsAssets/NandhaInfotech.webp",
         },
         {
           name: "TechSoftZets",
-          logo: "/assets/SponsorsAssets/TechSoftZets.png",
+          logo: "/assets/SponsorsAssets/TechSoftZets.webp",
         },
       ],
     },
@@ -77,7 +77,7 @@ export default function Sponsors() {
       items: [
         {
           name: "TruScholar",
-          logo: "/assets/SponsorsAssets/TruScholar.png",
+          logo: "/assets/SponsorsAssets/TruScholar.webp",
         },
       ],
     },
