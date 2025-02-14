@@ -81,6 +81,15 @@ export default function Sponsors() {
         },
       ],
     },
+    {
+      category: "Media Partner",
+      items: [
+        {
+          name: "Abhinandana",
+          logo: "/assets/SponsorsAssets/Abhinandana.webp",
+        },
+      ],
+    },
   ];
 
   return (
