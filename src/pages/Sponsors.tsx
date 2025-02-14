@@ -55,7 +55,7 @@ export default function Sponsors() {
         },
         {
           name: "HotelSowmiya",
-          logo: "/assets/SponsorsAssets/HotelSowmiya.png",
+          logo: "/assets/SponsorsAssets/HotelSowmiya.webp",
         },
       ],
     },
