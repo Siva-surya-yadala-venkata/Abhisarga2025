@@ -42,7 +42,7 @@ export const events = [
     date: "27thFeb - 2nd Mar",
     location: "TBD",
     type: "Technical",
-    club: "Matrix,NexSync",
+    club: "ConnexIon,Matrix,NexSync",
     attendees: 500,
     image: "/assets/Events/Agentica.webp",
     image2:
