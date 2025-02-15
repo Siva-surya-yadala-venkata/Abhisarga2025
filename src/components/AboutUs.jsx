@@ -88,13 +88,25 @@ export default function AboutUs() {
       bgColor: "black",
     },
     {
-      name: "Venkatesh Naidu",
-      description: ["Marketing"],
-      image: "./assets/AboutUs/venkateshNaidu.webp",
+      name: "KL Vitesh Reddy",
+      description: ["SDC"],
+      image: "./assets/AboutUs/KLViteshReddy.webp",
       bgColor: "black",
     },
     {
       title: "newLine",
+    },
+    {
+      name: "Prathyush MR",
+      description: ["SLC & Logistics"],
+      image: "./assets/AboutUs/PrathyushMR.webp",
+      bgColor: "black",
+    },
+    {
+      name: "Venkatesh Naidu",
+      description: ["Marketing"],
+      image: "./assets/AboutUs/venkateshNaidu.webp",
+      bgColor: "black",
     },
     {
       name: "Shree Raj",
@@ -103,9 +115,18 @@ export default function AboutUs() {
       bgColor: "black",
     },
     {
+      title: "newLine",
+    },
+    {
       name: "Venkata Sai Reddy",
       description: ["Design"],
       image: "./assets/AboutUs/VenkataSaiReddy.webp",
+      bgColor: "black",
+    },
+    {
+      name: "Sai Hyndavi Barla",
+      description: ["Invitation"],
+      image: "./assets/AboutUs/SaiHyndaviBarla.webp",
       bgColor: "black",
     },
     {
@@ -170,6 +191,9 @@ export default function AboutUs() {
       bgColor: "black",
     },
     {
+      title: "newLine",
+    },
+    {
       name: "Venkata Sai Pranav",
       description: ["Tech Team", "Member"],
       position: "Member",
@@ -212,7 +236,6 @@ export default function AboutUs() {
     }
     return acc;
   }, []);
-   
 
   return (
     <div
@@ -241,33 +264,33 @@ export default function AboutUs() {
             )}
             <div className="flex flex-wrap items-center  justify-center gap-8">
               {group.members.map((member, idx) => (
-                  <div
-                    key={idx}
-                    className="frame flex flex-col items-center justify-center cursor-pointer"
-                    onClick={() => {
-                      if (member.linkedin) {
-                        window.open(member.linkedin, "_blank");
-                      } else {
-                        console.log(`${member.name} clicked`);
-                      }
-                    }}
-                  >
-                    <div className="image-container">
-                      <img
-                        className="featured-image"
-                        src={member.image}
-                        alt={member.name}
-                      />
-                    </div>
-                    <div>
-                      <h3 className="featured-name">{member.name}</h3>
-                      {member.description.map((desc, i) => (
-                        <p key={i} className="featured-description">
-                          {desc}
-                        </p>
-                      ))}
-                    </div>
+                <div
+                  key={idx}
+                  className="frame flex flex-col items-center justify-center cursor-pointer"
+                  onClick={() => {
+                    if (member.linkedin) {
+                      window.open(member.linkedin, "_blank");
+                    } else {
+                      console.log(`${member.name} clicked`);
+                    }
+                  }}
+                >
+                  <div className="image-container">
+                    <img
+                      className="featured-image"
+                      src={member.image}
+                      alt={member.name}
+                    />
                   </div>
+                  <div>
+                    <h3 className="featured-name">{member.name}</h3>
+                    {member.description.map((desc, i) => (
+                      <p key={i} className="featured-description">
+                        {desc}
+                      </p>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </div>
