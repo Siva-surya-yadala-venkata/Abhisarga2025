@@ -131,7 +131,7 @@ export default function AboutUs() {
     },
     {
       name: "Yashwanth S",
-      description: ["SDC Secerary"],
+      description: ["SDC Secretary"],
       image: "./assets/AboutUs/YashwanthS.webp",
       bgColor: "black",
     },
