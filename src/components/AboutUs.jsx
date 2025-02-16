@@ -87,21 +87,21 @@ export default function AboutUs() {
       image: "./assets/AboutUs/TejaSri.webp",
       bgColor: "black",
     },
-    {
-      name: "KL Vitesh Reddy",
-      description: ["SDC"],
-      image: "./assets/AboutUs/KLViteshReddy.webp",
-      bgColor: "black",
-    },
+    //{
+    //  name: "KL Vitesh Reddy",
+    //  description: ["SDC"],
+   //   image: "./assets/AboutUs/KLViteshReddy.webp",
+   //   bgColor: "black",
+ //   },
     {
       title: "newLine",
     },
-    {
-      name: "Prathyush MR",
-      description: ["SLC & Logistics"],
-      image: "./assets/AboutUs/PrathyushMR.webp",
-      bgColor: "black",
-    },
+    //{
+     // name: "Prathyush MR",
+    //  description: ["SLC & Logistics"],
+    //  image: "./assets/AboutUs/PrathyushMR.webp",
+     // bgColor: "black",
+    //},
     {
       name: "Venkatesh Naidu",
       description: ["Marketing"],
@@ -123,12 +123,12 @@ export default function AboutUs() {
       image: "./assets/AboutUs/VenkataSaiReddy.webp",
       bgColor: "black",
     },
-    {
-      name: "Sai Hyndavi Barla",
-      description: ["Invitation"],
-      image: "./assets/AboutUs/SaiHyndaviBarla.webp",
-      bgColor: "black",
-    },
+    // {
+     // name: "Sai Hyndavi Barla",
+      //description: ["Invitation"],
+     // image: "./assets/AboutUs/SaiHyndaviBarla.webp",
+      //bgColor: "black",
+   // },
     {
       name: "Shanmathe S A",
       description: ["Proshows"],
