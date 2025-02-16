@@ -205,7 +205,7 @@ export default function AboutUs() {
       bgColor: "black",
     },
     {
-      name: "Vignesh Barage",
+      name: "Vighnesh Barage",
       description: ["SLC Mess Secretary"],
       image: "./assets/AboutUs/VigneshBarage.webp",
       bgColor: "black",
