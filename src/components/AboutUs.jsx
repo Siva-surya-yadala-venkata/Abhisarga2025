@@ -167,13 +167,13 @@ export default function AboutUs() {
     },
     {
       name: "BeerelliMedhanshRao",
-      description: ["SDC UG 2"],
+      description: ["SDC UG 1"],
       image: "./assets/AboutUs/BeerelliMedhanshRao.webp",
       bgColor: "black",
     },
     {
       name: "Nikitha Budaraju",
-      description: ["SDC UG 2"],
+      description: ["SDC UG 1"],
       image: "./assets/AboutUs/NikithaBudaraju.webp",
       bgColor: "black",
     },
