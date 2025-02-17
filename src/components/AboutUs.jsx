@@ -166,7 +166,7 @@ export default function AboutUs() {
       bgColor: "black",
     },
     {
-      name: "BeerelliMedhanshRao",
+      name: "B Medhansh Rao",
       description: ["SDC UG 2"],
       image: "./assets/AboutUs/BeerelliMedhanshRao.webp",
       bgColor: "black",
@@ -235,13 +235,13 @@ export default function AboutUs() {
       bgColor: "black",
     },
     {
-      name: "Kavyanjali Ganteda",
+      name: "Kavyanjali G",
       description: ["SLC UG 2"],
       image: "./assets/AboutUs/KavyanjaliGanteda.webp",
       bgColor: "black",
     },
     {
-      name: "Mukunth Parthasarathy",
+      name: "Mukunth P",
       description: ["SLC UG 1"],
       image: "./assets/AboutUs/MukunthParthasarathy.webp",
       bgColor: "black",
