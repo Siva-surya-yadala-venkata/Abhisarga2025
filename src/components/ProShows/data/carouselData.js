@@ -3,7 +3,7 @@ export const carouselData = [
     id: 1,
     image: ["/assets/proshows/proshow3.webp"], // Relative path from public
     author: "ABHISARGA",
-    date: "2024",
+    date: "2025",
     title: "DJ Gandhi Vijay",
     topic: "DJ NIGHT",
     link: "https://www.instagram.com/stories/highlights/18049394729292508/",
